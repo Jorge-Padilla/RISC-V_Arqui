@@ -1,0 +1,42 @@
+D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Regs.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Regs.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+
+} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_File.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_File.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Reg_File
+
+Top level modules:
+	Reg_File
+
+} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mux_4_1.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mux_4_1.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Mux_4_1
+
+Top level modules:
+	Mux_4_1
+
+} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU_sel.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU_sel.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+
+} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_File_tb.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_File_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Reg_File_tb
+
+Top level modules:
+	Reg_File_tb
+
+} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU_tb.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ALU_tb
+
+Top level modules:
+	ALU_tb
+
+} {} {}}

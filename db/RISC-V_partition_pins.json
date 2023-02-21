@@ -1,0 +1,185 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ALUSrcA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUSrcA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUSrcB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUSrcB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PCSrc[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PCSrc[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ShiftAmnt[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ShiftAmnt[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SignExt[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SignExt[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SignExt[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MemWrite",
+					"strict" : false
+				},
+				{
+					"name" : "MemRead",
+					"strict" : false
+				},
+				{
+					"name" : "IRWrite",
+					"strict" : false
+				},
+				{
+					"name" : "RegWrite",
+					"strict" : false
+				},
+				{
+					"name" : "PCWrite",
+					"strict" : false
+				},
+				{
+					"name" : "RegDst",
+					"strict" : false
+				},
+				{
+					"name" : "IorD",
+					"strict" : false
+				},
+				{
+					"name" : "Branch",
+					"strict" : false
+				},
+				{
+					"name" : "XorZero",
+					"strict" : false
+				},
+				{
+					"name" : "MemtoReg",
+					"strict" : false
+				},
+				{
+					"name" : "ALUControl[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUControl[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUControl[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUControl[3]",
+					"strict" : false
+				},
+				{
+					"name" : "uart_tx_send",
+					"strict" : false
+				},
+				{
+					"name" : "State_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "State_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "State_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "State_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Opcode[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Opcode[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Opcode[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Opcode[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Opcode[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Opcode[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Opcode[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Funct3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Funct3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Funct3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Funct7[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "tx_fsm_in_STOP_S",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
