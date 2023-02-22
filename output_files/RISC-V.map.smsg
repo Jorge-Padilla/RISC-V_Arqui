@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at RISC_V.sv(45): object "JalrMux" differs only in case from object "JALRMUX" in the same scope File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V.sv Line: 45
+Info (10281): Verilog HDL Declaration information at RISC_V.sv(61): object "AMux" differs only in case from object "AMUX" in the same scope File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V.sv Line: 61

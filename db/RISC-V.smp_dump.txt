@@ -1,5 +1,5 @@
 
-State Machine - |Control_Unit|State
+State Machine - |RISC_V|Control_Unit:CU|State
 Name State.STALL State.UART_DUMMY_WAIT State.UART_TX_WAIT State.UART_TX_INIT State.JUMP State.IMMI_WRBACK State.IMMI_EXE State.BRANCH State.REG_WRBACK State.REG_EXE State.MEM_WRITE State.MEM_WRBACK State.MEM_READ State.MEM_ADDR State.DECODE State.FETCH 
 State.FETCH 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 State.DECODE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 

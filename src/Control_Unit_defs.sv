@@ -34,8 +34,9 @@
 `define EXT_JALR	3'b000
 `define EXT_BRA		3'b011
 `define EXT_LOAD	3'b000
-`define EXT_STORE	3'b001
-`define EXT_IMMI	3'b000
+`define EXT_STORE   3'b001
+`define EXT_IMMI    3'b000
+`define EXT_UPPER   3'b100
 
 `define SHIFT_0	2'b00
 `define SHIFT_1	2'b01

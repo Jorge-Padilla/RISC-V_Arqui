@@ -4,167 +4,147 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "ALUSrcA[0]",
+					"name" : "mem_data[0]",
 					"strict" : false
 				},
 				{
-					"name" : "ALUSrcA[1]",
+					"name" : "mem_data[1]",
 					"strict" : false
 				},
 				{
-					"name" : "ALUSrcB[0]",
+					"name" : "mem_data[2]",
 					"strict" : false
 				},
 				{
-					"name" : "ALUSrcB[1]",
+					"name" : "mem_data[3]",
 					"strict" : false
 				},
 				{
-					"name" : "PCSrc[0]",
+					"name" : "mem_data[4]",
 					"strict" : false
 				},
 				{
-					"name" : "PCSrc[1]",
+					"name" : "mem_data[5]",
 					"strict" : false
 				},
 				{
-					"name" : "ShiftAmnt[0]",
+					"name" : "mem_data[6]",
 					"strict" : false
 				},
 				{
-					"name" : "ShiftAmnt[1]",
+					"name" : "mem_data[7]",
 					"strict" : false
 				},
 				{
-					"name" : "SignExt[0]",
+					"name" : "mem_data[8]",
 					"strict" : false
 				},
 				{
-					"name" : "SignExt[1]",
+					"name" : "mem_data[9]",
 					"strict" : false
 				},
 				{
-					"name" : "SignExt[2]",
+					"name" : "mem_data[10]",
 					"strict" : false
 				},
 				{
-					"name" : "MemWrite",
+					"name" : "mem_data[11]",
 					"strict" : false
 				},
 				{
-					"name" : "MemRead",
+					"name" : "mem_data[12]",
 					"strict" : false
 				},
 				{
-					"name" : "IRWrite",
+					"name" : "mem_data[13]",
 					"strict" : false
 				},
 				{
-					"name" : "RegWrite",
+					"name" : "mem_data[14]",
 					"strict" : false
 				},
 				{
-					"name" : "PCWrite",
+					"name" : "mem_data[15]",
 					"strict" : false
 				},
 				{
-					"name" : "RegDst",
+					"name" : "mem_data[16]",
 					"strict" : false
 				},
 				{
-					"name" : "IorD",
+					"name" : "mem_data[17]",
 					"strict" : false
 				},
 				{
-					"name" : "Branch",
+					"name" : "mem_data[18]",
 					"strict" : false
 				},
 				{
-					"name" : "XorZero",
+					"name" : "mem_data[19]",
 					"strict" : false
 				},
 				{
-					"name" : "MemtoReg",
+					"name" : "mem_data[20]",
 					"strict" : false
 				},
 				{
-					"name" : "ALUControl[0]",
+					"name" : "mem_data[21]",
 					"strict" : false
 				},
 				{
-					"name" : "ALUControl[1]",
+					"name" : "mem_data[22]",
 					"strict" : false
 				},
 				{
-					"name" : "ALUControl[2]",
+					"name" : "mem_data[23]",
 					"strict" : false
 				},
 				{
-					"name" : "ALUControl[3]",
+					"name" : "mem_data[24]",
 					"strict" : false
 				},
 				{
-					"name" : "uart_tx_send",
+					"name" : "mem_data[25]",
 					"strict" : false
 				},
 				{
-					"name" : "State_o[0]",
+					"name" : "mem_data[26]",
 					"strict" : false
 				},
 				{
-					"name" : "State_o[1]",
+					"name" : "mem_data[27]",
 					"strict" : false
 				},
 				{
-					"name" : "State_o[2]",
+					"name" : "mem_data[28]",
 					"strict" : false
 				},
 				{
-					"name" : "State_o[3]",
+					"name" : "mem_data[29]",
 					"strict" : false
 				},
 				{
-					"name" : "Opcode[3]",
+					"name" : "mem_data[30]",
 					"strict" : false
 				},
 				{
-					"name" : "Opcode[5]",
+					"name" : "mem_data[31]",
 					"strict" : false
 				},
 				{
-					"name" : "Opcode[2]",
+					"name" : "CU_State[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Opcode[4]",
+					"name" : "CU_State[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Opcode[6]",
+					"name" : "CU_State[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Opcode[0]",
-					"strict" : false
-				},
-				{
-					"name" : "Opcode[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Funct3[0]",
-					"strict" : false
-				},
-				{
-					"name" : "Funct3[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Funct3[2]",
-					"strict" : false
-				},
-				{
-					"name" : "Funct7[6]",
+					"name" : "CU_State[3]",
 					"strict" : false
 				},
 				{
@@ -173,10 +153,6 @@
 				},
 				{
 					"name" : "rst",
-					"strict" : false
-				},
-				{
-					"name" : "tx_fsm_in_STOP_S",
 					"strict" : false
 				}
 			]

@@ -19,6 +19,13 @@ module Reg_File #(parameter ADDRESS_WIDTH = 5, parameter DATA_WIDTH = 32) (
 
 	//Declaring the Registers array
 	reg [DATA_WIDTH-1:0] registers [2**ADDRESS_WIDTH-1:0];
+
+	//Initialize Zero and SP
+	initial begin
+		registers[0] = 32'h0;
+		registers[2] = 32'h7fffeffc;
+		registers[3] = 32'h10008000;
+	end
 	
 	//Read is async, with x0 being always 0
 	assign rd1 = (a1 == {ADDRESS_WIDTH{1'b0}}) ? {DATA_WIDTH{1'b0}} : registers[a1];
