@@ -1,17 +1,22 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Company: ITESO
 // Engineer: Jorge Alberto Padilla Gutierrez
-// Module Description: RISC-V DUT
+// Module Description: RISC-V Core
 //////////////////////////////////////////////////////////////////////////////////
 
 import Control_Unit_enum::*;
 
-module RISC_V #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
+module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	//Inputs
 	input wire              clk, 
 	input wire              rst,
+    input [DATA_WIDTH-1:0]  MemData,
 	//Outputs
-	output wire             uart_tx_out,
+	output wire             MemRead, 
+	output wire             MemWrite,
+    output [DATA_WIDTH-1:0] WriteData,
+    output [DATA_WIDTH-1:0] RWAddress,
+	//output wire             uart_tx_out,
     //Debug Outputs
     output [DATA_WIDTH-1:0] mem_data,
 	output cu_fsm_state_t   CU_State
@@ -30,10 +35,8 @@ module RISC_V #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 */    
 
 	//Signals required for connections
-	wire                    PCEn;
+    wire                    PCEn;
     wire                    Zero;
-    wire                    MemWrite;
-    wire                    MemRead;
     wire                    IRWrite;
     wire                    RegWrite;
     wire                    PCWrite;
@@ -41,34 +44,31 @@ module RISC_V #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     wire                    Branch;
     wire                    XorZero;
     wire                    MemtoReg;
-	wire                    PCSrc;
+    wire                    PCSrc;
     wire                    JalrMux;
-	wire [1:0]              ALUSrcA;
-	wire [1:0]              ALUSrcB;
-	wire [1:0]              ShiftAmnt;
-	wire [2:0]              SignExt;
-	wire [4:0]              ALUControl;
-	wire [DATA_WIDTH-1:0]   PC;
-	wire [DATA_WIDTH-1:0]   PCp;
-	wire [DATA_WIDTH-1:0]   PCbra;
-	wire [DATA_WIDTH-1:0]   Adr;
-	wire [DATA_WIDTH-1:0]   MemData;
-	wire [DATA_WIDTH-1:0]   Instr;
-	wire [DATA_WIDTH-1:0]   Data;
-	wire [DATA_WIDTH-1:0]   WD3;
-	wire [DATA_WIDTH-1:0]   RD1;
-	wire [DATA_WIDTH-1:0]   RD2;
-	wire [DATA_WIDTH-1:0]   AMux;
-	wire [DATA_WIDTH-1:0]   A;
-	wire [DATA_WIDTH-1:0]   B;
-	wire [DATA_WIDTH-1:0]   SignImm;
-	wire [DATA_WIDTH-1:0]   ShiftImm;
-	wire [DATA_WIDTH-1:0]   SrcA;
-	wire [DATA_WIDTH-1:0]   SrcB;
-	wire [DATA_WIDTH-1:0]   ALUResult;
-	wire [DATA_WIDTH-1:0]   ALUOut;
-	wire                    tx_fsm_in_STOP_S;
-	wire                    uart_tx_send;
+    wire [1:0]              ALUSrcA;
+    wire [1:0]              ALUSrcB;
+    wire [1:0]              ShiftAmnt;
+    wire [2:0]              SignExt;
+    wire [4:0]              ALUControl;
+    wire [DATA_WIDTH-1:0]   PC;
+    wire [DATA_WIDTH-1:0]   PCp;
+    wire [DATA_WIDTH-1:0]   PCbra;
+    wire [DATA_WIDTH-1:0]   Instr;
+    wire [DATA_WIDTH-1:0]   Data;
+    wire [DATA_WIDTH-1:0]   WD3;
+    wire [DATA_WIDTH-1:0]   RD1;
+    wire [DATA_WIDTH-1:0]   RD2;
+    wire [DATA_WIDTH-1:0]   AMux;
+    wire [DATA_WIDTH-1:0]   A;
+    wire [DATA_WIDTH-1:0]   SignImm;
+    wire [DATA_WIDTH-1:0]   ShiftImm;
+    wire [DATA_WIDTH-1:0]   SrcA;
+    wire [DATA_WIDTH-1:0]   SrcB;
+    wire [DATA_WIDTH-1:0]   ALUResult;
+    wire [DATA_WIDTH-1:0]   ALUOut;
+    wire                    tx_fsm_in_STOP_S;
+    wire                    uart_tx_send;
 	
 	//Instance of Modules
 
@@ -132,18 +132,8 @@ module RISC_V #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.A(PC),
 		.B(ALUOut),
 		.sel(IorD),
-		.Q(Adr)
+		.Q(RWAddress)
 	);
-	
-    //Memory Map
-    Mem_Map #(.DATA_WIDTH(DATA_WIDTH),.ADDR_WIDTH(ADDR_WIDTH)) MM (
-        .WD(B),
-        .A(Adr),
-        .re(MemRead),
-        .we(MemWrite),
-        .clk(clk),
-        .RD(MemData)
-    );
 	
     //Instruction Register
 	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) INSTRREG (
@@ -216,7 +206,7 @@ module RISC_V #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.clk(clk),
 		.en(1'b1),
 		.D(RD2),
-		.Q(B)
+		.Q(WriteData)
 	);
 	
     //Mux for rs1 value for jalr
@@ -239,7 +229,7 @@ module RISC_V #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	
     //Mux for ALU B input
 	Mux_4_1 #(.DATA_WIDTH(DATA_WIDTH)) BMUX (
-		.A(B),
+		.A(WriteData),
 		.B(32'h4),
 		.C(ShiftImm),
 		.D({27'h0,ShiftImm[4:0]}),
@@ -284,6 +274,6 @@ module RISC_V #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 //	);
 
     //Debug Output
-    assign mem_data = B;
+    assign mem_data = WriteData;
 	
 endmodule

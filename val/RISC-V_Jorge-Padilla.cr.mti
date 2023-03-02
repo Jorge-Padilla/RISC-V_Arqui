@@ -53,21 +53,28 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	Mux_4_1
 
-} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V.sv
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling package RISC_V_sv_unit
--- Importing package Control_Unit_enum
--- Compiling module RISC_V
-
-Top level modules:
-	RISC_V
-
 } {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_Param.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_Param.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module Reg_Param
 
 Top level modules:
 	Reg_Param
+
+} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package RISC_V_Multi_Cycle_sv_unit
+-- Importing package Control_Unit_enum
+-- Compiling module RISC_V_Multi_Cycle
+
+Top level modules:
+	RISC_V_Multi_Cycle
+
+} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/GPIO.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/GPIO.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module GPIO
+
+Top level modules:
+	GPIO
 
 } {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -112,6 +119,20 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	ALU
 
+} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ROM_Single_Port
+
+Top level modules:
+	ROM_Single_Port
+
+} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map_Controler.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map_Controler.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Mem_Map_Controler
+
+Top level modules:
+	Mem_Map_Controler
+
 } {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_tb.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_tb.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling package RISC_V_tb_sv_unit
@@ -121,19 +142,12 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	RISC_V_tb
 
-} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv
+} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_File.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_File.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module ROM_Single_Port
+-- Compiling module Reg_File
 
 Top level modules:
-	ROM_Single_Port
-
-} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map.sv
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module Mem_Map
-
-Top level modules:
-	Mem_Map
+	Reg_File
 
 } {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RAM_Single_Port.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RAM_Single_Port.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -141,6 +155,15 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 
 Top level modules:
 	RAM_Single_Port
+
+} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package RISC_V_Core_sv_unit
+-- Importing package Control_Unit_enum
+-- Compiling module RISC_V_Core
+
+Top level modules:
+	RISC_V_Core
 
 } {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU_tb.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU_tb.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021

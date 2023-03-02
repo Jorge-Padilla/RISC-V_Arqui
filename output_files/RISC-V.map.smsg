@@ -1,2 +1,3 @@
-Info (10281): Verilog HDL Declaration information at RISC_V.sv(45): object "JalrMux" differs only in case from object "JALRMUX" in the same scope File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V.sv Line: 45
-Info (10281): Verilog HDL Declaration information at RISC_V.sv(61): object "AMux" differs only in case from object "AMUX" in the same scope File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V.sv Line: 61
+Info (10281): Verilog HDL Declaration information at RISC_V_Core.sv(48): object "JalrMux" differs only in case from object "JALRMUX" in the same scope File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 48
+Info (10281): Verilog HDL Declaration information at RISC_V_Core.sv(62): object "AMux" differs only in case from object "AMUX" in the same scope File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 62
+Warning (10262): Verilog HDL Event Control warning at GPIO.sv(24): event expression is a constant File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/GPIO.sv Line: 24

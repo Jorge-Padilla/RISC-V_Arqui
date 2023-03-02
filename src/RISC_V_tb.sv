@@ -12,16 +12,20 @@ module RISC_V_tb;
 	//Wires
 	reg                     clk;
     reg                     rst;
-	wire                    uart_tx_out;
+	reg [7:0]				gpio_port_in;
+	wire [7:0]				gpio_port_out;
+	//wire                    uart_tx_out;
     wire [31:0]             mem_data;
 	cu_fsm_state_t          CU_State;
 	
 	//Instancia del DUT
-	RISC_V #(.DATA_WIDTH(32), .ADDR_WIDTH (32)) DUT(
+	RISC_V_Multi_Cycle DUT(
 		.clk(clk),
 		.rst(rst),
         .mem_data(mem_data),
-		.uart_tx_out(uart_tx_out),
+		.gpio_port_in(gpio_port_in),
+		.gpio_port_out(gpio_port_out),
+		//.uart_tx_out(uart_tx_out),
 		.CU_State(CU_State)
 	);
 
@@ -38,6 +42,7 @@ module RISC_V_tb;
 	//Proceso que fluctua a clock
 	initial
 	begin
+		gpio_port_in = 8'h03;
 		clk = 1'b0;
 		rst = 1'b1;
 		#1 rst = 1'b0;
@@ -45,8 +50,8 @@ module RISC_V_tb;
 		#1 rst = 1'b1;
 		clk = 1'b0;
 
-		@(DUT.PCREG.Q == '0);
-		@(DUT.PCREG.Q == '0);
+		@(DUT.CORE.PCREG.Q == '0);
+		@(DUT.CORE.PCREG.Q == '0);
 		@(posedge clk);
 		@(posedge clk);
 
