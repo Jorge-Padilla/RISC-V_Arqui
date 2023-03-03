@@ -1,6 +1,6 @@
-|RISC_V_Multi_Cycle
-clk => clk.IN3
-rst => RISC_V_Core:CORE.rst
+|RISC_V_Multi_Cycle_1Hz
+clk => clk.IN1
+rst => rst.IN1
 gpio_port_in[0] => gpio_port_in[0].IN1
 gpio_port_in[1] => gpio_port_in[1].IN1
 gpio_port_in[2] => gpio_port_in[2].IN1
@@ -9,53 +9,78 @@ gpio_port_in[4] => gpio_port_in[4].IN1
 gpio_port_in[5] => gpio_port_in[5].IN1
 gpio_port_in[6] => gpio_port_in[6].IN1
 gpio_port_in[7] => gpio_port_in[7].IN1
-gpio_port_out[0] <= GPIO:IO.GPIO_Out
-gpio_port_out[1] <= GPIO:IO.GPIO_Out
-gpio_port_out[2] <= GPIO:IO.GPIO_Out
-gpio_port_out[3] <= GPIO:IO.GPIO_Out
-gpio_port_out[4] <= GPIO:IO.GPIO_Out
-gpio_port_out[5] <= GPIO:IO.GPIO_Out
-gpio_port_out[6] <= GPIO:IO.GPIO_Out
-gpio_port_out[7] <= GPIO:IO.GPIO_Out
-mem_data[0] <= RISC_V_Core:CORE.mem_data[0]
-mem_data[1] <= RISC_V_Core:CORE.mem_data[1]
-mem_data[2] <= RISC_V_Core:CORE.mem_data[2]
-mem_data[3] <= RISC_V_Core:CORE.mem_data[3]
-mem_data[4] <= RISC_V_Core:CORE.mem_data[4]
-mem_data[5] <= RISC_V_Core:CORE.mem_data[5]
-mem_data[6] <= RISC_V_Core:CORE.mem_data[6]
-mem_data[7] <= RISC_V_Core:CORE.mem_data[7]
-mem_data[8] <= RISC_V_Core:CORE.mem_data[8]
-mem_data[9] <= RISC_V_Core:CORE.mem_data[9]
-mem_data[10] <= RISC_V_Core:CORE.mem_data[10]
-mem_data[11] <= RISC_V_Core:CORE.mem_data[11]
-mem_data[12] <= RISC_V_Core:CORE.mem_data[12]
-mem_data[13] <= RISC_V_Core:CORE.mem_data[13]
-mem_data[14] <= RISC_V_Core:CORE.mem_data[14]
-mem_data[15] <= RISC_V_Core:CORE.mem_data[15]
-mem_data[16] <= RISC_V_Core:CORE.mem_data[16]
-mem_data[17] <= RISC_V_Core:CORE.mem_data[17]
-mem_data[18] <= RISC_V_Core:CORE.mem_data[18]
-mem_data[19] <= RISC_V_Core:CORE.mem_data[19]
-mem_data[20] <= RISC_V_Core:CORE.mem_data[20]
-mem_data[21] <= RISC_V_Core:CORE.mem_data[21]
-mem_data[22] <= RISC_V_Core:CORE.mem_data[22]
-mem_data[23] <= RISC_V_Core:CORE.mem_data[23]
-mem_data[24] <= RISC_V_Core:CORE.mem_data[24]
-mem_data[25] <= RISC_V_Core:CORE.mem_data[25]
-mem_data[26] <= RISC_V_Core:CORE.mem_data[26]
-mem_data[27] <= RISC_V_Core:CORE.mem_data[27]
-mem_data[28] <= RISC_V_Core:CORE.mem_data[28]
-mem_data[29] <= RISC_V_Core:CORE.mem_data[29]
-mem_data[30] <= RISC_V_Core:CORE.mem_data[30]
-mem_data[31] <= RISC_V_Core:CORE.mem_data[31]
-CU_State[0] <= RISC_V_Core:CORE.CU_State[0]
-CU_State[1] <= RISC_V_Core:CORE.CU_State[1]
-CU_State[2] <= RISC_V_Core:CORE.CU_State[2]
-CU_State[3] <= RISC_V_Core:CORE.CU_State[3]
+gpio_port_out[0] << GPIO:IO.GPIO_Out
+gpio_port_out[1] << GPIO:IO.GPIO_Out
+gpio_port_out[2] << GPIO:IO.GPIO_Out
+gpio_port_out[3] << GPIO:IO.GPIO_Out
+gpio_port_out[4] << GPIO:IO.GPIO_Out
+gpio_port_out[5] << GPIO:IO.GPIO_Out
+gpio_port_out[6] << GPIO:IO.GPIO_Out
+gpio_port_out[7] << GPIO:IO.GPIO_Out
+clk_out << clk_out.DB_MAX_OUTPUT_PORT_TYPE
+CU_State[0] << RISC_V_Core:CORE.CU_State[0]
+CU_State[1] << RISC_V_Core:CORE.CU_State[1]
+CU_State[2] << RISC_V_Core:CORE.CU_State[2]
+CU_State[3] << RISC_V_Core:CORE.CU_State[3]
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE
+|RISC_V_Multi_Cycle_1Hz|Clk_Div:comb_3
+clk => out_clk~reg0.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+clk => cnt[20].CLK
+clk => cnt[21].CLK
+clk => cnt[22].CLK
+clk => cnt[23].CLK
+clk => cnt[24].CLK
+rst => cnt[0].ACLR
+rst => cnt[1].ACLR
+rst => cnt[2].ACLR
+rst => cnt[3].ACLR
+rst => cnt[4].ACLR
+rst => cnt[5].ACLR
+rst => cnt[6].ACLR
+rst => cnt[7].ACLR
+rst => cnt[8].ACLR
+rst => cnt[9].ACLR
+rst => cnt[10].ACLR
+rst => cnt[11].ACLR
+rst => cnt[12].ACLR
+rst => cnt[13].ACLR
+rst => cnt[14].ACLR
+rst => cnt[15].ACLR
+rst => cnt[16].ACLR
+rst => cnt[17].ACLR
+rst => cnt[18].ACLR
+rst => cnt[19].ACLR
+rst => cnt[20].ACLR
+rst => cnt[21].ACLR
+rst => cnt[22].ACLR
+rst => cnt[23].ACLR
+rst => cnt[24].ACLR
+rst => out_clk~reg0.ENA
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE
 clk => clk.IN8
 rst => rst.IN2
 MemData[0] => MemData[0].IN2
@@ -156,45 +181,13 @@ RWAddress[28] <= Mux_2_1:PCMUX.Q
 RWAddress[29] <= Mux_2_1:PCMUX.Q
 RWAddress[30] <= Mux_2_1:PCMUX.Q
 RWAddress[31] <= Mux_2_1:PCMUX.Q
-mem_data[0] <= WriteData[0].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[1] <= WriteData[1].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[2] <= WriteData[2].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[3] <= WriteData[3].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[4] <= WriteData[4].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[5] <= WriteData[5].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[6] <= WriteData[6].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[7] <= WriteData[7].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[8] <= WriteData[8].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[9] <= WriteData[9].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[10] <= WriteData[10].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[11] <= WriteData[11].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[12] <= WriteData[12].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[13] <= WriteData[13].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[14] <= WriteData[14].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[15] <= WriteData[15].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[16] <= WriteData[16].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[17] <= WriteData[17].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[18] <= WriteData[18].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[19] <= WriteData[19].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[20] <= WriteData[20].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[21] <= WriteData[21].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[22] <= WriteData[22].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[23] <= WriteData[23].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[24] <= WriteData[24].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[25] <= WriteData[25].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[26] <= WriteData[26].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[27] <= WriteData[27].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[28] <= WriteData[28].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[29] <= WriteData[29].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[30] <= WriteData[30].DB_MAX_OUTPUT_PORT_TYPE
-mem_data[31] <= WriteData[31].DB_MAX_OUTPUT_PORT_TYPE
 CU_State[0] <= Control_Unit:CU.State_o[0]
 CU_State[1] <= Control_Unit:CU.State_o[1]
 CU_State[2] <= Control_Unit:CU.State_o[2]
 CU_State[3] <= Control_Unit:CU.State_o[3]
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Control_Unit:CU
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Control_Unit:CU
 clk => clk.IN1
 rst => State~3.DATAIN
 Opcode[0] => Decoder0.IN6
@@ -308,7 +301,7 @@ State_o[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 State_o[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Control_Unit:CU|Counter_Param:uart_dummy_wait_counter
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Control_Unit:CU|Counter_Param:uart_dummy_wait_counter
 clk => cnt[0]~reg0.CLK
 clk => cnt[1]~reg0.CLK
 clk => cnt[2]~reg0.CLK
@@ -369,7 +362,7 @@ cnt[12] <= cnt[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[13] <= cnt[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|PC_Enable:PCE
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|PC_Enable:PCE
 PCWrite => PCEn.IN1
 Branch => PCEn.IN1
 Zero => PCEn.IN0
@@ -377,7 +370,7 @@ XorZero => PCEn.IN1
 PCEn <= PCEn.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_PC:PCREG
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Reg_PC:PCREG
 rst => Q[0]~reg0.ACLR
 rst => Q[1]~reg0.ACLR
 rst => Q[2]~reg0.ACLR
@@ -540,7 +533,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_PC:PCBRAREG
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Reg_PC:PCBRAREG
 rst => Q[0]~reg0.ACLR
 rst => Q[1]~reg0.ACLR
 rst => Q[2]~reg0.ACLR
@@ -703,7 +696,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_2_1:PCMUX
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Mux_2_1:PCMUX
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -834,7 +827,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_Param:INSTRREG
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Reg_Param:INSTRREG
 rst => Q[0]~reg0.ACLR
 rst => Q[1]~reg0.ACLR
 rst => Q[2]~reg0.ACLR
@@ -997,7 +990,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_Param:DATAREG
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Reg_Param:DATAREG
 rst => Q[0]~reg0.ACLR
 rst => Q[1]~reg0.ACLR
 rst => Q[2]~reg0.ACLR
@@ -1160,7 +1153,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_2_1:WD3MUX
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Mux_2_1:WD3MUX
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -1291,7 +1284,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Reg_File:REGFILE
 clk => registers.we_a.CLK
 clk => registers.waddr_a[4].CLK
 clk => registers.waddr_a[3].CLK
@@ -1466,7 +1459,7 @@ rd2[30] <= rd2.DB_MAX_OUTPUT_PORT_TYPE
 rd2[31] <= rd2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Sign_Ext_Unit:SEU
 In_12_I[0] => In_12_I[0].IN1
 In_12_I[1] => In_12_I[1].IN1
 In_12_I[2] => In_12_I[2].IN1
@@ -1580,7 +1573,7 @@ Out[30] <= Mux_2_1:MUX.Q
 Out[31] <= Mux_2_1:MUX.Q
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1645,7 +1638,7 @@ Q[10] <= Mux_2_1:M2.Q
 Q[11] <= Mux_2_1:M2.Q
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M0
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M0
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -1696,7 +1689,7 @@ Q[10] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[11] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M1
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M1
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -1747,7 +1740,7 @@ Q[10] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[11] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M2
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M2
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -1798,7 +1791,7 @@ Q[10] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[11] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX20
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX20
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -1881,7 +1874,7 @@ Q[18] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[19] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Sign_Ext:SE12
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Sign_Ext:SE12
 In[0] => Out[0].DATAIN
 In[1] => Out[1].DATAIN
 In[2] => Out[2].DATAIN
@@ -1948,7 +1941,7 @@ Out[30] <= In[11].DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= In[11].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Sign_Ext:SE20
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Sign_Ext:SE20
 In[0] => Out[0].DATAIN
 In[1] => Out[1].DATAIN
 In[2] => Out[2].DATAIN
@@ -2015,7 +2008,7 @@ Out[30] <= In[19].DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= In[19].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -2146,7 +2139,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Shift_Unit:SU
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Shift_Unit:SU
 In[0] => In_C[12].IN4
 In[1] => In_C[13].IN4
 In[2] => In_C[14].IN4
@@ -2215,7 +2208,7 @@ Out[30] <= Mux_4_1:MUX.Q
 Out[31] <= Mux_4_1:MUX.Q
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -2380,7 +2373,7 @@ Q[30] <= Mux_2_1:M2.Q
 Q[31] <= Mux_2_1:M2.Q
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX|Mux_2_1:M0
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX|Mux_2_1:M0
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -2511,7 +2504,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX|Mux_2_1:M1
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX|Mux_2_1:M1
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -2642,7 +2635,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX|Mux_2_1:M2
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX|Mux_2_1:M2
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -2773,7 +2766,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_Param:AREG
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Reg_Param:AREG
 rst => Q[0]~reg0.ACLR
 rst => Q[1]~reg0.ACLR
 rst => Q[2]~reg0.ACLR
@@ -2936,7 +2929,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_Param:BREG
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Reg_Param:BREG
 rst => Q[0]~reg0.ACLR
 rst => Q[1]~reg0.ACLR
 rst => Q[2]~reg0.ACLR
@@ -3099,7 +3092,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_2_1:JALRMUX
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Mux_2_1:JALRMUX
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -3230,7 +3223,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:AMUX
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Mux_4_1:AMUX
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -3395,7 +3388,7 @@ Q[30] <= Mux_2_1:M2.Q
 Q[31] <= Mux_2_1:M2.Q
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M0
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M0
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -3526,7 +3519,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M1
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M1
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -3657,7 +3650,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M2
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M2
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -3788,7 +3781,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Mux_4_1:BMUX
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -3953,7 +3946,7 @@ Q[30] <= Mux_2_1:M2.Q
 Q[31] <= Mux_2_1:M2.Q
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M0
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M0
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -4084,7 +4077,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M1
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M1
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -4215,7 +4208,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -4346,7 +4339,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|ALU:ALURISCV
 a[0] => Add0.IN32
 a[0] => Add1.IN64
 a[0] => f.IN0
@@ -5247,7 +5240,7 @@ f[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_Param:ALUREG
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Reg_Param:ALUREG
 rst => Q[0]~reg0.ACLR
 rst => Q[1]~reg0.ACLR
 rst => Q[2]~reg0.ACLR
@@ -5410,7 +5403,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_2_1:PCOUTMUX
+|RISC_V_Multi_Cycle_1Hz|RISC_V_Core:CORE|Mux_2_1:PCOUTMUX
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -5541,7 +5534,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|Mem_Map_Controler:MM
+|RISC_V_Multi_Cycle_1Hz|Mem_Map_Controler:MM
 clk => ~NO_FANOUT~
 re => ~NO_FANOUT~
 we => weGPIO.IN1
@@ -6020,7 +6013,7 @@ RD[30] <= Mux_4_1:MUX.Q
 RD[31] <= Mux_4_1:MUX.Q
 
 
-|RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MUX
+|RISC_V_Multi_Cycle_1Hz|Mem_Map_Controler:MM|Mux_4_1:MUX
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -6185,7 +6178,7 @@ Q[30] <= Mux_2_1:M2.Q
 Q[31] <= Mux_2_1:M2.Q
 
 
-|RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MUX|Mux_2_1:M0
+|RISC_V_Multi_Cycle_1Hz|Mem_Map_Controler:MM|Mux_4_1:MUX|Mux_2_1:M0
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -6316,7 +6309,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MUX|Mux_2_1:M1
+|RISC_V_Multi_Cycle_1Hz|Mem_Map_Controler:MM|Mux_4_1:MUX|Mux_2_1:M1
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -6447,7 +6440,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MUX|Mux_2_1:M2
+|RISC_V_Multi_Cycle_1Hz|Mem_Map_Controler:MM|Mux_4_1:MUX|Mux_2_1:M2
 A[0] => Q.DATAA
 A[1] => Q.DATAA
 A[2] => Q.DATAA
@@ -6578,7 +6571,7 @@ Q[30] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_V_Multi_Cycle|ROM_Single_Port:ROM
+|RISC_V_Multi_Cycle_1Hz|ROM_Single_Port:ROM
 A[0] => rom.RADDR
 A[1] => rom.RADDR1
 A[2] => rom.RADDR2
@@ -6623,7 +6616,7 @@ RD[30] <= rom.DATAOUT30
 RD[31] <= rom.DATAOUT31
 
 
-|RISC_V_Multi_Cycle|RAM_Single_Port:RAM
+|RISC_V_Multi_Cycle_1Hz|RAM_Single_Port:RAM
 WD[0] => ram.data_a[0].DATAIN
 WD[0] => ram.DATAIN
 WD[1] => ram.data_a[1].DATAIN
@@ -6798,7 +6791,7 @@ RD[30] <= ram.DATAOUT30
 RD[31] <= ram.DATAOUT31
 
 
-|RISC_V_Multi_Cycle|GPIO:IO
+|RISC_V_Multi_Cycle_1Hz|GPIO:IO
 clk => GPIO_Out[0]~reg0.CLK
 clk => GPIO_Out[1]~reg0.CLK
 clk => GPIO_Out[2]~reg0.CLK

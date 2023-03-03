@@ -15,14 +15,14 @@ module RISC_V_tb;
 	reg [7:0]				gpio_port_in;
 	wire [7:0]				gpio_port_out;
 	//wire                    uart_tx_out;
-    wire [31:0]             mem_data;
+    wire              		clk_out;
 	cu_fsm_state_t          CU_State;
 	
 	//Instancia del DUT
 	RISC_V_Multi_Cycle DUT(
 		.clk(clk),
 		.rst(rst),
-        .mem_data(mem_data),
+        .clk_out(clk_out),
 		.gpio_port_in(gpio_port_in),
 		.gpio_port_out(gpio_port_out),
 		//.uart_tx_out(uart_tx_out),

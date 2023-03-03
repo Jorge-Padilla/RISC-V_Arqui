@@ -14,7 +14,7 @@ module RISC_V_Multi_Cycle (
 	//Outputs
 	output [7:0]    gpio_port_out,
     //Debug Outputs
-    output [31:0]           mem_data,
+    output                  clk_out,
 	output cu_fsm_state_t   CU_State
 );
 
@@ -30,10 +30,10 @@ module RISC_V_Multi_Cycle (
     wire [31:0] ReadROM;
     wire [31:0] ReadRAM;
     wire [31:0] ReadGPIO;
-	wire [31:0] DataGPIO;
-	wire [31:0] AddrROM;
-	wire [31:0] AddrRAM;
-	wire [31:0] DataRAM;
+    wire [31:0] DataGPIO;
+    wire [31:0] AddrROM;
+    wire [31:0] AddrRAM;
+    wire [31:0] DataRAM;
 
 	//RISC-V Core
     RISC_V_Core #(.DATA_WIDTH(32), .ADDR_WIDTH(32)) CORE (
@@ -44,7 +44,6 @@ module RISC_V_Multi_Cycle (
         .MemWrite(MemWrite),
         .WriteData(Data),
         .RWAddress(Adr),
-        .mem_data(mem_data),
         .CU_State(CU_State)
     );
 
@@ -91,6 +90,9 @@ module RISC_V_Multi_Cycle (
         .GPIO_toMem(ReadGPIO),
         .GPIO_Out(gpio_port_out)
     );
+
+    //Debug Output
+    assign clk_out = clk;
 
 
 endmodule

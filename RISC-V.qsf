@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSXFC6D6F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY RISC_V_Multi_Cycle
+set_global_assignment -name TOP_LEVEL_ENTITY RISC_V_Multi_Cycle_1Hz
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:11:19  FEBRUARY 17, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "21.1.1 Lite Edition"
@@ -56,14 +56,13 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name SYSTEMVERILOG_FILE src/RISC_V_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/RISC_V_Multi_Cycle_1Hz.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/RISC_V_Multi_Cycle.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/RISC_V_Core.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/Reg_PC.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/PC_Enable.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/Clk_Div.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/Mem_Map_Controler.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/GPIO.sv
 set_global_assignment -name TEXT_FILE src/RISC_V_program.txt
@@ -88,4 +87,26 @@ set_global_assignment -name SYSTEMVERILOG_FILE src/Mux_4_1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/Mux_2_1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/ALU_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/ALU.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AF14 -to clk
+set_location_assignment PIN_AC22 -to clk_out
+set_location_assignment PIN_AB30 -to gpio_port_in[0]
+set_location_assignment PIN_Y27 -to gpio_port_in[1]
+set_location_assignment PIN_AB28 -to gpio_port_in[2]
+set_location_assignment PIN_AC30 -to gpio_port_in[3]
+set_location_assignment PIN_W25 -to gpio_port_in[4]
+set_location_assignment PIN_V25 -to gpio_port_in[5]
+set_location_assignment PIN_AC28 -to gpio_port_in[6]
+set_location_assignment PIN_AD30 -to gpio_port_in[7]
+set_location_assignment PIN_AJ4 -to rst
+set_location_assignment PIN_AA24 -to gpio_port_out[0]
+set_location_assignment PIN_AB23 -to gpio_port_out[1]
+set_location_assignment PIN_AC23 -to gpio_port_out[2]
+set_location_assignment PIN_AD24 -to gpio_port_out[3]
+set_location_assignment PIN_AG25 -to gpio_port_out[4]
+set_location_assignment PIN_AF25 -to gpio_port_out[5]
+set_location_assignment PIN_AE24 -to gpio_port_out[6]
+set_location_assignment PIN_AF24 -to gpio_port_out[7]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

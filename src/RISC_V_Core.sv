@@ -18,7 +18,6 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     output [DATA_WIDTH-1:0] RWAddress,
 	//output wire             uart_tx_out,
     //Debug Outputs
-    output [DATA_WIDTH-1:0] mem_data,
 	output cu_fsm_state_t   CU_State
 );
 
@@ -272,8 +271,5 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 //		.tx(uart_tx_out),
 //		.tx_fsm_in_STOP_S(tx_fsm_in_STOP_S)
 //	);
-
-    //Debug Output
-    assign mem_data = WriteData;
 	
 endmodule

@@ -4,7 +4,7 @@ add wave -noupdate /RISC_V_tb/clk
 add wave -noupdate /RISC_V_tb/rst
 add wave -noupdate /RISC_V_tb/DUT/gpio_port_in
 add wave -noupdate /RISC_V_tb/DUT/gpio_port_out
-add wave -noupdate /RISC_V_tb/mem_data
+add wave -noupdate /RISC_V_tb/clk_out
 add wave -noupdate /RISC_V_tb/CU_State
 add wave -noupdate /RISC_V_tb/DUT/clk
 add wave -noupdate /RISC_V_tb/DUT/CORE/PC

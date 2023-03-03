@@ -36,131 +36,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "mem_data[0]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[1]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[2]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[3]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[4]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[5]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[6]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[7]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[8]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[9]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[10]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[11]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[12]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[13]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[14]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[15]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[16]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[17]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[18]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[19]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[20]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[21]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[22]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[23]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[24]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[25]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[26]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[27]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[28]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[29]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[30]",
-					"strict" : false
-				},
-				{
-					"name" : "mem_data[31]",
+					"name" : "clk_out",
 					"strict" : false
 				},
 				{
@@ -180,11 +56,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "rst",
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
