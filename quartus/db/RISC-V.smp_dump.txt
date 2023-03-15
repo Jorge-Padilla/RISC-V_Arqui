@@ -1,0 +1,38 @@
+
+State Machine - |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Tx:TX|FSM_UART_Tx:FSM_Tx|tx_state
+Name tx_state.STOP_S tx_state.SHIFT_S tx_state.tx_BITS_S tx_state.START_S tx_state.SEND_S tx_state.INI_S 
+tx_state.INI_S 0 0 0 0 0 0 
+tx_state.SEND_S 0 0 0 0 1 1 
+tx_state.START_S 0 0 0 1 0 1 
+tx_state.tx_BITS_S 0 0 1 0 0 1 
+tx_state.SHIFT_S 0 1 0 0 0 1 
+tx_state.STOP_S 1 0 0 0 0 1 
+
+State Machine - |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Rx:RX|FSM_UART_Rx:FSM|Rx_state
+Name Rx_state.SAVE_DATA_BITS Rx_state.STOP_BIT Rx_state.WAIT_DATA_BIT_END Rx_state.SAMPLE_DATA_BIT Rx_state.DATA_BITS Rx_state.START_BIT Rx_state.INIT 
+Rx_state.INIT 0 0 0 0 0 0 0 
+Rx_state.START_BIT 0 0 0 0 0 1 1 
+Rx_state.DATA_BITS 0 0 0 0 1 0 1 
+Rx_state.SAMPLE_DATA_BIT 0 0 0 1 0 0 1 
+Rx_state.WAIT_DATA_BIT_END 0 0 1 0 0 0 1 
+Rx_state.STOP_BIT 0 1 0 0 0 0 1 
+Rx_state.SAVE_DATA_BITS 1 0 0 0 0 0 1 
+
+State Machine - |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Control_Unit:CU|State
+Name State.STALL State.UART_DUMMY_WAIT State.UART_TX_WAIT State.UART_TX_INIT State.JUMP State.IMMI_WRBACK State.IMMI_EXE State.BRANCH State.REG_WRBACK State.REG_EXE State.MEM_WRITE State.MEM_WRBACK State.MEM_READ State.MEM_ADDR State.DECODE State.FETCH 
+State.FETCH 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+State.DECODE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+State.MEM_ADDR 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+State.MEM_READ 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+State.MEM_WRBACK 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+State.MEM_WRITE 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+State.REG_EXE 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+State.REG_WRBACK 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+State.BRANCH 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+State.IMMI_EXE 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+State.IMMI_WRBACK 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+State.JUMP 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+State.UART_TX_INIT 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+State.UART_TX_WAIT 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.UART_DUMMY_WAIT 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.STALL 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

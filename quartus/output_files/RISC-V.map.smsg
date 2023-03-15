@@ -1,0 +1,7 @@
+Info (10281): Verilog HDL Declaration information at RISC_V_Multi_Cycle.sv(32): object "rx_data" differs only in case from object "Rx_Data" in the same scope File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv Line: 32
+Info (10281): Verilog HDL Declaration information at RISC_V_Core.sv(47): object "JalrMux" differs only in case from object "JALRMUX" in the same scope File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 47
+Info (10281): Verilog HDL Declaration information at RISC_V_Core.sv(61): object "AMux" differs only in case from object "AMUX" in the same scope File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 61
+Info (10281): Verilog HDL Declaration information at UART_Full_Duplex.sv(13): object "rx" differs only in case from object "RX" in the same scope File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex.sv Line: 13
+Info (10281): Verilog HDL Declaration information at UART_Full_Duplex.sv(23): object "tx" differs only in case from object "TX" in the same scope File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex.sv Line: 23
+Info (10281): Verilog HDL Declaration information at Mem_Map_Controler.sv(19): object "Rx_Data" differs only in case from object "rx_data" in the same scope File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map_Controler.sv Line: 19
+Warning (10262): Verilog HDL Event Control warning at GPIO.sv(24): event expression is a constant File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/GPIO.sv Line: 24
