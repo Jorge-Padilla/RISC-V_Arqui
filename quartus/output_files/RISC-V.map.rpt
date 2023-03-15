@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC-V
-Tue Mar 14 18:47:45 2023
+Tue Mar 14 19:54:42 2023
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -145,13 +145,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 14 18:47:45 2023       ;
+; Analysis & Synthesis Status     ; Successful - Tue Mar 14 19:54:42 2023       ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                   ; RISC-V                                      ;
 ; Top-level Entity Name           ; RISC_V_Multi_Cycle                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 33281                                       ;
+; Total registers                 ; 2561                                        ;
 ; Total pins                      ; 32                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,048                                       ;
@@ -260,16 +260,16 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.2%      ;
-;     Processor 5            ;   0.2%      ;
-;     Processor 6            ;   0.2%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -331,16 +331,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 22779     ;
+; Estimate of Logic utilization (ALMs needed) ; 2115      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 13456     ;
-;     -- 7 input functions                    ; 15        ;
-;     -- 6 input functions                    ; 11549     ;
-;     -- 5 input functions                    ; 377       ;
-;     -- 4 input functions                    ; 140       ;
-;     -- <=3 input functions                  ; 1375      ;
+; Combinational ALUT usage for logic          ; 2193      ;
+;     -- 7 input functions                    ; 29        ;
+;     -- 6 input functions                    ; 1269      ;
+;     -- 5 input functions                    ; 343       ;
+;     -- 4 input functions                    ; 126       ;
+;     -- <=3 input functions                  ; 426       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 33281     ;
+; Dedicated logic registers                   ; 2561      ;
 ;                                             ;           ;
 ; I/O pins                                    ; 32        ;
 ; Total MLAB memory bits                      ; 0         ;
@@ -349,9 +349,9 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 2         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 33346     ;
-; Total fan-out                               ; 175640    ;
-; Average fan-out                             ; 3.75      ;
+; Maximum fan-out                             ; 2626      ;
+; Total fan-out                               ; 19776     ;
+; Average fan-out                             ; 4.05      ;
 +---------------------------------------------+-----------+
 
 
@@ -360,26 +360,26 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node                       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                             ; Entity Name               ; Library Name ;
 +--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
-; |RISC_V_Multi_Cycle                              ; 13456 (0)           ; 33281 (0)                 ; 2048              ; 2          ; 32   ; 0            ; |RISC_V_Multi_Cycle                                                                                             ; RISC_V_Multi_Cycle        ; work         ;
+; |RISC_V_Multi_Cycle                              ; 2193 (0)            ; 2561 (0)                  ; 2048              ; 2          ; 32   ; 0            ; |RISC_V_Multi_Cycle                                                                                             ; RISC_V_Multi_Cycle        ; work         ;
 ;    |GPIO:IO|                                     ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|GPIO:IO                                                                                     ; GPIO                      ; work         ;
-;    |Mem_Map_Controler:MM|                        ; 87 (43)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM                                                                        ; Mem_Map_Controler         ; work         ;
-;       |Mux_4_1:MEMMUX|                           ; 43 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MEMMUX                                                         ; Mux_4_1                   ; work         ;
-;          |Mux_2_1:M2|                            ; 43 (43)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MEMMUX|Mux_2_1:M2                                              ; Mux_2_1                   ; work         ;
+;    |Mem_Map_Controler:MM|                        ; 94 (46)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM                                                                        ; Mem_Map_Controler         ; work         ;
+;       |Mux_4_1:MEMMUX|                           ; 47 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MEMMUX                                                         ; Mux_4_1                   ; work         ;
+;          |Mux_2_1:M2|                            ; 47 (47)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MEMMUX|Mux_2_1:M2                                              ; Mux_2_1                   ; work         ;
 ;       |Mux_4_1:RXMUX|                            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:RXMUX                                                          ; Mux_4_1                   ; work         ;
 ;          |Mux_2_1:M2|                            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:RXMUX|Mux_2_1:M2                                               ; Mux_2_1                   ; work         ;
-;    |RAM_Single_Port:RAM|                         ; 12054 (12054)       ; 32768 (32768)             ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RAM_Single_Port:RAM                                                                         ; RAM_Single_Port           ; work         ;
-;    |RISC_V_Core:CORE|                            ; 1191 (0)            ; 404 (0)                   ; 2048              ; 2          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE                                                                            ; RISC_V_Core               ; work         ;
-;       |ALU:ALURISCV|                             ; 660 (660)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV                                                               ; ALU                       ; work         ;
-;       |Control_Unit:CU|                          ; 69 (52)             ; 30 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Control_Unit:CU                                                            ; Control_Unit              ; work         ;
+;    |RAM_Single_Port:RAM|                         ; 838 (838)           ; 2048 (2048)               ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RAM_Single_Port:RAM                                                                         ; RAM_Single_Port           ; work         ;
+;    |RISC_V_Core:CORE|                            ; 1146 (0)            ; 404 (0)                   ; 2048              ; 2          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE                                                                            ; RISC_V_Core               ; work         ;
+;       |ALU:ALURISCV|                             ; 643 (643)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV                                                               ; ALU                       ; work         ;
+;       |Control_Unit:CU|                          ; 70 (53)             ; 30 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Control_Unit:CU                                                            ; Control_Unit              ; work         ;
 ;          |Counter_Param:uart_dummy_wait_counter| ; 17 (17)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Control_Unit:CU|Counter_Param:uart_dummy_wait_counter                      ; Counter_Param             ; work         ;
-;       |Mux_2_1:PCMUX|                            ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_2_1:PCMUX                                                              ; Mux_2_1                   ; work         ;
+;       |Mux_2_1:PCMUX|                            ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_2_1:PCMUX                                                              ; Mux_2_1                   ; work         ;
 ;       |Mux_2_1:PCOUTMUX|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_2_1:PCOUTMUX                                                           ; Mux_2_1                   ; work         ;
-;       |Mux_4_1:AMUX|                             ; 165 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:AMUX                                                               ; Mux_4_1                   ; work         ;
-;          |Mux_2_1:M2|                            ; 165 (165)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M2                                                    ; Mux_2_1                   ; work         ;
-;       |Mux_4_1:BMUX|                             ; 119 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX                                                               ; Mux_4_1                   ; work         ;
-;          |Mux_2_1:M2|                            ; 119 (119)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2                                                    ; Mux_2_1                   ; work         ;
-;       |PC_Enable:PCE|                            ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|PC_Enable:PCE                                                              ; PC_Enable                 ; work         ;
-;       |Reg_File:REGFILE|                         ; 137 (137)           ; 150 (150)                 ; 2048              ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE                                                           ; Reg_File                  ; work         ;
+;       |Mux_4_1:AMUX|                             ; 148 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:AMUX                                                               ; Mux_4_1                   ; work         ;
+;          |Mux_2_1:M2|                            ; 148 (148)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M2                                                    ; Mux_2_1                   ; work         ;
+;       |Mux_4_1:BMUX|                             ; 112 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX                                                               ; Mux_4_1                   ; work         ;
+;          |Mux_2_1:M2|                            ; 112 (112)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2                                                    ; Mux_2_1                   ; work         ;
+;       |PC_Enable:PCE|                            ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|PC_Enable:PCE                                                              ; PC_Enable                 ; work         ;
+;       |Reg_File:REGFILE|                         ; 138 (138)           ; 150 (150)                 ; 2048              ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE                                                           ; Reg_File                  ; work         ;
 ;          |altsyncram:registers_rtl_0|            ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_0                                ; altsyncram                ; work         ;
 ;             |altsyncram_2ho1:auto_generated|     ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_0|altsyncram_2ho1:auto_generated ; altsyncram_2ho1           ; work         ;
 ;          |altsyncram:registers_rtl_1|            ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_1                                ; altsyncram                ; work         ;
@@ -398,7 +398,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |Mux_2_1:MUX|                           ; 23 (23)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX                                              ; Mux_2_1                   ; work         ;
 ;          |Mux_4_1:MUX12|                         ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12                                            ; Mux_4_1                   ; work         ;
 ;             |Mux_2_1:M2|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M2                                 ; Mux_2_1                   ; work         ;
-;    |ROM_Single_Port:ROM|                         ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|ROM_Single_Port:ROM                                                                         ; ROM_Single_Port           ; work         ;
+;    |ROM_Single_Port:ROM|                         ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|ROM_Single_Port:ROM                                                                         ; ROM_Single_Port           ; work         ;
 ;    |UART_Full_Duplex:UART|                       ; 94 (2)              ; 101 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART                                                                       ; UART_Full_Duplex          ; work         ;
 ;       |Reg_Param:RXREG|                          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|Reg_Param:RXREG                                                       ; Reg_Param                 ; work         ;
 ;       |Reg_Param:RXRREG|                         ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|Reg_Param:RXRREG                                                      ; Reg_Param                 ; work         ;
@@ -525,12 +525,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 33281 ;
+; Total registers                              ; 2561  ;
 ; Number of registers using Synchronous Clear  ; 104   ;
 ; Number of registers using Synchronous Load   ; 31    ;
 ; Number of registers using Asynchronous Clear ; 195   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 32927 ;
+; Number of registers using Clock Enable       ; 2207  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -549,19 +549,19 @@ Encoding Type:  One-Hot
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[54]            ; 3       ;
 ; RISC_V_Core:CORE|Reg_PC:PCBRAREG|Q[22]                                  ; 6       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[56]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[58]            ; 2       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[58]            ; 3       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[60]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[62]            ; 3       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[62]            ; 2       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[64]            ; 3       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[66]            ; 3       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[74]            ; 3       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[70]            ; 2       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[68]            ; 3       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[72]            ; 2       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[20]            ; 2       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[20]            ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[22]            ; 3       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[24]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[26]            ; 2       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[26]            ; 3       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[28]            ; 3       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[30]            ; 3       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[32]            ; 3       ;
@@ -574,10 +574,10 @@ Encoding Type:  One-Hot
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[46]            ; 3       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[48]            ; 3       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[50]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[12]            ; 5       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[18]            ; 5       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[16]            ; 5       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[14]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[12]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[18]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[16]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[14]            ; 3       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[14]            ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[16]            ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[18]            ; 1       ;
@@ -1323,7 +1323,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                                    ;
 +----------------+-------+-----------------------------------------+
 ; DATA_WIDTH     ; 32    ; Signed Integer                          ;
-; ADDR_WIDTH     ; 10    ; Signed Integer                          ;
+; ADDR_WIDTH     ; 6     ; Signed Integer                          ;
 +----------------+-------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1334,7 +1334,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                                    ;
 +----------------+-------+-----------------------------------------+
 ; DATA_WIDTH     ; 32    ; Signed Integer                          ;
-; ADDR_WIDTH     ; 10    ; Signed Integer                          ;
+; ADDR_WIDTH     ; 6     ; Signed Integer                          ;
 +----------------+-------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1736,9 +1736,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; ReadGPIO[31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; DataGPIO[31..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; AddrROM[31..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; AddrROM[31..8]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; AddrROM[1..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; AddrRAM[31..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; AddrRAM[31..8]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; AddrRAM[1..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -1886,36 +1886,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 33281                       ;
+; arriav_ff             ; 2561                        ;
 ;     CLR               ; 46                          ;
 ;     CLR SCLR          ; 40                          ;
-;     ENA               ; 32818                       ;
+;     ENA               ; 2098                        ;
 ;     ENA CLR           ; 78                          ;
 ;     ENA CLR SLD       ; 31                          ;
 ;     SCLR              ; 64                          ;
 ;     plain             ; 204                         ;
-; arriav_lcell_comb     ; 13462                       ;
+; arriav_lcell_comb     ; 2199                        ;
 ;     arith             ; 151                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 40                          ;
 ;         2 data inputs ; 15                          ;
 ;         4 data inputs ; 2                           ;
 ;         5 data inputs ; 93                          ;
-;     extend            ; 15                          ;
-;         7 data inputs ; 15                          ;
-;     normal            ; 13296                       ;
+;     extend            ; 29                          ;
+;         7 data inputs ; 29                          ;
+;     normal            ; 2019                        ;
 ;         1 data inputs ; 56                          ;
-;         2 data inputs ; 1108                        ;
-;         3 data inputs ; 161                         ;
-;         4 data inputs ; 138                         ;
-;         5 data inputs ; 284                         ;
-;         6 data inputs ; 11549                       ;
+;         2 data inputs ; 157                         ;
+;         3 data inputs ; 163                         ;
+;         4 data inputs ; 124                         ;
+;         5 data inputs ; 250                         ;
+;         6 data inputs ; 1269                        ;
 ; arriav_mac            ; 2                           ;
 ; boundary_port         ; 32                          ;
 ; stratixv_ram_block    ; 64                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 16.00                       ;
-; Average LUT depth     ; 6.55                        ;
+; Max LUT depth         ; 15.00                       ;
+; Average LUT depth     ; 6.31                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1924,7 +1924,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:39     ;
+; Top            ; 00:00:12     ;
 +----------------+--------------+
 
 
@@ -1934,7 +1934,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Tue Mar 14 18:46:54 2023
+    Info: Processing started: Tue Mar 14 19:54:18 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC-V -c RISC-V
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -2061,12 +2061,12 @@ Info (12128): Elaborating entity "Mux_4_1" for hierarchy "RISC_V_Core:CORE|Shift
 Info (12128): Elaborating entity "ALU" for hierarchy "RISC_V_Core:CORE|ALU:ALURISCV" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 246
 Info (12128): Elaborating entity "Mem_Map_Controler" for hierarchy "Mem_Map_Controler:MM" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv Line: 89
 Info (12128): Elaborating entity "ROM_Single_Port" for hierarchy "ROM_Single_Port:ROM" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv Line: 95
-Warning (10850): Verilog HDL warning at ROM_Single_Port.sv(19): number of words (49) in memory file does not match the number of elements in the address range [0:1023] File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv Line: 19
+Warning (10850): Verilog HDL warning at ROM_Single_Port.sv(19): number of words (49) in memory file does not match the number of elements in the address range [0:63] File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv Line: 19
 Warning (10030): Net "rom.data_a" at ROM_Single_Port.sv(15) has no driver or initial value, using a default initial value '0' File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv Line: 15
 Warning (10030): Net "rom.waddr_a" at ROM_Single_Port.sv(15) has no driver or initial value, using a default initial value '0' File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv Line: 15
 Warning (10030): Net "rom.we_a" at ROM_Single_Port.sv(15) has no driver or initial value, using a default initial value '0' File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv Line: 15
 Info (12128): Elaborating entity "RAM_Single_Port" for hierarchy "RAM_Single_Port:RAM" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv Line: 104
-Warning (10850): Verilog HDL warning at RAM_Single_Port.sv(22): number of words (36) in memory file does not match the number of elements in the address range [0:1023] File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RAM_Single_Port.sv Line: 22
+Warning (10850): Verilog HDL warning at RAM_Single_Port.sv(22): number of words (36) in memory file does not match the number of elements in the address range [0:63] File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RAM_Single_Port.sv Line: 22
 Info (12128): Elaborating entity "GPIO" for hierarchy "GPIO:IO" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv Line: 114
 Info (12128): Elaborating entity "UART_Full_Duplex" for hierarchy "UART_Full_Duplex:UART" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv Line: 133
 Info (12128): Elaborating entity "Reg_Param" for hierarchy "UART_Full_Duplex:UART|Reg_Param:RXREG" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex.sv Line: 43
@@ -2118,9 +2118,9 @@ Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File 
 Warning (276020): Inferred RAM node "RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276007): RAM logic "RAM_Single_Port:RAM|ram" is uninferred due to asynchronous read logic File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RAM_Single_Port.sv Line: 18
-    Info (276007): RAM logic "ROM_Single_Port:ROM|rom" is uninferred due to asynchronous read logic File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv Line: 15
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/Quartus21/projects/RISC-V_Jorge-Padilla/quartus/db/RISC-V.ram0_ROM_Single_Port_97415f34.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/Quartus21/projects/RISC-V_Jorge-Padilla/quartus/db/RISC-V.ram0_RAM_Single_Port_b74c6548.hdl.mif" contains "don't care" values -- overwriting them with 0s
+    Info (276004): RAM logic "ROM_Single_Port:ROM|rom" is uninferred due to inappropriate RAM size File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv Line: 15
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/Quartus21/projects/RISC-V_Jorge-Padilla/quartus/db/RISC-V.ram0_ROM_Single_Port_bfc4a96e.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/Quartus21/projects/RISC-V_Jorge-Padilla/quartus/db/RISC-V.ram0_RAM_Single_Port_65c896f2.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -2189,17 +2189,17 @@ Info (17016): Found the following redundant logic cells in design
 Info (144001): Generated suppressed messages file D:/Quartus21/projects/RISC-V_Jorge-Padilla/quartus/output_files/RISC-V.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 46668 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4685 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 46570 logic cells
+    Info (21061): Implemented 4587 logic cells
     Info (21064): Implemented 64 RAM segments
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 72 warnings
-    Info: Peak virtual memory: 5145 megabytes
-    Info: Processing ended: Tue Mar 14 18:47:45 2023
-    Info: Elapsed time: 00:00:51
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Peak virtual memory: 4935 megabytes
+    Info: Processing ended: Tue Mar 14 19:54:42 2023
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +------------------------------------------+

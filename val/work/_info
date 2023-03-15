@@ -76,6 +76,8 @@ R0
 R0
 R0
 R0
+R0
+R0
 !s11f vlog 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -85,10 +87,10 @@ R0
 cModel Technology
 dD:/Quartus21
 T_opt1
-!s110 1678839801
-VYV=][];RL=dJ4lKF^i8oR3
+!s110 1678845025
+V@cSBV`^kZXi`6YSD^>Xk71
 04 14 4 work RISC_V_UART_tb fast 0
-=1-0068eb78737a-64110ff8-2dd-1374
+=1-0068eb78737a-64112461-1d3-23d0
 !s124 OEM10U89 
 o-quiet -auto_acc_if_foreign -work work +acc
 Z1 tCvgOpt 0
@@ -780,26 +782,26 @@ R2
 R11
 R36
 DXx4 work 26 RISC_V_Multi_Cycle_sv_unit 0 22 EA[^Z2YUMPSKF3^Og7gh02
-R37
+Z60 !s110 1678844959
 R5
 r1
 !s85 0
 !i10b 1
-!s100 <[;2;EL8M4AHjF[jSojPH1
-IDYziV]cidjCien92a?MC90
+!s100 cADKzCiUB9DmA8KJ3<aDX0
+II0eVLg[7?W18iWPEeL;jS3
 !s105 RISC_V_Multi_Cycle_sv_unit
 S1
 R4
-Z60 w1678835352
-Z61 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv
-Z62 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv
-!i122 622
+Z61 w1678844891
+Z62 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv
+Z63 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv
+!i122 633
 L0 10 130
 R6
 31
-R41
-Z63 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv|
-Z64 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv|
+Z64 !s108 1678844959.000000
+Z65 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv|
+Z66 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv|
 !i113 0
 R8
 R1
@@ -808,7 +810,7 @@ XRISC_V_Multi_Cycle_sv_unit
 R2
 R11
 R36
-R37
+R60
 VEA[^Z2YUMPSKF3^Og7gh02
 r1
 !s85 0
@@ -818,16 +820,16 @@ IEA[^Z2YUMPSKF3^Og7gh02
 !i103 1
 S1
 R4
-R60
 R61
 R62
-!i122 622
+R63
+!i122 633
 R18
 R6
 31
-R41
-R63
 R64
+R65
+R66
 !i113 0
 R8
 R1
@@ -873,16 +875,16 @@ Ib9ff^U5KJ^j;9Q16@9]LV2
 !s105 RISC_V_tb_sv_unit
 S1
 R4
-Z65 w1677800064
-Z66 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_tb.sv
-Z67 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_tb.sv
+Z67 w1677800064
+Z68 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_tb.sv
+Z69 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_tb.sv
 !i122 561
 L0 10 53
 R6
 31
 R47
-Z68 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_tb.sv|
-Z69 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_tb.sv|
+Z70 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_tb.sv|
+Z71 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_tb.sv|
 !i113 0
 R8
 R1
@@ -900,16 +902,16 @@ IC_WPcJlk0k:j0[JUgXYkb0
 !i103 1
 S1
 R4
-R65
-R66
 R67
+R68
+R69
 !i122 561
 R44
 R6
 31
 R47
-R68
-R69
+R70
+R71
 !i113 0
 R8
 R1
@@ -919,7 +921,7 @@ R2
 R11
 R36
 DXx4 work 22 RISC_V_UART_tb_sv_unit 0 22 [aAQem:jhNmX>i=^jh^5Q3
-Z70 !s110 1678839791
+Z72 !s110 1678839791
 R5
 r1
 !s85 0
@@ -929,16 +931,16 @@ I77@89Y`H6DNA6nUj<WPeG3
 !s105 RISC_V_UART_tb_sv_unit
 S1
 R4
-Z71 w1678839782
-Z72 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_UART_tb.sv
-Z73 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_UART_tb.sv
+Z73 w1678839782
+Z74 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_UART_tb.sv
+Z75 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_UART_tb.sv
 !i122 632
 L0 12 110
 R6
 31
-Z74 !s108 1678839791.000000
-Z75 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_UART_tb.sv|
-Z76 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_UART_tb.sv|
+Z76 !s108 1678839791.000000
+Z77 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_UART_tb.sv|
+Z78 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_UART_tb.sv|
 !i113 0
 R8
 R1
@@ -947,7 +949,7 @@ XRISC_V_UART_tb_sv_unit
 R2
 R11
 R36
-R70
+R72
 V[aAQem:jhNmX>i=^jh^5Q3
 r1
 !s85 0
@@ -957,16 +959,16 @@ I[aAQem:jhNmX>i=^jh^5Q3
 !i103 1
 S1
 R4
-R71
-R72
 R73
+R74
+R75
 !i122 632
 R44
 R6
 31
-R74
-R75
 R76
+R77
+R78
 !i113 0
 R8
 R1
@@ -983,13 +985,13 @@ w1678837566
 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv
 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv
 !i122 627
-Z77 L0 7 19
+Z79 L0 7 19
 R5
 R6
 r1
 !s85 0
 31
-Z78 !s108 1678837597.000000
+Z80 !s108 1678837597.000000
 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv|
 !i113 0
@@ -1005,10 +1007,10 @@ ILCYn9RTU^AV7NI__mMeFR3
 S1
 R4
 w1676670431
-Z79 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Unit.sv
-Z80 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Unit.sv
+Z81 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Unit.sv
+Z82 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Unit.sv
 !i122 31
-Z81 L0 7 11
+Z83 L0 7 11
 R5
 R6
 r1
@@ -1016,7 +1018,7 @@ r1
 31
 !s108 1676670522.000000
 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Unit.sv|
-Z82 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Unit.sv|
+Z84 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Unit.sv|
 !i113 0
 R8
 R1
@@ -1057,7 +1059,7 @@ w1678659160
 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Register_R_Param.sv
 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Register_R_Param.sv
 !i122 575
-R77
+R79
 R5
 R6
 r1
@@ -1079,8 +1081,8 @@ ImJ9=]24SOWXE8R_m4mUc^2
 S1
 R4
 w1676672223
-R79
-R80
+R81
+R82
 !i122 563
 L0 9 30
 R5
@@ -1090,7 +1092,7 @@ r1
 31
 R47
 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shifts.sv|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Unit.sv|
-R82
+R84
 !i113 0
 R8
 R1
@@ -1107,7 +1109,7 @@ w1676672520
 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Sign_Ext.sv
 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Sign_Ext.sv
 !i122 564
-R81
+R83
 R5
 R6
 r1
@@ -1159,16 +1161,16 @@ InZfI4fjmT?gL0>THZT:0I1
 !s105 UART_Full_Duplex_sv_unit
 S1
 R4
-Z83 w1678835315
-Z84 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex.sv
-Z85 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex.sv
+Z85 w1678835315
+Z86 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex.sv
+Z87 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex.sv
 !i122 624
-Z86 L0 9 86
+Z88 L0 9 86
 R6
 31
 R41
-Z87 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex.sv|
-Z88 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex.sv|
+Z89 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex.sv|
+Z90 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex.sv|
 !i113 0
 R8
 R1
@@ -1186,16 +1188,16 @@ IL`OTPKQ;DTM47;`185a?i3
 !i103 1
 S1
 R4
-R83
-R84
 R85
+R86
+R87
 !i122 624
 R18
 R6
 31
 R41
-R87
-R88
+R89
+R90
 !i113 0
 R8
 R1
@@ -1204,7 +1206,7 @@ vUART_Full_Duplex_tb
 R2
 R36
 DXx4 work 27 UART_Full_Duplex_tb_sv_unit 0 22 cA;TmEXYizC?fP^e1bMzU0
-Z89 !s110 1678837598
+Z91 !s110 1678837598
 R5
 r1
 !s85 0
@@ -1214,16 +1216,16 @@ IjgPHgS[Q6nTdX0G<NgoT03
 !s105 UART_Full_Duplex_tb_sv_unit
 S1
 R4
-Z90 w1678836270
-Z91 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex_tb.sv
-Z92 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex_tb.sv
+Z92 w1678836270
+Z93 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex_tb.sv
+Z94 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex_tb.sv
 !i122 628
 L0 11 87
 R6
 31
-R78
-Z93 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex_tb.sv|
-Z94 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex_tb.sv|
+R80
+Z95 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex_tb.sv|
+Z96 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex_tb.sv|
 !i113 0
 R8
 R1
@@ -1231,7 +1233,7 @@ n@u@a@r@t_@full_@duplex_tb
 XUART_Full_Duplex_tb_sv_unit
 R2
 R36
-R89
+R91
 VcA;TmEXYizC?fP^e1bMzU0
 r1
 !s85 0
@@ -1241,16 +1243,16 @@ IcA;TmEXYizC?fP^e1bMzU0
 !i103 1
 S1
 R4
-R90
-R91
 R92
+R93
+R94
 !i122 628
 R44
 R6
 31
-R78
-R93
-R94
+R80
+R95
+R96
 !i113 0
 R8
 R1
@@ -1284,7 +1286,7 @@ vUART_Rx
 R2
 R21
 DXx4 work 15 UART_Rx_sv_unit 0 22 @XaEiOggjP?d`8UXH^`f_2
-Z95 !s110 1678666285
+Z97 !s110 1678666285
 R5
 r1
 !s85 0
@@ -1294,16 +1296,16 @@ II^]F^HL2YlP_4K3R4jQzX1
 !s105 UART_Rx_sv_unit
 S1
 R4
-Z96 w1678666204
-Z97 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Rx.sv
-Z98 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Rx.sv
+Z98 w1678666204
+Z99 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Rx.sv
+Z100 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Rx.sv
 !i122 594
 L0 9 90
 R6
 31
-Z99 !s108 1678666285.000000
-Z100 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Rx.sv|
-Z101 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Rx.sv|
+Z101 !s108 1678666285.000000
+Z102 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Rx.sv|
+Z103 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Rx.sv|
 !i113 0
 R8
 R1
@@ -1311,7 +1313,7 @@ n@u@a@r@t_@rx
 XUART_Rx_sv_unit
 R2
 R21
-R95
+R97
 V@XaEiOggjP?d`8UXH^`f_2
 r1
 !s85 0
@@ -1321,16 +1323,16 @@ I@XaEiOggjP?d`8UXH^`f_2
 !i103 1
 S1
 R4
-R96
-R97
 R98
+R99
+R100
 !i122 594
 R18
 R6
 31
-R99
-R100
 R101
+R102
+R103
 !i113 0
 R8
 R1
@@ -1339,7 +1341,7 @@ vUART_Tx
 R2
 R21
 DXx4 work 15 UART_Tx_sv_unit 0 22 N?Y^ZE`M4aRdMd]A5RNAF1
-Z102 !s110 1678668163
+Z104 !s110 1678668163
 R5
 r1
 !s85 0
@@ -1349,16 +1351,16 @@ IWVazc9TE]DBQ_LgICYIOl1
 !s105 UART_Tx_sv_unit
 S1
 R4
-Z103 w1678668161
-Z104 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Tx.sv
-Z105 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Tx.sv
+Z105 w1678668161
+Z106 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Tx.sv
+Z107 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Tx.sv
 !i122 597
 L0 9 83
 R6
 31
-Z106 !s108 1678668163.000000
-Z107 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Tx.sv|
-Z108 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Tx.sv|
+Z108 !s108 1678668163.000000
+Z109 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Tx.sv|
+Z110 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Tx.sv|
 !i113 0
 R8
 R1
@@ -1366,7 +1368,7 @@ n@u@a@r@t_@tx
 XUART_Tx_sv_unit
 R2
 R21
-R102
+R104
 VN?Y^ZE`M4aRdMd]A5RNAF1
 r1
 !s85 0
@@ -1376,16 +1378,16 @@ IN?Y^ZE`M4aRdMd]A5RNAF1
 !i103 1
 S1
 R4
-R103
-R104
 R105
+R106
+R107
 !i122 597
 R18
 R6
 31
-R106
-R107
 R108
+R109
+R110
 !i113 0
 R8
 R1
@@ -1394,7 +1396,7 @@ vUART_Word_FSM
 R2
 R36
 DXx4 work 21 UART_Word_FSM_sv_unit 0 22 B_YB8c65>:f8HaenD?<7z1
-Z109 !s110 1678680204
+Z111 !s110 1678680204
 R5
 r1
 !s85 0
@@ -1404,16 +1406,16 @@ IL6i6^9MF0N`7S3?R1m^<I0
 !s105 UART_Word_FSM_sv_unit
 S1
 R4
-Z110 w1678679260
-Z111 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Word_FSM.sv
-Z112 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Word_FSM.sv
+Z112 w1678679260
+Z113 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Word_FSM.sv
+Z114 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Word_FSM.sv
 !i122 613
-R86
+R88
 R6
 31
-Z113 !s108 1678680204.000000
-Z114 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Word_FSM.sv|
-Z115 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Word_FSM.sv|
+Z115 !s108 1678680204.000000
+Z116 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Word_FSM.sv|
+Z117 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Word_FSM.sv|
 !i113 0
 R8
 R1
@@ -1421,7 +1423,7 @@ n@u@a@r@t_@word_@f@s@m
 XUART_Word_FSM_sv_unit
 R2
 R36
-R109
+R111
 VB_YB8c65>:f8HaenD?<7z1
 r1
 !s85 0
@@ -1431,16 +1433,16 @@ IB_YB8c65>:f8HaenD?<7z1
 !i103 1
 S1
 R4
-R110
-R111
 R112
+R113
+R114
 !i122 613
 R18
 R6
 31
-R113
-R114
 R115
+R116
+R117
 !i113 0
 R8
 R1
