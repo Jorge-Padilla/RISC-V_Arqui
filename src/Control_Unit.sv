@@ -16,7 +16,6 @@ module Control_Unit(
 	input[6:0]      Opcode,
 	input[6:0]      Funct7,
 	input[2:0]      Funct3,
-	input           tx_fsm_in_STOP_S,
 	//Outputs
 	output reg[1:0] ALUSrcA,
 	output reg[1:0] ALUSrcB,
@@ -34,7 +33,6 @@ module Control_Unit(
 	output reg      MemtoReg,
 	output reg		JalrMux,
 	output reg[4:0] ALUControl,
-	output wire     uart_tx_send,
 	//Debug Output
 	output cu_fsm_state_t State_o
 );
@@ -43,21 +41,6 @@ module Control_Unit(
     cu_fsm_state_t State;
 
     assign State_o = State;
-
-    //TODO: Do UART logic cleaner
-	assign uart_tx_send = ((State === UART_TX_WAIT)) ? 1'b1 : 1'b0;
-
-	wire uart_dummy_wait_done, uart_dummy_wait_rst;
-	assign uart_dummy_wait_rst = (State === UART_DUMMY_WAIT) ? 1'b0 : 1'b1;
-
-	Counter_Param #(
-		.MAX_COUNT(10000)
-	) uart_dummy_wait_counter (
-		.clk(clk),
-		.en(1'b1),
-		.rst(uart_dummy_wait_rst),
-		.max_cnt_hit(uart_dummy_wait_done)
-	);
 	
 	//Next state Block
 	always @(posedge clk, negedge rst) begin
@@ -78,7 +61,6 @@ module Control_Unit(
 					`OPCODE_JALR	:	State <= JUMP;			//I-Type jalr
 					`OPCODE_LUI		:	State <= IMMI_EXE;		//U-Type lui
 					`OPCODE_AUIPC	:	State <= IMMI_EXE;		//U-Type auipc
-					`OPCODE_UART	:	State <= UART_TX_INIT;	//UART TX
 					`OPCODE_STALL	:	State <= STALL;			//STALL
 					default			:	State <= FETCH;			//INVALID
 				endcase
@@ -106,12 +88,6 @@ module Control_Unit(
 				State <= FETCH;
 			JUMP:
 				State <= FETCH;
-			UART_TX_INIT:
-				State <= UART_DUMMY_WAIT;
-			UART_DUMMY_WAIT:
-				State <= (uart_dummy_wait_done === 1'b1) ? UART_TX_WAIT : UART_DUMMY_WAIT;
-			UART_TX_WAIT:
-				State <= (tx_fsm_in_STOP_S === 1'b1) ? FETCH : UART_TX_WAIT;
 			STALL:
 				State <= STALL;
 			default:
@@ -418,24 +394,6 @@ module Control_Unit(
 				ALUSrcB		= 2'b00;
 				MemtoReg	= 1'b0;
 				PCSrc		= 1'b1;		//Previous ALU Output is PC
-				ALUControl	= 5'b00000;
-			end
-			UART_TX_INIT: begin
-				MemWrite	= 1'b0;
-				MemRead		= 1'b0;
-				IRWrite		= 1'b0;
-				RegWrite	= 1'b0;
-				PCWrite		= 1'b0;
-				IorD		= 1'b0;
-				Branch		= 1'b0;
-				XorZero		= 1'b0;
-				SignExt		= 3'b000;
-				ShiftAmnt	= 2'b00;
-				JalrMux		= 1'b0;
-				ALUSrcA		= 2'b00;
-				ALUSrcB		= 2'b00;
-				MemtoReg	= 1'b0;
-				PCSrc		= 1'b0;
 				ALUControl	= 5'b00000;
 			end
 			default: begin

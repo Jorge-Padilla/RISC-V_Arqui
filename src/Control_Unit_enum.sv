@@ -19,9 +19,6 @@ typedef enum logic [3:0] {
 	IMMI_EXE,
 	IMMI_WRBACK,
 	JUMP,
-	UART_TX_INIT,
-	UART_TX_WAIT,
-	UART_DUMMY_WAIT,
 	STALL
 } cu_fsm_state_t;
 

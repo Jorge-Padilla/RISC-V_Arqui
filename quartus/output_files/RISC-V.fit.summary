@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Mar 14 19:59:38 2023
+Fitter Status : Successful - Tue Mar 14 20:25:06 2023
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : RISC-V
 Top-level Entity Name : RISC_V_Multi_Cycle
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 1,874 / 41,910 ( 4 % )
-Total registers : 2657
+Logic utilization (in ALMs) : 1,867 / 41,910 ( 4 % )
+Total registers : 2649
 Total pins : 32 / 499 ( 6 % )
 Total virtual pins : 0
 Total block memory bits : 2,048 / 5,662,720 ( < 1 % )

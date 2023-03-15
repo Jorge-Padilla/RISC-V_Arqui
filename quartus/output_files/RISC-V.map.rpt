@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC-V
-Tue Mar 14 19:54:42 2023
+Tue Mar 14 20:19:38 2023
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -27,98 +27,95 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
  19. Source assignments for RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_0|altsyncram_2ho1:auto_generated
  20. Source assignments for RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_1|altsyncram_2ho1:auto_generated
  21. Parameter Settings for User Entity Instance: RISC_V_Core:CORE
- 22. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Control_Unit:CU|Counter_Param:uart_dummy_wait_counter
- 23. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_PC:PCREG
- 24. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_PC:PCBRAREG
- 25. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_2_1:PCMUX
- 26. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_Param:INSTRREG
- 27. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_Param:DATAREG
- 28. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_2_1:WD3MUX
- 29. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_File:REGFILE
- 30. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU
- 31. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12
- 32. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M0
- 33. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M1
- 34. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M2
- 35. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX20
- 36. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Sign_Ext:SE12
- 37. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Sign_Ext:SE20
- 38. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX
- 39. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Shift_Unit:SU
- 40. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX
- 41. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX|Mux_2_1:M0
- 42. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX|Mux_2_1:M1
- 43. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX|Mux_2_1:M2
- 44. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_Param:AREG
- 45. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_Param:BREG
- 46. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_2_1:JALRMUX
- 47. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:AMUX
- 48. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M0
- 49. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M1
- 50. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M2
- 51. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:BMUX
- 52. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M0
- 53. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M1
- 54. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2
- 55. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_Param:ALUREG
- 56. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_2_1:PCOUTMUX
- 57. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM
- 58. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:RXMUX
- 59. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:RXMUX|Mux_2_1:M0
- 60. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:RXMUX|Mux_2_1:M1
- 61. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:RXMUX|Mux_2_1:M2
- 62. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:MEMMUX
- 63. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:MEMMUX|Mux_2_1:M0
- 64. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:MEMMUX|Mux_2_1:M1
- 65. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:MEMMUX|Mux_2_1:M2
- 66. Parameter Settings for User Entity Instance: ROM_Single_Port:ROM
- 67. Parameter Settings for User Entity Instance: RAM_Single_Port:RAM
- 68. Parameter Settings for User Entity Instance: GPIO:IO
- 69. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|Reg_Param:RXREG
- 70. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|Reg_Param:TXREG
- 71. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|Reg_Param:RXRREG
- 72. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|Reg_Param:TXSREG
- 73. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Rx:RX|Shift_Register_R_Param:SHIFT_REG
- 74. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Rx:RX|Reg_Param:RX_REG
- 75. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Rx:RX|Reg_Param:FF_PAR
- 76. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Rx:RX|Bit_Rate_Pulse:BR_PULSE
- 77. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Rx:RX|Counter_Param:COUNT_BITS
- 78. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Tx:TX|Reg_Param:TX_REG
- 79. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Tx:TX|Shift_Register_PISO_Param:PISO
- 80. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Tx:TX|Bit_Rate_Pulse:BR_PULSE
- 81. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Tx:TX|Counter_Param:COUNT_BITS
- 82. Parameter Settings for Inferred Entity Instance: RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_0
- 83. Parameter Settings for Inferred Entity Instance: RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_1
- 84. altsyncram Parameter Settings by Entity Instance
- 85. Port Connectivity Checks: "UART_Full_Duplex:UART|UART_Tx:TX|Counter_Param:COUNT_BITS"
- 86. Port Connectivity Checks: "UART_Full_Duplex:UART|UART_Tx:TX|Bit_Rate_Pulse:BR_PULSE"
- 87. Port Connectivity Checks: "UART_Full_Duplex:UART|UART_Tx:TX|Shift_Register_PISO_Param:PISO"
- 88. Port Connectivity Checks: "UART_Full_Duplex:UART|UART_Rx:RX|Counter_Param:COUNT_BITS"
- 89. Port Connectivity Checks: "UART_Full_Duplex:UART|UART_Rx:RX|Bit_Rate_Pulse:BR_PULSE"
- 90. Port Connectivity Checks: "UART_Full_Duplex:UART|UART_Rx:RX|FSM_UART_Rx:FSM"
- 91. Port Connectivity Checks: "UART_Full_Duplex:UART|Reg_Param:RXRREG"
- 92. Port Connectivity Checks: "UART_Full_Duplex:UART|Reg_Param:RXREG"
- 93. Port Connectivity Checks: "GPIO:IO"
- 94. Port Connectivity Checks: "Mem_Map_Controler:MM|Mux_4_1:RXMUX"
- 95. Port Connectivity Checks: "Mem_Map_Controler:MM"
- 96. Port Connectivity Checks: "RISC_V_Core:CORE|Reg_Param:ALUREG"
- 97. Port Connectivity Checks: "RISC_V_Core:CORE|Mux_4_1:BMUX"
- 98. Port Connectivity Checks: "RISC_V_Core:CORE|Mux_4_1:AMUX"
- 99. Port Connectivity Checks: "RISC_V_Core:CORE|Reg_Param:BREG"
-100. Port Connectivity Checks: "RISC_V_Core:CORE|Reg_Param:AREG"
-101. Port Connectivity Checks: "RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX"
-102. Port Connectivity Checks: "RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Sign_Ext:SE20"
-103. Port Connectivity Checks: "RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Sign_Ext:SE12"
-104. Port Connectivity Checks: "RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX20"
-105. Port Connectivity Checks: "RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12"
-106. Port Connectivity Checks: "RISC_V_Core:CORE|Reg_Param:DATAREG"
-107. Port Connectivity Checks: "RISC_V_Core:CORE|Reg_Param:INSTRREG"
-108. Port Connectivity Checks: "RISC_V_Core:CORE|Control_Unit:CU|Counter_Param:uart_dummy_wait_counter"
-109. Port Connectivity Checks: "RISC_V_Core:CORE|Control_Unit:CU"
-110. Post-Synthesis Netlist Statistics for Top Partition
-111. Elapsed Time Per Partition
-112. Analysis & Synthesis Messages
-113. Analysis & Synthesis Suppressed Messages
+ 22. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_PC:PCREG
+ 23. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_PC:PCBRAREG
+ 24. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_2_1:PCMUX
+ 25. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_Param:INSTRREG
+ 26. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_Param:DATAREG
+ 27. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_2_1:WD3MUX
+ 28. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_File:REGFILE
+ 29. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU
+ 30. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12
+ 31. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M0
+ 32. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M1
+ 33. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M2
+ 34. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX20
+ 35. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Sign_Ext:SE12
+ 36. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Sign_Ext:SE20
+ 37. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX
+ 38. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Shift_Unit:SU
+ 39. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX
+ 40. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX|Mux_2_1:M0
+ 41. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX|Mux_2_1:M1
+ 42. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX|Mux_2_1:M2
+ 43. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_Param:AREG
+ 44. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_Param:BREG
+ 45. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_2_1:JALRMUX
+ 46. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:AMUX
+ 47. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M0
+ 48. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M1
+ 49. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M2
+ 50. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:BMUX
+ 51. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M0
+ 52. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M1
+ 53. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2
+ 54. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Reg_Param:ALUREG
+ 55. Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Mux_2_1:PCOUTMUX
+ 56. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM
+ 57. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:RXMUX
+ 58. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:RXMUX|Mux_2_1:M0
+ 59. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:RXMUX|Mux_2_1:M1
+ 60. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:RXMUX|Mux_2_1:M2
+ 61. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:MEMMUX
+ 62. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:MEMMUX|Mux_2_1:M0
+ 63. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:MEMMUX|Mux_2_1:M1
+ 64. Parameter Settings for User Entity Instance: Mem_Map_Controler:MM|Mux_4_1:MEMMUX|Mux_2_1:M2
+ 65. Parameter Settings for User Entity Instance: ROM_Single_Port:ROM
+ 66. Parameter Settings for User Entity Instance: RAM_Single_Port:RAM
+ 67. Parameter Settings for User Entity Instance: GPIO:IO
+ 68. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|Reg_Param:RXREG
+ 69. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|Reg_Param:TXREG
+ 70. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|Reg_Param:RXRREG
+ 71. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|Reg_Param:TXSREG
+ 72. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Rx:RX|Shift_Register_R_Param:SHIFT_REG
+ 73. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Rx:RX|Reg_Param:RX_REG
+ 74. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Rx:RX|Reg_Param:FF_PAR
+ 75. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Rx:RX|Bit_Rate_Pulse:BR_PULSE
+ 76. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Rx:RX|Counter_Param:COUNT_BITS
+ 77. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Tx:TX|Reg_Param:TX_REG
+ 78. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Tx:TX|Shift_Register_PISO_Param:PISO
+ 79. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Tx:TX|Bit_Rate_Pulse:BR_PULSE
+ 80. Parameter Settings for User Entity Instance: UART_Full_Duplex:UART|UART_Tx:TX|Counter_Param:COUNT_BITS
+ 81. Parameter Settings for Inferred Entity Instance: RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_0
+ 82. Parameter Settings for Inferred Entity Instance: RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_1
+ 83. altsyncram Parameter Settings by Entity Instance
+ 84. Port Connectivity Checks: "UART_Full_Duplex:UART|UART_Tx:TX|Counter_Param:COUNT_BITS"
+ 85. Port Connectivity Checks: "UART_Full_Duplex:UART|UART_Tx:TX|Bit_Rate_Pulse:BR_PULSE"
+ 86. Port Connectivity Checks: "UART_Full_Duplex:UART|UART_Tx:TX|Shift_Register_PISO_Param:PISO"
+ 87. Port Connectivity Checks: "UART_Full_Duplex:UART|UART_Rx:RX|Counter_Param:COUNT_BITS"
+ 88. Port Connectivity Checks: "UART_Full_Duplex:UART|UART_Rx:RX|Bit_Rate_Pulse:BR_PULSE"
+ 89. Port Connectivity Checks: "UART_Full_Duplex:UART|UART_Rx:RX|FSM_UART_Rx:FSM"
+ 90. Port Connectivity Checks: "UART_Full_Duplex:UART|Reg_Param:RXRREG"
+ 91. Port Connectivity Checks: "UART_Full_Duplex:UART|Reg_Param:RXREG"
+ 92. Port Connectivity Checks: "GPIO:IO"
+ 93. Port Connectivity Checks: "Mem_Map_Controler:MM|Mux_4_1:RXMUX"
+ 94. Port Connectivity Checks: "Mem_Map_Controler:MM"
+ 95. Port Connectivity Checks: "RISC_V_Core:CORE|Reg_Param:ALUREG"
+ 96. Port Connectivity Checks: "RISC_V_Core:CORE|Mux_4_1:BMUX"
+ 97. Port Connectivity Checks: "RISC_V_Core:CORE|Mux_4_1:AMUX"
+ 98. Port Connectivity Checks: "RISC_V_Core:CORE|Reg_Param:BREG"
+ 99. Port Connectivity Checks: "RISC_V_Core:CORE|Reg_Param:AREG"
+100. Port Connectivity Checks: "RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX"
+101. Port Connectivity Checks: "RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Sign_Ext:SE20"
+102. Port Connectivity Checks: "RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Sign_Ext:SE12"
+103. Port Connectivity Checks: "RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX20"
+104. Port Connectivity Checks: "RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12"
+105. Port Connectivity Checks: "RISC_V_Core:CORE|Reg_Param:DATAREG"
+106. Port Connectivity Checks: "RISC_V_Core:CORE|Reg_Param:INSTRREG"
+107. Post-Synthesis Netlist Statistics for Top Partition
+108. Elapsed Time Per Partition
+109. Analysis & Synthesis Messages
+110. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -145,13 +142,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 14 19:54:42 2023       ;
+; Analysis & Synthesis Status     ; Successful - Tue Mar 14 20:19:38 2023       ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                   ; RISC-V                                      ;
 ; Top-level Entity Name           ; RISC_V_Multi_Cycle                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2561                                        ;
+; Total registers                 ; 2544                                        ;
 ; Total pins                      ; 32                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,048                                       ;
@@ -265,11 +262,11 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.1%      ;
-;     Processor 4            ;   0.1%      ;
-;     Processor 5            ;   0.1%      ;
-;     Processor 6            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -331,16 +328,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 2115      ;
+; Estimate of Logic utilization (ALMs needed) ; 2136      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 2193      ;
-;     -- 7 input functions                    ; 29        ;
-;     -- 6 input functions                    ; 1269      ;
-;     -- 5 input functions                    ; 343       ;
-;     -- 4 input functions                    ; 126       ;
-;     -- <=3 input functions                  ; 426       ;
+; Combinational ALUT usage for logic          ; 2244      ;
+;     -- 7 input functions                    ; 23        ;
+;     -- 6 input functions                    ; 1294      ;
+;     -- 5 input functions                    ; 386       ;
+;     -- 4 input functions                    ; 128       ;
+;     -- <=3 input functions                  ; 413       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 2561      ;
+; Dedicated logic registers                   ; 2544      ;
 ;                                             ;           ;
 ; I/O pins                                    ; 32        ;
 ; Total MLAB memory bits                      ; 0         ;
@@ -349,75 +346,74 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 2         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 2626      ;
-; Total fan-out                               ; 19776     ;
-; Average fan-out                             ; 4.05      ;
+; Maximum fan-out                             ; 2609      ;
+; Total fan-out                               ; 20015     ;
+; Average fan-out                             ; 4.07      ;
 +---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                    ;
-+--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
-; Compilation Hierarchy Node                       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                             ; Entity Name               ; Library Name ;
-+--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
-; |RISC_V_Multi_Cycle                              ; 2193 (0)            ; 2561 (0)                  ; 2048              ; 2          ; 32   ; 0            ; |RISC_V_Multi_Cycle                                                                                             ; RISC_V_Multi_Cycle        ; work         ;
-;    |GPIO:IO|                                     ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|GPIO:IO                                                                                     ; GPIO                      ; work         ;
-;    |Mem_Map_Controler:MM|                        ; 94 (46)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM                                                                        ; Mem_Map_Controler         ; work         ;
-;       |Mux_4_1:MEMMUX|                           ; 47 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MEMMUX                                                         ; Mux_4_1                   ; work         ;
-;          |Mux_2_1:M2|                            ; 47 (47)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MEMMUX|Mux_2_1:M2                                              ; Mux_2_1                   ; work         ;
-;       |Mux_4_1:RXMUX|                            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:RXMUX                                                          ; Mux_4_1                   ; work         ;
-;          |Mux_2_1:M2|                            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:RXMUX|Mux_2_1:M2                                               ; Mux_2_1                   ; work         ;
-;    |RAM_Single_Port:RAM|                         ; 838 (838)           ; 2048 (2048)               ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RAM_Single_Port:RAM                                                                         ; RAM_Single_Port           ; work         ;
-;    |RISC_V_Core:CORE|                            ; 1146 (0)            ; 404 (0)                   ; 2048              ; 2          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE                                                                            ; RISC_V_Core               ; work         ;
-;       |ALU:ALURISCV|                             ; 643 (643)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV                                                               ; ALU                       ; work         ;
-;       |Control_Unit:CU|                          ; 70 (53)             ; 30 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Control_Unit:CU                                                            ; Control_Unit              ; work         ;
-;          |Counter_Param:uart_dummy_wait_counter| ; 17 (17)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Control_Unit:CU|Counter_Param:uart_dummy_wait_counter                      ; Counter_Param             ; work         ;
-;       |Mux_2_1:PCMUX|                            ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_2_1:PCMUX                                                              ; Mux_2_1                   ; work         ;
-;       |Mux_2_1:PCOUTMUX|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_2_1:PCOUTMUX                                                           ; Mux_2_1                   ; work         ;
-;       |Mux_4_1:AMUX|                             ; 148 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:AMUX                                                               ; Mux_4_1                   ; work         ;
-;          |Mux_2_1:M2|                            ; 148 (148)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M2                                                    ; Mux_2_1                   ; work         ;
-;       |Mux_4_1:BMUX|                             ; 112 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX                                                               ; Mux_4_1                   ; work         ;
-;          |Mux_2_1:M2|                            ; 112 (112)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2                                                    ; Mux_2_1                   ; work         ;
-;       |PC_Enable:PCE|                            ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|PC_Enable:PCE                                                              ; PC_Enable                 ; work         ;
-;       |Reg_File:REGFILE|                         ; 138 (138)           ; 150 (150)                 ; 2048              ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE                                                           ; Reg_File                  ; work         ;
-;          |altsyncram:registers_rtl_0|            ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_0                                ; altsyncram                ; work         ;
-;             |altsyncram_2ho1:auto_generated|     ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_0|altsyncram_2ho1:auto_generated ; altsyncram_2ho1           ; work         ;
-;          |altsyncram:registers_rtl_1|            ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_1                                ; altsyncram                ; work         ;
-;             |altsyncram_2ho1:auto_generated|     ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_1|altsyncram_2ho1:auto_generated ; altsyncram_2ho1           ; work         ;
-;       |Reg_PC:PCBRAREG|                          ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_PC:PCBRAREG                                                            ; Reg_PC                    ; work         ;
-;       |Reg_PC:PCREG|                             ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_PC:PCREG                                                               ; Reg_PC                    ; work         ;
-;       |Reg_Param:ALUREG|                         ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_Param:ALUREG                                                           ; Reg_Param                 ; work         ;
-;       |Reg_Param:AREG|                           ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_Param:AREG                                                             ; Reg_Param                 ; work         ;
-;       |Reg_Param:BREG|                           ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_Param:BREG                                                             ; Reg_Param                 ; work         ;
-;       |Reg_Param:DATAREG|                        ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_Param:DATAREG                                                          ; Reg_Param                 ; work         ;
-;       |Reg_Param:INSTRREG|                       ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_Param:INSTRREG                                                         ; Reg_Param                 ; work         ;
-;       |Shift_Unit:SU|                            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Shift_Unit:SU                                                              ; Shift_Unit                ; work         ;
-;          |Mux_4_1:MUX|                           ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX                                                  ; Mux_4_1                   ; work         ;
-;             |Mux_2_1:M2|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX|Mux_2_1:M2                                       ; Mux_2_1                   ; work         ;
-;       |Sign_Ext_Unit:SEU|                        ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU                                                          ; Sign_Ext_Unit             ; work         ;
-;          |Mux_2_1:MUX|                           ; 23 (23)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX                                              ; Mux_2_1                   ; work         ;
-;          |Mux_4_1:MUX12|                         ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12                                            ; Mux_4_1                   ; work         ;
-;             |Mux_2_1:M2|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M2                                 ; Mux_2_1                   ; work         ;
-;    |ROM_Single_Port:ROM|                         ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|ROM_Single_Port:ROM                                                                         ; ROM_Single_Port           ; work         ;
-;    |UART_Full_Duplex:UART|                       ; 94 (2)              ; 101 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART                                                                       ; UART_Full_Duplex          ; work         ;
-;       |Reg_Param:RXREG|                          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|Reg_Param:RXREG                                                       ; Reg_Param                 ; work         ;
-;       |Reg_Param:RXRREG|                         ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|Reg_Param:RXRREG                                                      ; Reg_Param                 ; work         ;
-;       |Reg_Param:TXREG|                          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|Reg_Param:TXREG                                                       ; Reg_Param                 ; work         ;
-;       |Reg_Param:TXSREG|                         ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|Reg_Param:TXSREG                                                      ; Reg_Param                 ; work         ;
-;       |UART_Rx:RX|                               ; 48 (11)             ; 42 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Rx:RX                                                            ; UART_Rx                   ; work         ;
-;          |Bit_Rate_Pulse:BR_PULSE|               ; 20 (20)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Rx:RX|Bit_Rate_Pulse:BR_PULSE                                    ; Bit_Rate_Pulse            ; work         ;
-;          |Counter_Param:COUNT_BITS|              ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Rx:RX|Counter_Param:COUNT_BITS                                   ; Counter_Param             ; work         ;
-;          |FSM_UART_Rx:FSM|                       ; 13 (13)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Rx:RX|FSM_UART_Rx:FSM                                            ; FSM_UART_Rx               ; work         ;
-;          |Reg_Param:FF_PAR|                      ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Rx:RX|Reg_Param:FF_PAR                                           ; Reg_Param                 ; work         ;
-;          |Reg_Param:RX_REG|                      ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Rx:RX|Reg_Param:RX_REG                                           ; Reg_Param                 ; work         ;
-;          |Shift_Register_R_Param:SHIFT_REG|      ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Rx:RX|Shift_Register_R_Param:SHIFT_REG                           ; Shift_Register_R_Param    ; work         ;
-;       |UART_Tx:TX|                               ; 42 (1)              ; 41 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Tx:TX                                                            ; UART_Tx                   ; work         ;
-;          |Bit_Rate_Pulse:BR_PULSE|               ; 16 (16)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Tx:TX|Bit_Rate_Pulse:BR_PULSE                                    ; Bit_Rate_Pulse            ; work         ;
-;          |Counter_Param:COUNT_BITS|              ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Tx:TX|Counter_Param:COUNT_BITS                                   ; Counter_Param             ; work         ;
-;          |FSM_UART_Tx:FSM_Tx|                    ; 11 (11)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Tx:TX|FSM_UART_Tx:FSM_Tx                                         ; FSM_UART_Tx               ; work         ;
-;          |Reg_Param:TX_REG|                      ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Tx:TX|Reg_Param:TX_REG                                           ; Reg_Param                 ; work         ;
-;          |Shift_Register_PISO_Param:PISO|        ; 10 (10)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Tx:TX|Shift_Register_PISO_Param:PISO                             ; Shift_Register_PISO_Param ; work         ;
-+--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                             ; Entity Name               ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
+; |RISC_V_Multi_Cycle                          ; 2244 (0)            ; 2544 (0)                  ; 2048              ; 2          ; 32   ; 0            ; |RISC_V_Multi_Cycle                                                                                             ; RISC_V_Multi_Cycle        ; work         ;
+;    |GPIO:IO|                                 ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|GPIO:IO                                                                                     ; GPIO                      ; work         ;
+;    |Mem_Map_Controler:MM|                    ; 94 (46)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM                                                                        ; Mem_Map_Controler         ; work         ;
+;       |Mux_4_1:MEMMUX|                       ; 47 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MEMMUX                                                         ; Mux_4_1                   ; work         ;
+;          |Mux_2_1:M2|                        ; 47 (47)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MEMMUX|Mux_2_1:M2                                              ; Mux_2_1                   ; work         ;
+;       |Mux_4_1:RXMUX|                        ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:RXMUX                                                          ; Mux_4_1                   ; work         ;
+;          |Mux_2_1:M2|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:RXMUX|Mux_2_1:M2                                               ; Mux_2_1                   ; work         ;
+;    |RAM_Single_Port:RAM|                     ; 838 (838)           ; 2048 (2048)               ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RAM_Single_Port:RAM                                                                         ; RAM_Single_Port           ; work         ;
+;    |RISC_V_Core:CORE|                        ; 1197 (0)            ; 387 (0)                   ; 2048              ; 2          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE                                                                            ; RISC_V_Core               ; work         ;
+;       |ALU:ALURISCV|                         ; 670 (670)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV                                                               ; ALU                       ; work         ;
+;       |Control_Unit:CU|                      ; 50 (50)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Control_Unit:CU                                                            ; Control_Unit              ; work         ;
+;       |Mux_2_1:PCMUX|                        ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_2_1:PCMUX                                                              ; Mux_2_1                   ; work         ;
+;       |Mux_2_1:PCOUTMUX|                     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_2_1:PCOUTMUX                                                           ; Mux_2_1                   ; work         ;
+;       |Mux_4_1:AMUX|                         ; 150 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:AMUX                                                               ; Mux_4_1                   ; work         ;
+;          |Mux_2_1:M2|                        ; 150 (150)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M2                                                    ; Mux_2_1                   ; work         ;
+;       |Mux_4_1:BMUX|                         ; 110 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX                                                               ; Mux_4_1                   ; work         ;
+;          |Mux_2_1:M2|                        ; 110 (110)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2                                                    ; Mux_2_1                   ; work         ;
+;       |PC_Enable:PCE|                        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|PC_Enable:PCE                                                              ; PC_Enable                 ; work         ;
+;       |Reg_File:REGFILE|                     ; 164 (164)           ; 150 (150)                 ; 2048              ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE                                                           ; Reg_File                  ; work         ;
+;          |altsyncram:registers_rtl_0|        ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_0                                ; altsyncram                ; work         ;
+;             |altsyncram_2ho1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_0|altsyncram_2ho1:auto_generated ; altsyncram_2ho1           ; work         ;
+;          |altsyncram:registers_rtl_1|        ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_1                                ; altsyncram                ; work         ;
+;             |altsyncram_2ho1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE|altsyncram:registers_rtl_1|altsyncram_2ho1:auto_generated ; altsyncram_2ho1           ; work         ;
+;       |Reg_PC:PCBRAREG|                      ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_PC:PCBRAREG                                                            ; Reg_PC                    ; work         ;
+;       |Reg_PC:PCREG|                         ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_PC:PCREG                                                               ; Reg_PC                    ; work         ;
+;       |Reg_Param:ALUREG|                     ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_Param:ALUREG                                                           ; Reg_Param                 ; work         ;
+;       |Reg_Param:AREG|                       ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_Param:AREG                                                             ; Reg_Param                 ; work         ;
+;       |Reg_Param:BREG|                       ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_Param:BREG                                                             ; Reg_Param                 ; work         ;
+;       |Reg_Param:DATAREG|                    ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_Param:DATAREG                                                          ; Reg_Param                 ; work         ;
+;       |Reg_Param:INSTRREG|                   ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_Param:INSTRREG                                                         ; Reg_Param                 ; work         ;
+;       |Shift_Unit:SU|                        ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Shift_Unit:SU                                                              ; Shift_Unit                ; work         ;
+;          |Mux_4_1:MUX|                       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX                                                  ; Mux_4_1                   ; work         ;
+;             |Mux_2_1:M2|                     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX|Mux_2_1:M2                                       ; Mux_2_1                   ; work         ;
+;       |Sign_Ext_Unit:SEU|                    ; 43 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU                                                          ; Sign_Ext_Unit             ; work         ;
+;          |Mux_2_1:MUX|                       ; 42 (42)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX                                              ; Mux_2_1                   ; work         ;
+;          |Mux_4_1:MUX12|                     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12                                            ; Mux_4_1                   ; work         ;
+;             |Mux_2_1:M2|                     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M2                                 ; Mux_2_1                   ; work         ;
+;    |ROM_Single_Port:ROM|                     ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|ROM_Single_Port:ROM                                                                         ; ROM_Single_Port           ; work         ;
+;    |UART_Full_Duplex:UART|                   ; 94 (2)              ; 101 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART                                                                       ; UART_Full_Duplex          ; work         ;
+;       |Reg_Param:RXREG|                      ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|Reg_Param:RXREG                                                       ; Reg_Param                 ; work         ;
+;       |Reg_Param:RXRREG|                     ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|Reg_Param:RXRREG                                                      ; Reg_Param                 ; work         ;
+;       |Reg_Param:TXREG|                      ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|Reg_Param:TXREG                                                       ; Reg_Param                 ; work         ;
+;       |Reg_Param:TXSREG|                     ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|Reg_Param:TXSREG                                                      ; Reg_Param                 ; work         ;
+;       |UART_Rx:RX|                           ; 48 (11)             ; 42 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Rx:RX                                                            ; UART_Rx                   ; work         ;
+;          |Bit_Rate_Pulse:BR_PULSE|           ; 20 (20)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Rx:RX|Bit_Rate_Pulse:BR_PULSE                                    ; Bit_Rate_Pulse            ; work         ;
+;          |Counter_Param:COUNT_BITS|          ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Rx:RX|Counter_Param:COUNT_BITS                                   ; Counter_Param             ; work         ;
+;          |FSM_UART_Rx:FSM|                   ; 13 (13)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Rx:RX|FSM_UART_Rx:FSM                                            ; FSM_UART_Rx               ; work         ;
+;          |Reg_Param:FF_PAR|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Rx:RX|Reg_Param:FF_PAR                                           ; Reg_Param                 ; work         ;
+;          |Reg_Param:RX_REG|                  ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Rx:RX|Reg_Param:RX_REG                                           ; Reg_Param                 ; work         ;
+;          |Shift_Register_R_Param:SHIFT_REG|  ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Rx:RX|Shift_Register_R_Param:SHIFT_REG                           ; Shift_Register_R_Param    ; work         ;
+;       |UART_Tx:TX|                           ; 42 (1)              ; 41 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Tx:TX                                                            ; UART_Tx                   ; work         ;
+;          |Bit_Rate_Pulse:BR_PULSE|           ; 16 (16)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Tx:TX|Bit_Rate_Pulse:BR_PULSE                                    ; Bit_Rate_Pulse            ; work         ;
+;          |Counter_Param:COUNT_BITS|          ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Tx:TX|Counter_Param:COUNT_BITS                                   ; Counter_Param             ; work         ;
+;          |FSM_UART_Tx:FSM_Tx|                ; 11 (11)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Tx:TX|FSM_UART_Tx:FSM_Tx                                         ; FSM_UART_Tx               ; work         ;
+;          |Reg_Param:TX_REG|                  ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Tx:TX|Reg_Param:TX_REG                                           ; Reg_Param                 ; work         ;
+;          |Shift_Register_PISO_Param:PISO|    ; 10 (10)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Tx:TX|Shift_Register_PISO_Param:PISO                             ; Shift_Register_PISO_Param ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -476,28 +472,25 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Control_Unit:CU|State                                                                                                                                                                                                                                    ;
-+-----------------------+-------------+-----------------------+--------------------+--------------------+------------+-------------------+----------------+--------------+------------------+---------------+-----------------+------------------+----------------+----------------+--------------+-------------+
-; Name                  ; State.STALL ; State.UART_DUMMY_WAIT ; State.UART_TX_WAIT ; State.UART_TX_INIT ; State.JUMP ; State.IMMI_WRBACK ; State.IMMI_EXE ; State.BRANCH ; State.REG_WRBACK ; State.REG_EXE ; State.MEM_WRITE ; State.MEM_WRBACK ; State.MEM_READ ; State.MEM_ADDR ; State.DECODE ; State.FETCH ;
-+-----------------------+-------------+-----------------------+--------------------+--------------------+------------+-------------------+----------------+--------------+------------------+---------------+-----------------+------------------+----------------+----------------+--------------+-------------+
-; State.FETCH           ; 0           ; 0                     ; 0                  ; 0                  ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 0           ;
-; State.DECODE          ; 0           ; 0                     ; 0                  ; 0                  ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 1            ; 1           ;
-; State.MEM_ADDR        ; 0           ; 0                     ; 0                  ; 0                  ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 1              ; 0            ; 1           ;
-; State.MEM_READ        ; 0           ; 0                     ; 0                  ; 0                  ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 1              ; 0              ; 0            ; 1           ;
-; State.MEM_WRBACK      ; 0           ; 0                     ; 0                  ; 0                  ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 1                ; 0              ; 0              ; 0            ; 1           ;
-; State.MEM_WRITE       ; 0           ; 0                     ; 0                  ; 0                  ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 1               ; 0                ; 0              ; 0              ; 0            ; 1           ;
-; State.REG_EXE         ; 0           ; 0                     ; 0                  ; 0                  ; 0          ; 0                 ; 0              ; 0            ; 0                ; 1             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
-; State.REG_WRBACK      ; 0           ; 0                     ; 0                  ; 0                  ; 0          ; 0                 ; 0              ; 0            ; 1                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
-; State.BRANCH          ; 0           ; 0                     ; 0                  ; 0                  ; 0          ; 0                 ; 0              ; 1            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
-; State.IMMI_EXE        ; 0           ; 0                     ; 0                  ; 0                  ; 0          ; 0                 ; 1              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
-; State.IMMI_WRBACK     ; 0           ; 0                     ; 0                  ; 0                  ; 0          ; 1                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
-; State.JUMP            ; 0           ; 0                     ; 0                  ; 0                  ; 1          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
-; State.UART_TX_INIT    ; 0           ; 0                     ; 0                  ; 1                  ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
-; State.UART_TX_WAIT    ; 0           ; 0                     ; 1                  ; 0                  ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
-; State.UART_DUMMY_WAIT ; 0           ; 1                     ; 0                  ; 0                  ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
-; State.STALL           ; 1           ; 0                     ; 0                  ; 0                  ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
-+-----------------------+-------------+-----------------------+--------------------+--------------------+------------+-------------------+----------------+--------------+------------------+---------------+-----------------+------------------+----------------+----------------+--------------+-------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Control_Unit:CU|State                                                                                                                                                              ;
++-------------------+-------------+------------+-------------------+----------------+--------------+------------------+---------------+-----------------+------------------+----------------+----------------+--------------+-------------+
+; Name              ; State.STALL ; State.JUMP ; State.IMMI_WRBACK ; State.IMMI_EXE ; State.BRANCH ; State.REG_WRBACK ; State.REG_EXE ; State.MEM_WRITE ; State.MEM_WRBACK ; State.MEM_READ ; State.MEM_ADDR ; State.DECODE ; State.FETCH ;
++-------------------+-------------+------------+-------------------+----------------+--------------+------------------+---------------+-----------------+------------------+----------------+----------------+--------------+-------------+
+; State.FETCH       ; 0           ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 0           ;
+; State.DECODE      ; 0           ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 1            ; 1           ;
+; State.MEM_ADDR    ; 0           ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 1              ; 0            ; 1           ;
+; State.MEM_READ    ; 0           ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 1              ; 0              ; 0            ; 1           ;
+; State.MEM_WRBACK  ; 0           ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 1                ; 0              ; 0              ; 0            ; 1           ;
+; State.MEM_WRITE   ; 0           ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 1               ; 0                ; 0              ; 0              ; 0            ; 1           ;
+; State.REG_EXE     ; 0           ; 0          ; 0                 ; 0              ; 0            ; 0                ; 1             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
+; State.REG_WRBACK  ; 0           ; 0          ; 0                 ; 0              ; 0            ; 1                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
+; State.BRANCH      ; 0           ; 0          ; 0                 ; 0              ; 1            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
+; State.IMMI_EXE    ; 0           ; 0          ; 0                 ; 1              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
+; State.IMMI_WRBACK ; 0           ; 0          ; 1                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
+; State.JUMP        ; 0           ; 1          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
+; State.STALL       ; 1           ; 0          ; 0                 ; 0              ; 0            ; 0                ; 0             ; 0               ; 0                ; 0              ; 0              ; 0            ; 1           ;
++-------------------+-------------+------------+-------------------+----------------+--------------+------------------+---------------+-----------------+------------------+----------------+----------------+--------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -525,10 +518,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2561  ;
-; Number of registers using Synchronous Clear  ; 104   ;
+; Total registers                              ; 2544  ;
+; Number of registers using Synchronous Clear  ; 90    ;
 ; Number of registers using Synchronous Load   ; 31    ;
-; Number of registers using Asynchronous Clear ; 195   ;
+; Number of registers using Asynchronous Clear ; 178   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 2207  ;
 ; Number of registers using Preset             ; 0     ;
@@ -542,41 +535,41 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------------------------+---------+
 ; UART_Full_Duplex:UART|UART_Tx:TX|Shift_Register_PISO_Param:PISO|D_FF[0] ; 1       ;
 ; UART_Full_Duplex:UART|UART_Tx:TX|Shift_Register_PISO_Param:PISO|D_FF[1] ; 1       ;
-; RISC_V_Core:CORE|Reg_PC:PCREG|Q[22]                                     ; 4       ;
+; RISC_V_Core:CORE|Reg_PC:PCREG|Q[22]                                     ; 3       ;
 ; UART_Full_Duplex:UART|UART_Tx:TX|Shift_Register_PISO_Param:PISO|D_FF[2] ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[12]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[52]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[54]            ; 3       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[52]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[54]            ; 5       ;
 ; RISC_V_Core:CORE|Reg_PC:PCBRAREG|Q[22]                                  ; 6       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[56]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[58]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[60]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[62]            ; 2       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[64]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[66]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[74]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[70]            ; 2       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[68]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[72]            ; 2       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[20]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[22]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[24]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[26]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[28]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[30]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[32]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[34]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[36]            ; 2       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[38]            ; 2       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[40]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[42]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[44]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[46]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[48]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[50]            ; 3       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[12]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[18]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[16]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[56]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[58]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[60]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[62]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[64]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[66]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[74]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[70]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[68]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[72]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[20]            ; 3       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[22]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[24]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[26]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[28]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[30]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[32]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[34]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[36]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[38]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[40]            ; 5       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[42]            ; 2       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[44]            ; 2       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[46]            ; 2       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[48]            ; 2       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[50]            ; 2       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[12]            ; 3       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[18]            ; 3       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[16]            ; 3       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_0_bypass[14]            ; 3       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[14]            ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[16]            ; 1       ;
@@ -586,30 +579,30 @@ Encoding Type:  One-Hot
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[24]            ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[26]            ; 1       ;
 ; UART_Full_Duplex:UART|UART_Tx:TX|Shift_Register_PISO_Param:PISO|D_FF[3] ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[28]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[64]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[68]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[66]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[58]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[62]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[60]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[52]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[42]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[30]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[34]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[56]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[54]            ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[50]            ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[48]            ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[46]            ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[44]            ; 1       ;
-; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[32]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[42]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[60]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[58]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[64]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[62]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[68]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[66]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[54]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[56]            ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[74]            ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[70]            ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[72]            ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[40]            ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[38]            ; 1       ;
 ; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[36]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[30]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[28]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[52]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[32]            ; 1       ;
+; RISC_V_Core:CORE|Reg_File:REGFILE|registers_rtl_1_bypass[34]            ; 1       ;
 ; UART_Full_Duplex:UART|UART_Tx:TX|Shift_Register_PISO_Param:PISO|D_FF[4] ; 1       ;
 ; UART_Full_Duplex:UART|UART_Tx:TX|Shift_Register_PISO_Param:PISO|D_FF[5] ; 1       ;
 ; UART_Full_Duplex:UART|UART_Tx:TX|Shift_Register_PISO_Param:PISO|D_FF[6] ; 1       ;
@@ -783,32 +776,32 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Tx:TX|Shift_Register_PISO_Param:PISO|D_FF[7] ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |RISC_V_Multi_Cycle|UART_Full_Duplex:UART|UART_Tx:TX|Shift_Register_PISO_Param:PISO|D_FF[2] ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Reg_File:REGFILE|registers                             ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MEMMUX|Mux_2_1:M2|Q[24]                    ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MEMMUX|Mux_2_1:M2|Q[8]                     ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MEMMUX|Mux_2_1:M2|Q[28]                    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX|Q[12]                    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX|Q[11]                    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|ShiftLeft0                                ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|ShiftLeft0                                ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|ShiftLeft0                                ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|ShiftRight0                               ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|ShiftRight1                               ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|ShiftLeft0                                ;
-; 4:1                ; 49 bits   ; 98 LEs        ; 98 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|ShiftRight1                               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|ShiftRight0                               ;
+; 4:1                ; 49 bits   ; 98 LEs        ; 98 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|ShiftLeft0                                ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Control_Unit:CU|ALUControl                             ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M2|Q[24]                          ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2|Q[27]                          ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MEMMUX|Mux_2_1:M2|Q[1]                     ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2|Q[2]                           ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX|Q[9]                     ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:AMUX|Mux_2_1:M2|Q[18]                          ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2|Q[24]                          ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|Mem_Map_Controler:MM|Mux_4_1:MEMMUX|Mux_2_1:M2|Q[7]                     ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2|Q[3]                           ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX|Q[8]                     ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX|Q[2]                     ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2|Q[10]                          ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2|Q[12]                          ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Control_Unit:CU|Selector15                             ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2|Q[5]                           ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Mux_4_1:BMUX|Mux_2_1:M2|Q[16]                          ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|Control_Unit:CU|Selector14                             ;
 ; 40:1               ; 5 bits    ; 130 LEs       ; 80 LEs               ; 50 LEs                 ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|Mux23                                     ;
-; 41:1               ; 8 bits    ; 216 LEs       ; 128 LEs              ; 88 LEs                 ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|Mux9                                      ;
-; 42:1               ; 2 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|Mux22                                     ;
-; 40:1               ; 3 bits    ; 78 LEs        ; 48 LEs               ; 30 LEs                 ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|Mux17                                     ;
+; 41:1               ; 8 bits    ; 216 LEs       ; 128 LEs              ; 88 LEs                 ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|Mux8                                      ;
+; 42:1               ; 2 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|Mux21                                     ;
+; 40:1               ; 3 bits    ; 78 LEs        ; 48 LEs               ; 30 LEs                 ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|Mux18                                     ;
 ; 43:1               ; 3 bits    ; 84 LEs        ; 54 LEs               ; 30 LEs                 ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|Mux28                                     ;
 ; 43:1               ; 2 bits    ; 56 LEs        ; 34 LEs               ; 22 LEs                 ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|Mux6                                      ;
 ; 44:1               ; 3 bits    ; 87 LEs        ; 54 LEs               ; 33 LEs                 ; No         ; |RISC_V_Multi_Cycle|RISC_V_Core:CORE|ALU:ALURISCV|Mux3                                      ;
@@ -867,17 +860,6 @@ Encoding Type:  One-Hot
 ; DATA_WIDTH     ; 32    ; Signed Integer                       ;
 ; ADDR_WIDTH     ; 32    ; Signed Integer                       ;
 +----------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: RISC_V_Core:CORE|Control_Unit:CU|Counter_Param:uart_dummy_wait_counter ;
-+----------------+-------+--------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                       ;
-+----------------+-------+--------------------------------------------------------------------------------------------+
-; MAX_COUNT      ; 10000 ; Signed Integer                                                                             ;
-; NUM_BITS       ; 14    ; Signed Integer                                                                             ;
-+----------------+-------+--------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1861,61 +1843,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+---------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RISC_V_Core:CORE|Control_Unit:CU|Counter_Param:uart_dummy_wait_counter"                                  ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                  ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; en   ; Input  ; Info     ; Stuck at VCC                                                                                             ;
-; cnt  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RISC_V_Core:CORE|Control_Unit:CU"                                                               ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; tx_fsm_in_STOP_S ; Input  ; Info     ; Stuck at GND                                                                        ;
-; uart_tx_send     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 2561                        ;
-;     CLR               ; 46                          ;
-;     CLR SCLR          ; 40                          ;
+; arriav_ff             ; 2544                        ;
+;     CLR               ; 43                          ;
+;     CLR SCLR          ; 26                          ;
 ;     ENA               ; 2098                        ;
 ;     ENA CLR           ; 78                          ;
 ;     ENA CLR SLD       ; 31                          ;
 ;     SCLR              ; 64                          ;
 ;     plain             ; 204                         ;
-; arriav_lcell_comb     ; 2199                        ;
-;     arith             ; 151                         ;
+; arriav_lcell_comb     ; 2246                        ;
+;     arith             ; 137                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 40                          ;
+;         1 data inputs ; 26                          ;
 ;         2 data inputs ; 15                          ;
 ;         4 data inputs ; 2                           ;
 ;         5 data inputs ; 93                          ;
-;     extend            ; 29                          ;
-;         7 data inputs ; 29                          ;
-;     normal            ; 2019                        ;
-;         1 data inputs ; 56                          ;
-;         2 data inputs ; 157                         ;
-;         3 data inputs ; 163                         ;
-;         4 data inputs ; 124                         ;
-;         5 data inputs ; 250                         ;
-;         6 data inputs ; 1269                        ;
+;     extend            ; 23                          ;
+;         7 data inputs ; 23                          ;
+;     normal            ; 2086                        ;
+;         1 data inputs ; 52                          ;
+;         2 data inputs ; 161                         ;
+;         3 data inputs ; 160                         ;
+;         4 data inputs ; 126                         ;
+;         5 data inputs ; 293                         ;
+;         6 data inputs ; 1294                        ;
 ; arriav_mac            ; 2                           ;
 ; boundary_port         ; 32                          ;
 ; stratixv_ram_block    ; 64                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 15.00                       ;
-; Average LUT depth     ; 6.31                        ;
+; Average LUT depth     ; 6.29                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1934,7 +1896,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Tue Mar 14 19:54:18 2023
+    Info: Processing started: Tue Mar 14 20:19:16 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC-V -c RISC-V
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -2029,36 +1991,34 @@ Warning (10037): Verilog HDL or VHDL warning at GPIO.sv(24): conditional express
 Critical Warning (10846): Verilog HDL Instantiation warning at RISC_V_Multi_Cycle_1Hz.sv(46): instance has no name File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle_1Hz.sv Line: 46
 Info (12127): Elaborating entity "RISC_V_Multi_Cycle" for the top level hierarchy
 Info (12128): Elaborating entity "RISC_V_Core" for hierarchy "RISC_V_Core:CORE" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv Line: 61
-Warning (10030): Net "tx_fsm_in_STOP_S" at RISC_V_Core.sv(69) has no driver or initial value, using a default initial value '0' File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 69
-Info (12128): Elaborating entity "Control_Unit" for hierarchy "RISC_V_Core:CORE|Control_Unit:CU" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 100
-Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(148): variable "Opcode" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 148
-Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(187): variable "Opcode" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 187
-Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(273): variable "Funct7" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 273
-Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(273): variable "Funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 273
-Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(301): variable "Funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 301
-Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(349): variable "Opcode" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 349
-Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(368): variable "Funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 368
-Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(371): variable "Funct7" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 371
-Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(371): variable "Funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 371
-Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(375): variable "Funct7" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 375
-Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(375): variable "Funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 375
-Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(379): variable "Funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 379
-Info (10264): Verilog HDL Case Statement information at Control_Unit.sv(125): all case item expressions in this case statement are onehot File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 125
-Info (12128): Elaborating entity "Counter_Param" for hierarchy "RISC_V_Core:CORE|Control_Unit:CU|Counter_Param:uart_dummy_wait_counter" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 60
-Info (12128): Elaborating entity "PC_Enable" for hierarchy "RISC_V_Core:CORE|PC_Enable:PCE" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 109
-Info (12128): Elaborating entity "Reg_PC" for hierarchy "RISC_V_Core:CORE|Reg_PC:PCREG" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 118
-Info (12128): Elaborating entity "Mux_2_1" for hierarchy "RISC_V_Core:CORE|Mux_2_1:PCMUX" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 135
-Info (12128): Elaborating entity "Reg_Param" for hierarchy "RISC_V_Core:CORE|Reg_Param:INSTRREG" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 144
-Info (12128): Elaborating entity "Reg_File" for hierarchy "RISC_V_Core:CORE|Reg_File:REGFILE" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 173
-Info (12128): Elaborating entity "Sign_Ext_Unit" for hierarchy "RISC_V_Core:CORE|Sign_Ext_Unit:SEU" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 184
+Info (12128): Elaborating entity "Control_Unit" for hierarchy "RISC_V_Core:CORE|Control_Unit:CU" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 83
+Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(124): variable "Opcode" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 124
+Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(163): variable "Opcode" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 163
+Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(249): variable "Funct7" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 249
+Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(249): variable "Funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 249
+Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(277): variable "Funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 277
+Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(325): variable "Opcode" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 325
+Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(344): variable "Funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 344
+Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(347): variable "Funct7" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 347
+Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(347): variable "Funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 347
+Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(351): variable "Funct7" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 351
+Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(351): variable "Funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 351
+Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(355): variable "Funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 355
+Info (10264): Verilog HDL Case Statement information at Control_Unit.sv(101): all case item expressions in this case statement are onehot File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv Line: 101
+Info (12128): Elaborating entity "PC_Enable" for hierarchy "RISC_V_Core:CORE|PC_Enable:PCE" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 92
+Info (12128): Elaborating entity "Reg_PC" for hierarchy "RISC_V_Core:CORE|Reg_PC:PCREG" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 101
+Info (12128): Elaborating entity "Mux_2_1" for hierarchy "RISC_V_Core:CORE|Mux_2_1:PCMUX" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 118
+Info (12128): Elaborating entity "Reg_Param" for hierarchy "RISC_V_Core:CORE|Reg_Param:INSTRREG" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 127
+Info (12128): Elaborating entity "Reg_File" for hierarchy "RISC_V_Core:CORE|Reg_File:REGFILE" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 156
+Info (12128): Elaborating entity "Sign_Ext_Unit" for hierarchy "RISC_V_Core:CORE|Sign_Ext_Unit:SEU" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 167
 Info (12128): Elaborating entity "Mux_4_1" for hierarchy "RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Sign_Ext_Unit.sv Line: 31
 Info (12128): Elaborating entity "Mux_2_1" for hierarchy "RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_4_1:MUX12|Mux_2_1:M0" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mux_4_1.sv Line: 27
 Info (12128): Elaborating entity "Mux_2_1" for hierarchy "RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Mux_2_1:MUX20" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Sign_Ext_Unit.sv Line: 38
 Info (12128): Elaborating entity "Sign_Ext" for hierarchy "RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Sign_Ext:SE12" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Sign_Ext_Unit.sv Line: 48
 Info (12128): Elaborating entity "Sign_Ext" for hierarchy "RISC_V_Core:CORE|Sign_Ext_Unit:SEU|Sign_Ext:SE20" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Sign_Ext_Unit.sv Line: 53
-Info (12128): Elaborating entity "Shift_Unit" for hierarchy "RISC_V_Core:CORE|Shift_Unit:SU" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 191
+Info (12128): Elaborating entity "Shift_Unit" for hierarchy "RISC_V_Core:CORE|Shift_Unit:SU" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 174
 Info (12128): Elaborating entity "Mux_4_1" for hierarchy "RISC_V_Core:CORE|Shift_Unit:SU|Mux_4_1:MUX" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Unit.sv Line: 36
-Info (12128): Elaborating entity "ALU" for hierarchy "RISC_V_Core:CORE|ALU:ALURISCV" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 246
+Info (12128): Elaborating entity "ALU" for hierarchy "RISC_V_Core:CORE|ALU:ALURISCV" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv Line: 229
 Info (12128): Elaborating entity "Mem_Map_Controler" for hierarchy "Mem_Map_Controler:MM" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv Line: 89
 Info (12128): Elaborating entity "ROM_Single_Port" for hierarchy "ROM_Single_Port:ROM" File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv Line: 95
 Warning (10850): Verilog HDL warning at ROM_Single_Port.sv(19): number of words (49) in memory file does not match the number of elements in the address range [0:63] File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv Line: 19
@@ -2173,7 +2133,7 @@ Info (12133): Instantiated megafunction "RISC_V_Core:CORE|Reg_File:REGFILE|altsy
     Info (12134): Parameter "INIT_FILE" = "db/RISC-V.ram0_Reg_File_2801358d.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2ho1.tdf
     Info (12023): Found entity 1: altsyncram_2ho1 File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/quartus/db/altsyncram_2ho1.tdf Line: 28
-Warning (12241): 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 10 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
@@ -2189,17 +2149,17 @@ Info (17016): Found the following redundant logic cells in design
 Info (144001): Generated suppressed messages file D:/Quartus21/projects/RISC-V_Jorge-Padilla/quartus/output_files/RISC-V.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4685 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4717 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 4587 logic cells
+    Info (21061): Implemented 4619 logic cells
     Info (21064): Implemented 64 RAM segments
     Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 72 warnings
-    Info: Peak virtual memory: 4935 megabytes
-    Info: Processing ended: Tue Mar 14 19:54:42 2023
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:07
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 71 warnings
+    Info: Peak virtual memory: 4903 megabytes
+    Info: Processing ended: Tue Mar 14 20:19:38 2023
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:09
 
 
 +------------------------------------------+
