@@ -41,17 +41,37 @@ add wave -noupdate /RISC_V_UART_tb/DUT/ROM/RD
 add wave -noupdate -expand /RISC_V_UART_tb/DUT/CORE/REGFILE/registers
 add wave -noupdate /RISC_V_UART_tb/DUT/RAM/ram
 add wave -noupdate -divider {Mem Controler}
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/re
 add wave -noupdate /RISC_V_UART_tb/DUT/MM/we
-add wave -noupdate /RISC_V_UART_tb/DUT/MM/weRAM
-add wave -noupdate /RISC_V_UART_tb/DUT/MM/weGPIO
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/WD
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/A
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/RD
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/data
 add wave -noupdate /RISC_V_UART_tb/DUT/MM/ReadROM
-add wave -noupdate /RISC_V_UART_tb/DUT/CORE/PCE/PCWrite
-add wave -noupdate /RISC_V_UART_tb/DUT/CORE/PCE/Branch
-add wave -noupdate /RISC_V_UART_tb/DUT/CORE/PCE/Zero
-add wave -noupdate /RISC_V_UART_tb/DUT/CORE/PCE/XorZero
-add wave -noupdate /RISC_V_UART_tb/DUT/CORE/PCE/PCEn
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/AddrROM
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/mem
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/weRAM
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/ReadRAM
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/AddrRAM
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/DataRAM
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/gpio
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/weGPIO
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/ReadGPIO
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/DataGPIO
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/uart
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/in_save_data_bits_w
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/tx_fsm_in_STOP_S
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/ReadUART
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/Rx_Data
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/Tx_Data_w
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/rx_data
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/tx_send_en
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/tx_data_en
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/tx_send
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/rx_ready
+add wave -noupdate /RISC_V_UART_tb/DUT/MM/tx_send_read
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {79175 ps} 0}
+WaveRestoreCursors {{Cursor 1} {230852000 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -67,4 +87,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {2602500 ps} {3652500 ps}
+WaveRestoreZoom {0 ps} {603863400 ps}

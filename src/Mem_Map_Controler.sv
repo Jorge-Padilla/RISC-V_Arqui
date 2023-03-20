@@ -43,8 +43,6 @@ module Mem_Map_Controler #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32)
     wire                    mem;
     wire                    rx_ready;
     wire                    uart;
-    wire                    start_fsm;
-    wire                    rst_counter;
     wire                    tx_send_read;
     wire [(DATA_WIDTH-1):0] ReadUART;
 
