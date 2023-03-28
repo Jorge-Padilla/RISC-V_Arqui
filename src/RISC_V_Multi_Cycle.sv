@@ -89,15 +89,15 @@ module RISC_V_Multi_Cycle (
     );
 
     //Instruction Memory
-    ROM_Single_Port #(.DATA_WIDTH(32), .ADDR_WIDTH(10)) ROM (
-        .A(AddrROM[11:2]),
+    ROM_Single_Port #(.DATA_WIDTH(32), .ADDR_WIDTH(6)) ROM (
+        .A(AddrROM[7:2]),
         .RD(ReadROM)
     );
 
     //Data Memory
-    RAM_Single_Port #(.DATA_WIDTH(32), .ADDR_WIDTH(10)) RAM (
+    RAM_Single_Port #(.DATA_WIDTH(32), .ADDR_WIDTH(6)) RAM (
         .WD(DataRAM),
-        .A(AddrRAM[11:2]),
+        .A(AddrRAM[7:2]),
         .we(weRAM),
         .clk(clk),
         .RD(ReadRAM)

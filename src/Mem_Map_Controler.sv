@@ -37,27 +37,18 @@ module Mem_Map_Controler #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32)
 	output reg[(DATA_WIDTH-1):0]    RD
 );
 
-    //Signals for read values
-    //wire [(DATA_WIDTH-1):0] ReadRAM;
-    //wire [(DATA_WIDTH-1):0] ReadROM;
-    //wire [(DATA_WIDTH-1):0] ReadMEM;
-
     //Signals for Map detection
     wire                    gpio;
     wire                    data;
     wire                    mem;
     wire                    rx_ready;
     wire                    uart;
-    wire                    start_fsm;
-    wire                    rst_counter;
     wire                    tx_send_read;
-    //wire [1:0]              Counter;
     wire [(DATA_WIDTH-1):0] ReadUART;
-    //wire [(DATA_WIDTH-1):0] WriteUART;
-    //word_state_t            Word_state_out;
 
     //0x10010000 is data memory
     //0x10010024 and 0x10010028 is GPIO
+    //0x10010030 to 0x1001003C are UART
     //0x00400000 is instruction memory
     assign weGPIO       = A == 32'h10010024 && we;
     assign gpio         = A == 32'h10010028;
@@ -71,7 +62,7 @@ module Mem_Map_Controler #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32)
     assign weRAM        = mem && we;
     assign data         = (~mem & (|A[27:22])) | uart;
 
-    //Select UART Rx
+    //Select UART Rx or read Tx Send
     Mux_4_1 #(.DATA_WIDTH(DATA_WIDTH)) RXMUX (
         .A(32'b0),
         .B({31'h0,in_save_data_bits_w}),
@@ -99,58 +90,8 @@ module Mem_Map_Controler #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32)
     assign tx_send      = |WD;
     assign Tx_Data_w    = WD[7:0];
 
-    /*
-    //UART Word and send registers
-    Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) UARTREG (
-		.clk(clk),
-		.rst(1'b1),
-		.en(word_data_en),
-		.D(WD),
-		.Q(WriteUART)
-	);
-
-    Reg_Param #(.DATA_WIDTH(1)) UARTSREG (
-		.clk(clk),
-		.rst(rst_send_en),
-		.en(word_send_en),
-		.D(|WD),
-		.Q(start_fsm)
-	);
-
-    //Select Part of Word for UART
-    Mux_4_1 #(.DATA_WIDTH(8)) TXMUX (
-        .A(WriteUART[31:24]),
-        .B(WriteUART[23:16]),
-        .C(WriteUART[15:8]),
-        .D(WriteUART[7:0]),
-        .sel(Counter),
-        .Q(Tx_Data_w)
-    );
-
-    UART_Word_FSM FSM(
-        .clk(clk),
-        .rst(rst),
-        .start_fsm(start_fsm),
-        .tx_fsm_in_STOP_S(tx_fsm_in_STOP_S),
-        .Counter(Counter),
-        .rst_send_en(rst_send_en),
-        .rst_counter(rst_counter),
-        .tx_send(tx_send),
-        .tx_send_en(tx_send_en),
-        .tx_data_en(tx_data_en),
-        .Word_state_out(Word_state_out)
-    );
-
-    Counter_Param # (.MAX_COUNT(4)) COUNT_BITS (
-        .clk(clk),
-        .rst(rst_counter),
-        .en(tx_fsm_in_STOP_S),
-        .cnt(Counter)
-    );	
-    */
-
     //FF for read output
-    //TODO: FIX DISPLACEMENT
+    //TODO: This will be used on Single Cycle
     //`FF_D_RST_EN(clk, 1'b1, re, ReadMEM, RD)
 
 endmodule

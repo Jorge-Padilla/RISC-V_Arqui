@@ -16,22 +16,9 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	output wire             MemWrite,
     output [DATA_WIDTH-1:0] WriteData,
     output [DATA_WIDTH-1:0] RWAddress,
-	//output wire             uart_tx_out,
     //Debug Outputs
 	output cu_fsm_state_t   CU_State
 );
-
-//TODO: Implement pll for FPGA
-/*
-*	wire pll_clk_out;
-*
-*	//PLL, 85MHz max frequency
-*	pll pll_inst (
-*		.refclk   (clk),        // refclk.clk
-*		.rst      (1'b0),       // reset.reset
-*		.outclk_0 (pll_clk_out)
-*	);
-*/    
 
 	//Signals required for connections
     wire                    PCEn;
@@ -66,8 +53,6 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     wire [DATA_WIDTH-1:0]   SrcB;
     wire [DATA_WIDTH-1:0]   ALUResult;
     wire [DATA_WIDTH-1:0]   ALUOut;
-    wire                    tx_fsm_in_STOP_S;
-    wire                    uart_tx_send;
 	
 	//Instance of Modules
 
@@ -94,8 +79,6 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
         .MemtoReg(MemtoReg),
         .JalrMux(JalrMux),
         .ALUControl(ALUControl),
-        .tx_fsm_in_STOP_S(tx_fsm_in_STOP_S),
-        .uart_tx_send(uart_tx_send),
         .State_o(CU_State)
     );
 	
@@ -261,15 +244,5 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.sel(PCSrc),
 		.Q(PCp)
 	);
-
-    //UART
-//	UART_Tx UART_Tx_i (
-//		.clk(clk),
-//		.n_rst(rst),
-//		.tx_send(uart_tx_send),
-//		.Tx_Data(A),
-//		.tx(uart_tx_out),
-//		.tx_fsm_in_STOP_S(tx_fsm_in_STOP_S)
-//	);
 	
 endmodule
