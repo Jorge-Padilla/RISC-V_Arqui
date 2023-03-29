@@ -17,7 +17,6 @@ module Mem_Map_Controler #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32)
     input                           in_save_data_bits_w,
     input                           tx_fsm_in_STOP_S,
     input [7:0]                     Rx_Data,
-	input [(ADDR_WIDTH-1):0]        ReadROM,
 	input [(ADDR_WIDTH-1):0]        ReadRAM,
 	input [(ADDR_WIDTH-1):0]        ReadGPIO,
 	input [(DATA_WIDTH-1):0]        WD,
@@ -31,7 +30,6 @@ module Mem_Map_Controler #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32)
     output                          tx_send,
     output [7:0]                    Tx_Data_w,
 	output [(DATA_WIDTH-1):0]       DataGPIO,
-	output [(DATA_WIDTH-1):0]       AddrROM,
 	output [(DATA_WIDTH-1):0]       AddrRAM,
 	output [(DATA_WIDTH-1):0]       DataRAM,
 	output reg[(DATA_WIDTH-1):0]    RD
@@ -44,6 +42,7 @@ module Mem_Map_Controler #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32)
     wire                    rx_ready;
     wire                    uart;
     wire                    tx_send_read;
+    wire [(DATA_WIDTH-1):0] RDSelected;
     wire [(DATA_WIDTH-1):0] ReadUART;
 
     //0x10010000 is data memory
@@ -76,22 +75,25 @@ module Mem_Map_Controler #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32)
     Mux_4_1 #(.DATA_WIDTH(DATA_WIDTH)) MEMMUX (
         .A(ReadGPIO),
         .B(ReadRAM),
-        .C(ReadROM),
+        .C(ReadRAM),
         .D(ReadUART),
         .sel({data,mem}),
-        .Q(RD)
+        .Q(RDSelected)
     );
 
     //The Data and Address Values are always sent and just selected with MUX or Enables
-    assign AddrROM      = A;
     assign AddrRAM      = A;
     assign DataGPIO     = WD;
     assign DataRAM      = WD;
     assign tx_send      = |WD;
     assign Tx_Data_w    = WD[7:0];
 
-    //FF for read output
-    //TODO: This will be used on Single Cycle
-    //`FF_D_RST_EN(clk, 1'b1, re, ReadMEM, RD)
+    //MUX for read output
+    Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) PCOUTMUX (
+		.A(32'h0),
+		.B(RDSelected),
+		.sel(re),
+		.Q(RD)
+	);
 
 endmodule

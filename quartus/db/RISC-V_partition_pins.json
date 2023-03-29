@@ -48,22 +48,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "CU_State[0]",
-					"strict" : false
-				},
-				{
-					"name" : "CU_State[1]",
-					"strict" : false
-				},
-				{
-					"name" : "CU_State[2]",
-					"strict" : false
-				},
-				{
-					"name" : "CU_State[3]",
-					"strict" : false
-				},
-				{
 					"name" : "Rx_state_out[0]",
 					"strict" : false
 				},
@@ -100,23 +84,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio_port_in[5]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_port_in[6]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_port_in[3]",
-					"strict" : false
-				},
-				{
 					"name" : "gpio_port_in[0]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_port_in[1]",
 					"strict" : false
 				},
 				{
@@ -124,11 +92,27 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio_port_in[2]",
+					"name" : "gpio_port_in[7]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio_port_in[7]",
+					"name" : "gpio_port_in[6]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_port_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_port_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_port_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_port_in[2]",
 					"strict" : false
 				}
 			]
