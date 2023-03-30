@@ -36,8 +36,18 @@
 `define EXT_STORE   3'b001
 `define EXT_IMMI    3'b000
 `define EXT_UPPER   3'b100
+`define EXT_NONE    3'b000
 
 `define SHIFT_0	2'b00
 `define SHIFT_1	2'b01
 `define SHIFT_2	2'b10
 `define SHIFT_C	2'b11
+
+`define ALU_A_PC    2'b00
+`define ALU_A_REG   2'b01
+`define ALU_A_ZERO  2'b10
+
+`define ALU_B_REG   2'b00
+`define ALU_B_FOUR  2'b01
+`define ALU_B_IMM   2'b10
+`define ALU_B_IMM5  2'b11

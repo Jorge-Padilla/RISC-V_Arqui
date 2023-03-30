@@ -10,23 +10,20 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	//Inputs
 	input wire              clk, 
 	input wire              rst,
+    input [DATA_WIDTH-1:0]  InstrData,
     input [DATA_WIDTH-1:0]  MemData,
 	//Outputs
 	output wire             MemRead, 
 	output wire             MemWrite,
     output [DATA_WIDTH-1:0] WriteData,
     output [DATA_WIDTH-1:0] RWAddress,
-    //Debug Outputs
-	output cu_fsm_state_t   CU_State
+    output [DATA_WIDTH-1:0] PC
 );
 
 	//Signals required for connections
-    wire                    PCEn;
     wire                    Zero;
-    wire                    IRWrite;
     wire                    RegWrite;
-    wire                    PCWrite;
-    wire                    IorD;
+    wire                    Jump;
     wire                    Branch;
     wire                    XorZero;
     wire                    MemtoReg;
@@ -37,22 +34,16 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     wire [1:0]              ShiftAmnt;
     wire [2:0]              SignExt;
     wire [4:0]              ALUControl;
-    wire [DATA_WIDTH-1:0]   PC;
     wire [DATA_WIDTH-1:0]   PCp;
+    wire [DATA_WIDTH-1:0]   PCj;
+    wire [DATA_WIDTH-1:0]   PCp4;
     wire [DATA_WIDTH-1:0]   PCbra;
-    wire [DATA_WIDTH-1:0]   Instr;
-    wire [DATA_WIDTH-1:0]   Data;
     wire [DATA_WIDTH-1:0]   WD3;
     wire [DATA_WIDTH-1:0]   RD1;
-    wire [DATA_WIDTH-1:0]   RD2;
-    wire [DATA_WIDTH-1:0]   AMux;
-    wire [DATA_WIDTH-1:0]   A;
     wire [DATA_WIDTH-1:0]   SignImm;
     wire [DATA_WIDTH-1:0]   ShiftImm;
     wire [DATA_WIDTH-1:0]   SrcA;
     wire [DATA_WIDTH-1:0]   SrcB;
-    wire [DATA_WIDTH-1:0]   ALUResult;
-    wire [DATA_WIDTH-1:0]   ALUOut;
 	
 	//Instance of Modules
 
@@ -60,108 +51,91 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	Control_Unit CU(
         .clk(clk),
         .rst(rst),
-        .Opcode(Instr[6:0]),
-        .Funct7(Instr[31:25]),
-        .Funct3(Instr[14:12]),
+        .Opcode(InstrData[6:0]),
+        .Funct7(InstrData[31:25]),
+        .Funct3(InstrData[14:12]),
         .ALUSrcA(ALUSrcA),
         .ALUSrcB(ALUSrcB),
-        .PCSrc(PCSrc),
         .ShiftAmnt(ShiftAmnt),
         .SignExt(SignExt),
         .MemWrite(MemWrite), 
         .MemRead(MemRead),
-        .IRWrite(IRWrite),
         .RegWrite(RegWrite),
-        .PCWrite(PCWrite),
-        .IorD(IorD),
+        .Jump(Jump),
         .Branch(Branch),
         .XorZero(XorZero),
         .MemtoReg(MemtoReg),
         .JalrMux(JalrMux),
-        .ALUControl(ALUControl),
-        .State_o(CU_State)
+        .ALUControl(ALUControl)
     );
 	
     //PC Enable Logic for Branches and Jumps
-    PC_Enable PCE(
-        .PCWrite(PCWrite),
-        .Branch(Branch),
-        .Zero(Zero),
-        .XorZero(XorZero),
-        .PCEn(PCEn)
-    );
+	PC_Enable PCE(
+		.PCWrite(Jump),
+		.Branch(Branch),
+		.Zero(Zero),
+		.XorZero(XorZero),
+		.PCEn(PCSrc)
+	);
 	
     //Program Counter Register
 	Reg_PC #(.DATA_WIDTH(DATA_WIDTH)) PCREG (
 		.rst(rst),
 		.clk(clk),
-		.en(PCEn),
+		.en(1'b1),
 		.D(PCp),
 		.Q(PC)
 	);
-	
-    //Branch Program Counter Register
-	Reg_PC #(.DATA_WIDTH(DATA_WIDTH)) PCBRAREG (
-		.rst(rst),
-		.clk(clk),
-		.en(PCEn),
-		.D(PC),
-		.Q(PCbra)
+
+	//PC+4 Adder
+	Adder #(.DATA_WIDTH(DATA_WIDTH)) PCP4 (
+		.a(PC),
+		.b(32'h4),
+		.f(PCp4)
 	);
-	
-    //Mux that defines if the Memory address is PC or ALUOut
-	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) PCMUX (
+
+	//Mux for jal and jalr source
+	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) JALRMUX (
 		.A(PC),
-		.B(ALUOut),
-		.sel(IorD),
-		.Q(RWAddress)
+		.B(RD1),
+		.sel(JalrMux),
+		.Q(PCj)
+	);
+
+	//Branch and Jump Adder
+	Adder #(.DATA_WIDTH(DATA_WIDTH)) PCBJ (
+		.a(PCj),
+		.b(ShiftImm),
+		.f(PCbra)
 	);
 	
-    //Instruction Register
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) INSTRREG (
-		.rst(1'b1),
-		.clk(clk),
-		.en(IRWrite),
-		.D(MemData),
-		.Q(Instr)
-	);
-	
-    //Data Register
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) DATAREG (
-		.rst(1'b1),
-		.clk(clk),
-		.en(1'b1),
-		.D(MemData),
-		.Q(Data)
-	);
-	
-    //Mux for WD3
-	Mux_2_1 #(.DATA_WIDTH(32)) WD3MUX (
-		.A(ALUOut),
-		.B(Data),
-		.sel(MemtoReg),
-		.Q(WD3)
+    //Mux for next PC
+	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) PCOUTMUX (
+		.A(PCp4),
+		.B(PCbra),
+		.sel(PCSrc),
+		.Q(PCp)
 	);
 	
     //Register File
 	Reg_File #(.ADDRESS_WIDTH(5), .DATA_WIDTH(DATA_WIDTH)) REGFILE (
 		.clk(clk),
 		.we3(RegWrite),
-		.a1(Instr[19:15]),
-		.a2(Instr[24:20]),
-		.a3(Instr[11:7]),
+		.a1(InstrData[19:15]),
+		.a2(InstrData[24:20]),
+		.a3(InstrData[11:7]),
 		.wd3(WD3),
 		.rd1(RD1),
-		.rd2(RD2)
+		.rd2(WriteData)
 	);
     
     //Sign Extender Unit
     Sign_Ext_Unit #(.IN_WIDTH_1(12), .IN_WIDTH_2(20), .OUT_WIDTH(DATA_WIDTH)) SEU (
-        .In_12_I(Instr[31:20]),
-        .In_12_S({Instr[31:25],Instr[11:7]}),
-        .In_12_B({Instr[31],Instr[7],Instr[30:25],Instr[11:8]}),
-        .In_20_U(Instr[31:12]),
-        .In_20_J({Instr[31],Instr[19:12],Instr[20],Instr[30:21]}),
+        .In_12_I(InstrData[31:20]),
+        .In_12_S({InstrData[31:25],InstrData[11:7]}),
+        .In_12_B({InstrData[31],InstrData[7],InstrData[30:25],InstrData[11:8]}),
+        .In_20_U(InstrData[31:12]),
+        .In_20_J({InstrData[31],InstrData[19:12],InstrData[20],InstrData[30:21]}),
         .sel(SignExt),
         .Out(SignImm)
     );
@@ -173,38 +147,12 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
         .Out(ShiftImm)
     );
 	
-    //ALU A Register
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) AREG (
-		.rst(1'b1),
-		.clk(clk),
-		.en(1'b1),
-		.D(RD1),
-		.Q(A)
-	);
-	
-    //ALU B Register
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) BREG (
-		.rst(1'b1),
-		.clk(clk),
-		.en(1'b1),
-		.D(RD2),
-		.Q(WriteData)
-	);
-	
-    //Mux for rs1 value for jalr
-	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) JALRMUX (
-		.A(A),
-		.B(RD1),
-		.sel(JalrMux),
-		.Q(AMux)
-	);
-	
     //Mux for ALU A input
 	Mux_4_1 #(.DATA_WIDTH(DATA_WIDTH)) AMUX (
 		.A(PC),
-		.B(AMux),
+		.B(RD1),
 		.C(32'h0),
-		.D(PCbra),
+		.D(32'h0),
 		.sel(ALUSrcA),
 		.Q(SrcA)
 	);
@@ -224,25 +172,16 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.a(SrcA),
 		.b(SrcB),
 		.sel(ALUControl),
-		.f(ALUResult),
+		.f(RWAddress),
 		.z(Zero)
 	);
 	
-    //Register for ALU Output
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) ALUREG (
-		.rst(1'b1),
-		.clk(clk),
-		.en(1'b1),
-		.D(ALUResult),
-		.Q(ALUOut)
-	);
-	
-    //Mux for next PC
-	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) PCOUTMUX (
-		.A(ALUResult),
-		.B(ALUOut),
-		.sel(PCSrc),
-		.Q(PCp)
+    //Mux for WD3
+	Mux_2_1 #(.DATA_WIDTH(32)) WD3MUX (
+		.A(RWAddress),
+		.B(MemData),
+		.sel(MemtoReg),
+		.Q(WD3)
 	);
 	
 endmodule
