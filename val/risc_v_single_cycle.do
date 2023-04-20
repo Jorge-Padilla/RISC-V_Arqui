@@ -29,6 +29,8 @@ add wave -noupdate /RISC_V_Single_Cycle_UART_tb/DUT/CORE/PCE/Branch
 add wave -noupdate /RISC_V_Single_Cycle_UART_tb/DUT/CORE/PCE/Zero
 add wave -noupdate /RISC_V_Single_Cycle_UART_tb/DUT/CORE/PCE/XorZero
 add wave -noupdate /RISC_V_Single_Cycle_UART_tb/DUT/CORE/PCE/PCEn
+add wave -noupdate /RISC_V_Single_Cycle_UART_tb/DUT/CORE/PCp4
+add wave -noupdate /RISC_V_Single_Cycle_UART_tb/DUT/CORE/PCbra
 add wave -noupdate -divider {ROM / RAM / Regs}
 add wave -noupdate /RISC_V_Single_Cycle_UART_tb/DUT/CORE/MemData
 add wave -noupdate /RISC_V_Single_Cycle_UART_tb/DUT/ROM/A

@@ -17,20 +17,15 @@ auipc	s0, 0xfc10
 addi	s0, s0, 0x40
 # int row[4][4]
 # int row[0][4] = { 1, 2, 3, 4 };
-auipc	s1, 0xfc10
-addi	s1, s1, 0x48
+addi	s1, s0, 0x10
 # int row[1][4] = { 5, 6, 7, 8 };
-auipc	s2, 0xfc10
-addi	s2, s2, 0x50
+addi	s2, s0, 0x20
 # int row[2][4] = { 9, 10, 11, 12 };
-auipc	s3, 0xfc10
-addi	s3, s3, 0x58
+addi	s3, s0, 0x30
 # int row[3][4] = { 13, 14, 15, 16 };
-auipc	s4, 0xfc10
-addi	s4, s4, 0x60
+addi	s4, s0, 0x40
 # int result[4] = { 0, 0, 0, 0 };
-auipc	s5, 0xfc10
-addi	s5, s5, 0x68
+addi	s5, s0, 0x50
 # int rows = 4
 addi	s6, zero, 4
 # int colums = 4
