@@ -18,7 +18,7 @@
 
 	add	s0, t0, t1
 	sub	s1, t1, t2
-	xor	s2, t2, t2
+	xor	s2, t2, t6
 	or	s3, t3, t1
 	and	s4, t4, t0
 	sll	s5, t5, t1
