@@ -65,8 +65,6 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     wire [DATA_WIDTH-1:0]   E_ShiftImm;
     wire [DATA_WIDTH-1:0]   E_PCj;
     wire [DATA_WIDTH-1:0]   E_PCbra;
-    wire [DATA_WIDTH-1:0]   E_RD1;
-    wire [DATA_WIDTH-1:0]   E_RD2;
     wire [DATA_WIDTH-1:0]   E_SrcA;
     wire [DATA_WIDTH-1:0]   E_SrcB;
     wire [DATA_WIDTH-1:0]   E_ALUOut;
@@ -82,6 +80,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     wire [DATA_WIDTH-1:0]   M_PCbra;
 	//Writeback
     wire					W_RegWrite;
+    wire                    W_MemtoReg;
     wire [DATA_WIDTH-1:0]	W_MemData;
     wire [DATA_WIDTH-1:0]   W_ALUOut;
     wire [DATA_WIDTH-1:0]   W_InstrData;
@@ -233,14 +232,14 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.D(D_ALUSrcB),
 		.Q(E_ALUSrcB)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) D_E_SHIFTAMNT(
+	Reg_Param #(.DATA_WIDTH(2)) D_E_SHIFTAMNT(
 		.rst(rst),
 		.clk(~clk),
 		.en(1'b1),
 		.D(D_ShiftAmnt),
 		.Q(E_ShiftAmnt)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) D_E_SIGNEXT(
+	Reg_Param #(.DATA_WIDTH(3)) D_E_SIGNEXT(
 		.rst(rst),
 		.clk(~clk),
 		.en(1'b1),
