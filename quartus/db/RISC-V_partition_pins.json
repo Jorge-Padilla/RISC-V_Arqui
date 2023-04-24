@@ -76,6 +76,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "rx",
+					"strict" : false
+				},
+				{
 					"name" : "gpio_port_in[0]",
 					"strict" : false
 				},
@@ -105,14 +113,6 @@
 				},
 				{
 					"name" : "gpio_port_in[7]",
-					"strict" : false
-				},
-				{
-					"name" : "rst",
-					"strict" : false
-				},
-				{
-					"name" : "rx",
 					"strict" : false
 				}
 			]

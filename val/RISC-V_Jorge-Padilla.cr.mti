@@ -185,6 +185,16 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	Bit_Rate_Pulse
 
+} {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Pipeline_UART_tb.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Pipeline_UART_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package RISC_V_Pipeline_UART_tb_sv_unit
+-- Importing package Control_Unit_enum
+-- Importing package UART_pkg
+-- Compiling module RISC_V_Pipeline_UART_tb
+
+Top level modules:
+	RISC_V_Pipeline_UART_tb
+
 } {} {}} D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module ROM_Single_Port

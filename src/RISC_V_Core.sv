@@ -53,6 +53,8 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     wire                    E_MemtoReg;
     wire                    E_JalrMux;
     wire                    E_Zero;
+    wire [1:0]              E_AForward;
+    wire [1:0]              E_BForward;
     wire [1:0]              E_ALUSrcA;
     wire [1:0]              E_ALUSrcB;
     wire [1:0]              E_ShiftAmnt;
@@ -66,6 +68,8 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     wire [DATA_WIDTH-1:0]   E_ShiftImm;
     wire [DATA_WIDTH-1:0]   E_PCj;
     wire [DATA_WIDTH-1:0]   E_PCbra;
+    wire [DATA_WIDTH-1:0]   E_RegA;
+    wire [DATA_WIDTH-1:0]   E_RegB;
     wire [DATA_WIDTH-1:0]   E_SrcA;
     wire [DATA_WIDTH-1:0]   E_SrcB;
     wire [DATA_WIDTH-1:0]   E_ALUOut;
@@ -333,6 +337,18 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
         .sel(E_ShiftAmnt),
         .Out(E_ShiftImm)
     );
+
+	//Forwarding Unit
+	Forwarding_Unit #(.DATA_WIDTH(5)) FU (
+		.Rs1(E_InstrData[19:15]),
+		.Rs2(E_InstrData[24:20]),
+		.M_Rd(M_InstrData[11:7]),
+		.W_Rd(W_InstrData[11:7]),
+		.M_RegWrite(M_RegWrite),
+		.W_RegWrite(W_RegWrite),
+		.AForward(E_AForward),
+		.BForward(E_BForward)
+	);
 	
 	//Mux for jal and jalr source
 	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) JALRMUX (
@@ -348,11 +364,31 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.b(E_ShiftImm),
 		.f(E_PCbra)
 	);
+
+	//Mux for Forwarding A input
+	Mux_4_1 #(.DATA_WIDTH(DATA_WIDTH)) AFW (
+		.A(E_RD1),
+		.B(RWAddress),
+		.C(W_WD3),
+		.D(32'h0),
+		.sel(E_AForward),
+		.Q(E_RegA)
+	);
+	
+    //Mux for Forwarding B input
+	Mux_4_1 #(.DATA_WIDTH(DATA_WIDTH)) BFW (
+		.A(E_RD2),
+		.B(RWAddress),
+		.C(W_WD3),
+		.D(32'h0),
+		.sel(E_BForward),
+		.Q(E_RegB)
+	);
 	
     //Mux for ALU A input
 	Mux_4_1 #(.DATA_WIDTH(DATA_WIDTH)) AMUX (
 		.A(E_PC),
-		.B(E_RD1),
+		.B(E_RegA),
 		.C(32'h0),
 		.D(32'h0),
 		.sel(E_ALUSrcA),
@@ -361,7 +397,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	
     //Mux for ALU B input
 	Mux_4_1 #(.DATA_WIDTH(DATA_WIDTH)) BMUX (
-		.A(E_RD2),
+		.A(E_RegB),
 		.B(32'h4),
 		.C(E_ShiftImm),
 		.D({27'h0,E_ShiftImm[4:0]}),

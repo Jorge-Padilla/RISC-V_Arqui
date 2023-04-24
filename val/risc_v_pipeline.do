@@ -44,6 +44,8 @@ add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_XorZero
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_MemtoReg
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_JalrMux
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_Zero
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_AForward
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_BForward
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/W_RegWrite
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_ALUSrcA
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_ALUSrcB
@@ -57,6 +59,8 @@ add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_SignImm
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_ShiftImm
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_PCj
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_PCbra
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_RegA
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_RegB
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_SrcA
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_SrcB
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_ALUOut

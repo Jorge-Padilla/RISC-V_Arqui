@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSXFC6D6F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY RISC_V_Single_Cycle
+set_global_assignment -name TOP_LEVEL_ENTITY RISC_V_Pipeline
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:11:19  FEBRUARY 17, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "21.1.1 Lite Edition"
@@ -115,61 +115,6 @@ set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Single_Cycle.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Core_Mul.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Single_Cycle_UART_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Mem_Map_Controler_Mul.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Control_Unit_Mul.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Adder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Multi_Cycle.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Multi_Cycle_1Hz.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_UART_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Core.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_tb.sv
-set_global_assignment -name TEXT_FILE ../src/RISC_V_UART.txt
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/UART_Word_FSM.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/UART_Tx.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/UART_Rx.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/UART_pkg.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/UART_Full_Duplex_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/UART_Full_Duplex.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Shift_Register_R_Param.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Shift_Register_PISO_Param.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/FSM_UART_Tx.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/FSM_UART_Rx.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Bit_Rate_Pulse.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Sign_Ext_Unit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Sign_Ext.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Shifts.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Shift_Unit.sv
-set_global_assignment -name SOURCE_FILE ../src/ROM_Single_Port.sv.bak
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/ROM_Single_Port.sv
-set_global_assignment -name TEXT_FILE ../src/RISC_V_program_GPIO.txt
-set_global_assignment -name TEXT_FILE ../src/RISC_V_program.txt
-set_global_assignment -name TEXT_FILE ../src/RISC_V_mem.txt
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Regs.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Reg_PC.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Reg_Param.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Reg_File_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Reg_File.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/RAM_Single_Port.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/PC_Enable.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Mux_4_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Mux_2_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Mem_Map_Controler.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/GPIO.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Counter_Param.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Control_Unit_enum.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Control_Unit_defs.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Control_Unit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/Clk_Div.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/ALU_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/ALU_sel.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/ALU.sv
-set_global_assignment -name SIGNALTAP_FILE stp1.stp
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=256" -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
@@ -351,5 +296,66 @@ set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Pipeline.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Core.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Pipeline_UART_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Pipeline_rst_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Forwarding_Unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Core_Single.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Single_Cycle.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Core_Mul.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Single_Cycle_UART_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Mem_Map_Controler_Mul.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Control_Unit_Mul.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Multi_Cycle.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_Multi_Cycle_1Hz.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_UART_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/RISC_V_tb.sv
+set_global_assignment -name TEXT_FILE ../src/RISC_V_Pipe_test.txt
+set_global_assignment -name TEXT_FILE ../src/RISC_V_UART.txt
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/UART_Word_FSM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/UART_Tx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/UART_Rx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/UART_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/UART_Full_Duplex_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/UART_Full_Duplex.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Shift_Register_R_Param.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Shift_Register_PISO_Param.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/FSM_UART_Tx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/FSM_UART_Rx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Bit_Rate_Pulse.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Sign_Ext_Unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Sign_Ext.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Shifts.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Shift_Unit.sv
+set_global_assignment -name SOURCE_FILE ../src/ROM_Single_Port.sv.bak
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/ROM_Single_Port.sv
+set_global_assignment -name TEXT_FILE ../src/RISC_V_program_GPIO.txt
+set_global_assignment -name TEXT_FILE ../src/RISC_V_program.txt
+set_global_assignment -name TEXT_FILE ../src/RISC_V_mem.txt
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Regs.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Reg_PC.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Reg_Param.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Reg_File_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Reg_File.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/RAM_Single_Port.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/PC_Enable.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Mux_4_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Mux_2_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Mem_Map_Controler.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/GPIO.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Counter_Param.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Control_Unit_enum.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Control_Unit_defs.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Control_Unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/Clk_Div.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/ALU_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/ALU_sel.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/ALU.sv
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp

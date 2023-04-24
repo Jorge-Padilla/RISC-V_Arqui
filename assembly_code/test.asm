@@ -39,3 +39,24 @@
 	sltiu	s8, t4, 23
 
 	sw	s3, 0(ra)
+	
+	add	s0, t4, t6
+	and	s1, s0, t2
+	xor	s2, s0, t3
+	
+	add	s0, t4, t6
+	and	s3, t2, s0
+	xor	s4, t3, s0
+	
+	add	s0, t4, t6
+	and	s5, s0, s0
+	xor	s6, s0, s0
+	
+	add	s0, t4, t6
+	and	s7, s0, s1
+	xor	s8, s0, s7
+	
+	add	s0, t4, t6
+	and	s9, s1, s0
+	xor	s10, s9, s0
+	
