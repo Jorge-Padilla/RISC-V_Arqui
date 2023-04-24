@@ -25,6 +25,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     wire [DATA_WIDTH-1:0]   F_PCp;
     wire [DATA_WIDTH-1:0]   F_PCp4;
 	//Decode
+	wire					D_PCEn;
     wire					D_MemWrite;
     wire					D_MemRead;
     wire                    D_RegWrite;
@@ -97,7 +98,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	Reg_PC #(.DATA_WIDTH(DATA_WIDTH)) PCREG (
 		.rst(rst),
 		.clk(clk),
-		.en(1'b1),
+		.en(D_PCEn),
 		.D(F_PCp),
 		.Q(PC)
 	);
@@ -154,6 +155,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
         .ALUSrcB(D_ALUSrcB),
         .ShiftAmnt(D_ShiftAmnt),
         .SignExt(D_SignExt),
+        .PCEn(D_PCEn),
         .MemWrite(D_MemWrite), 
         .MemRead(D_MemRead),
         .RegWrite(D_RegWrite),

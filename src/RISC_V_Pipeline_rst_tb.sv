@@ -9,7 +9,7 @@
 import Control_Unit_enum::*;
 import UART_pkg::*;
 
-module RISC_V_Pipeline_UART_tb;
+module RISC_V_Pipeline_rst_tb;
 
 	//Wires
 	reg                     clk;
@@ -86,27 +86,27 @@ module RISC_V_Pipeline_UART_tb;
         tx_send_en = 1'b0;
 
 		#1 rst = 1'b0;
-        #2 rst = 1'b1;
+        #1 rst = 1'b1;
 		
-        #1 Tx_Data = 8'h0C;
-        #200 tx_send = 1'b1;
-        tx_send_en = 1'b1;
-        #2 tx_send = 1'b0;
-        tx_send_en = 1'b0;
+        #1
 
-		//@(DUT.CORE.PCREG.Q == '0);
-		//@(DUT.CORE.PCREG.Q == '0);
-		//@(posedge clk);
-		//@(posedge clk);
+        #1 rst = 1'b0;
+        #1 rst = 1'b1;
 
-        @(Tx_state_out==STOP_S);
-        @(Tx_state_out==INI_S);
-        @(Tx_state_out==STOP_S);
-        @(Tx_state_out==INI_S);
-        @(Tx_state_out==STOP_S);
-        @(Tx_state_out==INI_S);
-        @(Tx_state_out==STOP_S);
-        @(Tx_state_out==INI_S);
+        #2
+
+        #1 rst = 1'b0;
+        #1 rst = 1'b1;
+        
+        #1
+
+        #2 rst = 1'b0;
+        #2 rst = 1'b1;
+
+        #2
+
+        #2 rst = 1'b0;
+        #2 rst = 1'b1;
 
         #200
 
