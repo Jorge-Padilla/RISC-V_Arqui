@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Apr 23 21:21:17 2023
+Analysis & Synthesis Status : Successful - Tue Apr 25 14:19:03 2023
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : RISC-V
 Top-level Entity Name : RISC_V_Pipeline
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 4030
+Total registers : 8122
 Total pins : 28
 Total virtual pins : 0
-Total block memory bits : 22,016
+Total block memory bits : 96,000
 Total DSP Blocks : 2
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

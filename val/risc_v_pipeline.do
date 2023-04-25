@@ -10,6 +10,7 @@ add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/tx
 add wave -noupdate -divider FETCH
 add wave -noupdate -color Cyan -itemcolor Cyan /RISC_V_Pipeline_UART_tb/DUT/CORE/PC
 add wave -noupdate -color Gold -itemcolor Gold /RISC_V_Pipeline_UART_tb/DUT/CORE/InstrData
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/F_PCEn
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/M_PCSrc
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/F_PCp4
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/M_PCbra
@@ -17,6 +18,10 @@ add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/F_PCp
 add wave -noupdate -divider DECODE
 add wave -noupdate -color Cyan -itemcolor Cyan /RISC_V_Pipeline_UART_tb/DUT/CORE/D_PC
 add wave -noupdate -color Gold -itemcolor Gold /RISC_V_Pipeline_UART_tb/DUT/CORE/D_InstrData
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_PCEn
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_PCWrite
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RegEn
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_Stall
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_MemWrite
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_MemRead
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RegWrite
@@ -30,6 +35,19 @@ add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_ALUSrcB
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_ShiftAmnt
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_SignExt
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_ALUControl
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_MemWrite_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_MemRead_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RegWrite_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_Jump_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_Branch_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_XorZero_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_MemtoReg_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_JalrMux_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_ALUSrcA_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_ALUSrcB_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_ShiftAmnt_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_SignExt_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_ALUControl_H
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RD1
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RD2
 add wave -noupdate -divider EXECUTE

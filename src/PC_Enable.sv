@@ -6,15 +6,13 @@
 
 module PC_Enable (
 	//Inputs
-	input   PCWrite,
-	input   Branch,
-	input   Zero,
-    input   XorZero,
+	input   D_PCEn,
+	input   D_PCWrite,
 	//Output
-	output  PCEn
+	output  F_PCEn
 );
 
 	//Declare the output
-	assign PCEn = PCWrite | (Branch & (XorZero ^ Zero));
+	assign F_PCEn = D_PCEn & D_PCWrite;
 
 endmodule
