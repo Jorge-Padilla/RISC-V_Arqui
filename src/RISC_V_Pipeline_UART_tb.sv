@@ -78,26 +78,212 @@ module RISC_V_Pipeline_UART_tb;
 	//Proceso que fluctua a clock
 	initial
 	begin
-		gpio_port_in = 8'h03;
-		rst = 1'b1;
-        tx_send = 0;
-        Tx_Data = '0;
-        rx_data_clf = 1'b0;
-        tx_send_en = 1'b0;
+		gpio_port_in    = 8'h03;
+		rst             = 1'b1;
+        tx_send         = 0;
+        Tx_Data         = '0;
+        rx_data_clf     = 1'b0;
+        tx_send_en      = 1'b0;
 
-		#1 rst = 1'b0;
-        #2 rst = 1'b1;
+		#1 rst  = 1'b0;
+        #2 rst  = 1'b1;
 		
-        #1 Tx_Data = 8'h0C;
-        #200 tx_send = 1'b1;
-        tx_send_en = 1'b1;
-        #2 tx_send = 1'b0;
-        tx_send_en = 1'b0;
+        #1 Tx_Data  = 8'h01;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
 
-		//@(DUT.CORE.PCREG.Q == '0);
-		//@(DUT.CORE.PCREG.Q == '0);
-		//@(posedge clk);
-		//@(posedge clk);
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+        #1 Tx_Data  = 8'h02;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+        #1 Tx_Data  = 8'h03;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+        #1 Tx_Data  = 8'h04;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+         #1 Tx_Data  = 8'h01;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+        #1 Tx_Data  = 8'h02;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+        #1 Tx_Data  = 8'h03;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+        #1 Tx_Data  = 8'h04;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+         #1 Tx_Data  = 8'h05;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+        #1 Tx_Data  = 8'h06;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+        #1 Tx_Data  = 8'h07;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+        #1 Tx_Data  = 8'h08;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+         #1 Tx_Data  = 8'h09;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+        #10 Tx_Data  = 8'h0A;
+        //#200 
+        #1 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+        #10 Tx_Data  = 8'h0B;
+        //#200 
+        #1 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+        #1 Tx_Data  = 8'h0C;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+         #1 Tx_Data  = 8'h0D;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+        #1 Tx_Data  = 8'h0E;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+        #1 Tx_Data  = 8'h0F;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
+
+        @(Tx_state_out_u==STOP_S);
+        @(Tx_state_out_u==INI_S);
+
+        #1 Tx_Data  = 8'h10;
+        //#200 
+        #10 tx_send  = 1'b1;
+        tx_send_en  = 1'b1;
+        #2 tx_send  = 1'b0;
+        tx_send_en  = 1'b0;
 
         @(Tx_state_out==STOP_S);
         @(Tx_state_out==INI_S);

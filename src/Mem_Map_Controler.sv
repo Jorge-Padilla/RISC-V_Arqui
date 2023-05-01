@@ -50,10 +50,10 @@ module Mem_Map_Controler #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32)
     //0x10010030 to 0x1001003C are UART
     //0x00400000 is instruction memory
     assign weGPIO       = A == 32'h10010024 && we;
-    assign gpio         = A == 32'h10010028;
-    assign rx_data      = A == 32'h10010030 | tx_send_read;
-    assign tx_data_en   = A == 32'h10010034 && we;          // && (Word_state_out === INIT_W);
-    assign rx_ready     = A == 32'h10010038 | tx_send_read; //clears when reading rx_data
+    assign gpio         = A == 32'h10010028 && re;
+    assign rx_data      = (A == 32'h10010030 | tx_send_read) && re;
+    assign tx_data_en   = A == 32'h10010034 && we;                  // && (Word_state_out === INIT_W);
+    assign rx_ready     = (A == 32'h10010038 | tx_send_read) && re; //clears when reading rx_data
     assign tx_send_en   = A == 32'h1001003C && we;
     assign tx_send_read = A == 32'h1001003C && ~we;
     assign uart         = rx_data | rx_ready;

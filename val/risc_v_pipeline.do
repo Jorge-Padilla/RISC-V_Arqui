@@ -60,6 +60,13 @@ add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_Jump
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_Branch
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_XorZero
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_MemtoReg
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_MemWrite_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_MemRead_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_RegWrite_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_Jump_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_Branch_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_XorZero_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_MemtoReg_H
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_JalrMux
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_Zero
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/E_AForward

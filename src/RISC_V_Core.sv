@@ -62,12 +62,19 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	wire [DATA_WIDTH-1:0]   D_RD2;
 	//Execute
 	wire					E_MemWrite;
+	wire					E_MemWrite_H;
 	wire					E_MemRead;
+	wire					E_MemRead_H;
 	wire					E_RegWrite;
+	wire					E_RegWrite_H;
 	wire                    E_Jump;
+	wire                    E_Jump_H;
 	wire                    E_Branch;
+	wire                    E_Branch_H;
 	wire                    E_XorZero;
+	wire                    E_XorZero_H;
 	wire                    E_MemtoReg;
+	wire                    E_MemtoReg_H;
 	wire                    E_JalrMux;
 	wire                    E_Zero;
 	wire [1:0]              E_AForward;
@@ -119,7 +126,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	Reg_PC #(.DATA_WIDTH(DATA_WIDTH)) PCREG (
 		.rst(rst),
 		.clk(clk),
-		.en(F_PCEn),
+		.en(F_PCEn | M_PCSrc),
 		.D(F_PCp),
 		.Q(PC)
 	);
@@ -154,7 +161,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) F_D_PC(
 		.rst(rst),
 		.clk(~clk),
-		.en(D_RegEn),
+		.en(D_RegEn | M_PCSrc),
 		.D(PC),
 		.Q(D_PC)
 	);
@@ -163,7 +170,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) F_D_INSTRDATA(
 		.rst(rst),
 		.clk(~clk),
-		.en(D_RegEn),
+		.en(D_RegEn | M_PCSrc),
 		.D(InstrData),
 		.Q(D_InstrData)
 	);
@@ -222,79 +229,79 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	Mux_2_1 #(.DATA_WIDTH(2)) STALL_ALUSRCA (
 		.A(D_ALUSrcA),
 		.B(2'b00),
-		.sel(D_Stall),
+		.sel(D_Stall | M_PCSrc),
 		.Q(D_ALUSrcA_H)
 	);
 	Mux_2_1 #(.DATA_WIDTH(2)) STALL_ALUSRCB (
 		.A(D_ALUSrcB),
 		.B(2'b00),
-		.sel(D_Stall),
+		.sel(D_Stall | M_PCSrc),
 		.Q(D_ALUSrcB_H)
 	);
 	Mux_2_1 #(.DATA_WIDTH(2)) STALL_SHIFTAMNT (
 		.A(D_ShiftAmnt),
 		.B(2'b00),
-		.sel(D_Stall),
+		.sel(D_Stall | M_PCSrc),
 		.Q(D_ShiftAmnt_H)
 	);
 	Mux_2_1 #(.DATA_WIDTH(3)) STALL_SIGNEXT (
 		.A(D_SignExt),
 		.B(3'b000),
-		.sel(D_Stall),
+		.sel(D_Stall | M_PCSrc),
 		.Q(D_SignExt_H)
 	);
 	Mux_2_1 #(.DATA_WIDTH(1)) STALL_MEMWRITE (
 		.A(D_MemWrite),
 		.B(1'b0),
-		.sel(D_Stall),
+		.sel(D_Stall | M_PCSrc),
 		.Q(D_MemWrite_H)
 	);
 	Mux_2_1 #(.DATA_WIDTH(1)) STALL_MEMREAD (
 		.A(D_MemRead),
 		.B(1'b0),
-		.sel(D_Stall),
+		.sel(D_Stall | M_PCSrc),
 		.Q(D_MemRead_H)
 	);
 	Mux_2_1 #(.DATA_WIDTH(1)) STALL_REGWRITE (
 		.A(D_RegWrite),
 		.B(1'b0),
-		.sel(D_Stall),
+		.sel(D_Stall | M_PCSrc),
 		.Q(D_RegWrite_H)
 	);
 	Mux_2_1 #(.DATA_WIDTH(1)) STALL_JUMP (
 		.A(D_Jump),
 		.B(1'b0),
-		.sel(D_Stall),
+		.sel(D_Stall | M_PCSrc),
 		.Q(D_Jump_H)
 	);
 	Mux_2_1 #(.DATA_WIDTH(1)) STALL_BRANCH (
 		.A(D_Branch),
 		.B(1'b0),
-		.sel(D_Stall),
+		.sel(D_Stall | M_PCSrc),
 		.Q(D_Branch_H)
 	);
 	Mux_2_1 #(.DATA_WIDTH(1)) STALL_XORZERO (
 		.A(D_XorZero),
 		.B(1'b0),
-		.sel(D_Stall),
+		.sel(D_Stall | M_PCSrc),
 		.Q(D_XorZero_H)
 	);
 	Mux_2_1 #(.DATA_WIDTH(1)) STALL_MEMTOREG (
 		.A(D_MemtoReg),
 		.B(1'b0),
-		.sel(D_Stall),
+		.sel(D_Stall | M_PCSrc),
 		.Q(D_MemtoReg_H)
 	);
 	Mux_2_1 #(.DATA_WIDTH(1)) STALL_JALRMUX (
 		.A(D_JalrMux),
 		.B(1'b0),
-		.sel(D_Stall),
+		.sel(D_Stall | M_PCSrc),
 		.Q(D_JalrMux_H)
 	);
 	Mux_2_1 #(.DATA_WIDTH(5)) STALL_ALUCONTROL (
 		.A(D_ALUControl),
 		.B(5'b00000),
-		.sel(D_Stall),
+		.sel(D_Stall | M_PCSrc),
 		.Q(D_ALUControl_H)
 	);
 
@@ -529,6 +536,50 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.z(E_Zero)
 	);
 
+	//Muxes for Nop
+	Mux_2_1 #(.DATA_WIDTH(1)) NOP_MEMWRITE (
+		.A(E_MemWrite),
+		.B(1'b0),
+		.sel(M_PCSrc),
+		.Q(E_MemWrite_H)
+	);
+	Mux_2_1 #(.DATA_WIDTH(1)) NOP_MEMREAD (
+		.A(E_MemRead),
+		.B(1'b0),
+		.sel(M_PCSrc),
+		.Q(E_MemRead_H)
+	);
+	Mux_2_1 #(.DATA_WIDTH(1)) NOP_REGWRITE (
+		.A(E_RegWrite),
+		.B(1'b0),
+		.sel(M_PCSrc),
+		.Q(E_RegWrite_H)
+	);
+	Mux_2_1 #(.DATA_WIDTH(1)) NOP_JUMP (
+		.A(E_Jump),
+		.B(1'b0),
+		.sel(M_PCSrc),
+		.Q(E_Jump_H)
+	);
+	Mux_2_1 #(.DATA_WIDTH(1)) NOP_BRANCH (
+		.A(E_Branch),
+		.B(1'b0),
+		.sel(M_PCSrc),
+		.Q(E_Branch_H)
+	);
+	Mux_2_1 #(.DATA_WIDTH(1)) NOP_XORZERO (
+		.A(E_XorZero),
+		.B(1'b0),
+		.sel(M_PCSrc),
+		.Q(E_XorZero_H)
+	);
+	Mux_2_1 #(.DATA_WIDTH(1)) NOP_MEMTOREG (
+		.A(E_MemtoReg),
+		.B(1'b0),
+		.sel(M_PCSrc),
+		.Q(E_MemtoReg_H)
+	);
+
 	/*
 		EXECUTE/MEMORY FFs
 	*/
@@ -583,49 +634,49 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.rst(rst),
 		.clk(~clk),
 		.en(1'b1),
-		.D(E_MemWrite),
+		.D(E_MemWrite_H),
 		.Q(MemWrite)
 	);
 	Reg_Param #(.DATA_WIDTH(1)) E_M_MEMREAD(
 		.rst(rst),
 		.clk(~clk),
 		.en(1'b1),
-		.D(E_MemRead),
+		.D(E_MemRead_H),
 		.Q(MemRead)
 	);
 	Reg_Param #(.DATA_WIDTH(1)) E_M_REGWRITE(
 		.rst(rst),
 		.clk(~clk),
 		.en(1'b1),
-		.D(E_RegWrite),
+		.D(E_RegWrite_H),
 		.Q(M_RegWrite)
 	);
 	Reg_Param #(.DATA_WIDTH(1)) E_M_JUMP(
 		.rst(rst),
 		.clk(~clk),
 		.en(1'b1),
-		.D(E_Jump),
+		.D(E_Jump_H),
 		.Q(M_Jump)
 	);
 	Reg_Param #(.DATA_WIDTH(1)) E_M_BRANCH(
 		.rst(rst),
 		.clk(~clk),
 		.en(1'b1),
-		.D(E_Branch),
+		.D(E_Branch_H),
 		.Q(M_Branch)
 	);
 	Reg_Param #(.DATA_WIDTH(1)) E_M_XORZERO(
 		.rst(rst),
 		.clk(~clk),
 		.en(1'b1),
-		.D(E_XorZero),
+		.D(E_XorZero_H),
 		.Q(M_XorZero)
 	);
 	Reg_Param #(.DATA_WIDTH(1)) E_M_MEMTOREG(
 		.rst(rst),
 		.clk(~clk),
 		.en(1'b1),
-		.D(E_MemtoReg),
+		.D(E_MemtoReg_H),
 		.Q(M_MemtoReg)
 	);
 

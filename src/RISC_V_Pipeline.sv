@@ -87,8 +87,8 @@ module RISC_V_Pipeline (
     );
 
     //Instruction Memory
-    ROM_Single_Port #(.DATA_WIDTH(32), .ADDR_WIDTH(6)) ROM (
-        .A(PC[7:2]),
+    ROM_Single_Port #(.DATA_WIDTH(32), .ADDR_WIDTH(7)) ROM (
+        .A(PC[8:2]),
         .RD(InstrData)
     );
 
