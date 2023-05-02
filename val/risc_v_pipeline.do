@@ -48,8 +48,12 @@ add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_ALUSrcB_H
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_ShiftAmnt_H
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_SignExt_H
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_ALUControl_H
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RCA
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RCB
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RD1
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RD2
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RRD1
+add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RRD2
 add wave -noupdate -divider EXECUTE
 add wave -noupdate -color Cyan -itemcolor Cyan /RISC_V_Pipeline_UART_tb/DUT/CORE/E_PC
 add wave -noupdate -color Gold -itemcolor Gold /RISC_V_Pipeline_UART_tb/DUT/CORE/E_InstrData

@@ -30,6 +30,8 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	wire					D_PCWrite;
 	wire					D_RegEn;
 	wire					D_Stall;
+	wire					D_RCA;
+	wire					D_RCB;
 	wire					D_MemWrite;
 	wire					D_MemWrite_H;
 	wire					D_MemRead;
@@ -60,6 +62,8 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	wire [DATA_WIDTH-1:0]   D_InstrData;
 	wire [DATA_WIDTH-1:0]   D_RD1;
 	wire [DATA_WIDTH-1:0]   D_RD2;
+	wire [DATA_WIDTH-1:0]   D_RRD1;
+	wire [DATA_WIDTH-1:0]   D_RRD2;
 	//Execute
 	wire					E_MemWrite;
 	wire					E_MemWrite_H;
@@ -225,6 +229,28 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.Stall(D_Stall)
 	);
 
+	//Race condition on dependency after 2 instructions
+	Forwarding_Unit_Decode #(.DATA_WIDTH(5)) FUD (
+		.Rs1(D_InstrData[19:15]),
+		.Rs2(D_InstrData[24:20]),
+		.W_Rd(W_InstrData[11:7]),
+		.W_RegWrite(W_RegWrite),
+		.AForward(D_RCA),
+		.BForward(D_RCB)
+	);
+	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) RCA (
+		.A(D_RD1),
+		.B(W_WD3),
+		.sel(D_RCA),
+		.Q(D_RRD1)
+	);
+	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) RCB (
+		.A(D_RD2),
+		.B(W_WD3),
+		.sel(D_RCB),
+		.Q(D_RRD2)
+	);
+
 	//Muxes for Stall
 	Mux_2_1 #(.DATA_WIDTH(2)) STALL_ALUSRCA (
 		.A(D_ALUSrcA),
@@ -323,7 +349,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.rst(rst),
 		.clk(~clk),
 		.en(1'b1),
-		.D(D_RD1),
+		.D(D_RRD1),
 		.Q(E_RD1)
 	);
 
@@ -332,7 +358,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.rst(rst),
 		.clk(~clk),
 		.en(1'b1),
-		.D(D_RD2),
+		.D(D_RRD2),
 		.Q(E_RD2)
 	);
 
