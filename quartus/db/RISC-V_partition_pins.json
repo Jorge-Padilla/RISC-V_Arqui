@@ -84,6 +84,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "gpio_port_in[4]",
+					"strict" : false
+				},
+				{
 					"name" : "gpio_port_in[0]",
 					"strict" : false
 				},
@@ -92,15 +96,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio_port_in[2]",
-					"strict" : false
-				},
-				{
 					"name" : "gpio_port_in[3]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio_port_in[4]",
+					"name" : "gpio_port_in[2]",
 					"strict" : false
 				},
 				{
