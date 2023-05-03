@@ -48,12 +48,8 @@ add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_ALUSrcB_H
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_ShiftAmnt_H
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_SignExt_H
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_ALUControl_H
-add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RCA
-add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RCB
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RD1
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RD2
-add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RRD1
-add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/D_RRD2
 add wave -noupdate -divider EXECUTE
 add wave -noupdate -color Cyan -itemcolor Cyan /RISC_V_Pipeline_UART_tb/DUT/CORE/E_PC
 add wave -noupdate -color Gold -itemcolor Gold /RISC_V_Pipeline_UART_tb/DUT/CORE/E_InstrData
@@ -118,9 +114,39 @@ add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/W_WD3
 add wave -noupdate -divider {ROM / RAM / Regs}
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/CORE/MemData
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/ROM/A
-add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/ROM/RD
-add wave -noupdate -expand /RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/registers
-add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/RAM/ram
+add wave -noupdate -expand -group regs -label r30 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[31]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r31 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[30]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r20 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[29]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r21 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[28]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r22 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[27]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r23 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[26]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r24 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[25]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r25 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[24]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r26 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[23]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r27 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[22]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r28 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[21]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r29 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[20]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r10 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[19]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r11 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[18]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r12 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[17]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r13 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[16]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r14 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[15]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r15 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[14]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r16 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[13]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r17 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[12]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r18 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[11]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r19 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[10]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r9 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[9]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r8 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[8]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r7 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[7]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r6 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[6]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r5 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[5]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r4 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[4]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r3 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[3]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r2 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[2]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r1 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[1]/genblk1/REG_i/Q}
+add wave -noupdate -expand -group regs -label r0 {/RISC_V_Pipeline_UART_tb/DUT/CORE/REGFILE/GENREGS[0]/genblk1/REG_i/Q}
+add wave -noupdate -expand /RISC_V_Pipeline_UART_tb/DUT/RAM/ram
 add wave -noupdate -divider {Mem Controler}
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/MM/re
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/MM/we

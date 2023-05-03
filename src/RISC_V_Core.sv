@@ -30,8 +30,6 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	wire					D_PCWrite;
 	wire					D_RegEn;
 	wire					D_Stall;
-	wire					D_RCA;
-	wire					D_RCB;
 	wire					D_MemWrite;
 	wire					D_MemWrite_H;
 	wire					D_MemRead;
@@ -62,8 +60,6 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	wire [DATA_WIDTH-1:0]   D_InstrData;
 	wire [DATA_WIDTH-1:0]   D_RD1;
 	wire [DATA_WIDTH-1:0]   D_RD2;
-	wire [DATA_WIDTH-1:0]   D_RRD1;
-	wire [DATA_WIDTH-1:0]   D_RRD2;
 	//Execute
 	wire					E_MemWrite;
 	wire					E_MemWrite_H;
@@ -162,18 +158,18 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	*/
 
 	//PC F/D
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) F_D_PC(
+	Reg_Neg_Param #(.DATA_WIDTH(DATA_WIDTH)) F_D_PC(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(D_RegEn | M_PCSrc),
 		.D(PC),
 		.Q(D_PC)
 	);
 
 	//InstrData F/D
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) F_D_INSTRDATA(
+	Reg_Neg_Param #(.DATA_WIDTH(DATA_WIDTH)) F_D_INSTRDATA(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(D_RegEn | M_PCSrc),
 		.D(InstrData),
 		.Q(D_InstrData)
@@ -209,6 +205,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     //Register File
 	Reg_File #(.ADDRESS_WIDTH(5), .DATA_WIDTH(DATA_WIDTH)) REGFILE (
 		.clk(clk),
+		.rst(rst),
 		.we3(W_RegWrite),
 		.a1(D_InstrData[19:15]),
 		.a2(D_InstrData[24:20]),
@@ -227,28 +224,6 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.PCWrite(D_PCWrite),
 		.IDWrite(D_RegEn),
 		.Stall(D_Stall)
-	);
-
-	//Race condition on dependency after 2 instructions
-	Forwarding_Unit_Decode #(.DATA_WIDTH(5)) FUD (
-		.Rs1(D_InstrData[19:15]),
-		.Rs2(D_InstrData[24:20]),
-		.W_Rd(W_InstrData[11:7]),
-		.W_RegWrite(W_RegWrite),
-		.AForward(D_RCA),
-		.BForward(D_RCB)
-	);
-	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) RCA (
-		.A(D_RD1),
-		.B(W_WD3),
-		.sel(D_RCA),
-		.Q(D_RRD1)
-	);
-	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) RCB (
-		.A(D_RD2),
-		.B(W_WD3),
-		.sel(D_RCB),
-		.Q(D_RRD2)
 	);
 
 	//Muxes for Stall
@@ -336,129 +311,129 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	*/
 
 	//PC D/E
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) D_E_PC(
+	Reg_Neg_Param #(.DATA_WIDTH(DATA_WIDTH)) D_E_PC(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(D_PC),
 		.Q(E_PC)
 	);
 
 	//RD1 D/E
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) D_E_RD1(
+	Reg_Neg_Param #(.DATA_WIDTH(DATA_WIDTH)) D_E_RD1(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
-		.D(D_RRD1),
+		.D(D_RD1),
 		.Q(E_RD1)
 	);
 
 	//RD2 D/E
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) D_E_RD2(
+	Reg_Neg_Param #(.DATA_WIDTH(DATA_WIDTH)) D_E_RD2(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
-		.D(D_RRD2),
+		.D(D_RD2),
 		.Q(E_RD2)
 	);
 
 	//InstrData D/E
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) D_E_INSTRDATA(
+	Reg_Neg_Param #(.DATA_WIDTH(DATA_WIDTH)) D_E_INSTRDATA(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(D_InstrData),
 		.Q(E_InstrData)
 	);
 
 	//Control Unit Signals D/E
-	Reg_Param #(.DATA_WIDTH(2)) D_E_ALUSRCA(
+	Reg_Neg_Param #(.DATA_WIDTH(2)) D_E_ALUSRCA(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(D_ALUSrcA_H),
 		.Q(E_ALUSrcA)
 	);
-	Reg_Param #(.DATA_WIDTH(2)) D_E_ALUSRCB(
+	Reg_Neg_Param #(.DATA_WIDTH(2)) D_E_ALUSRCB(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(D_ALUSrcB_H),
 		.Q(E_ALUSrcB)
 	);
-	Reg_Param #(.DATA_WIDTH(2)) D_E_SHIFTAMNT(
+	Reg_Neg_Param #(.DATA_WIDTH(2)) D_E_SHIFTAMNT(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(D_ShiftAmnt_H),
 		.Q(E_ShiftAmnt)
 	);
-	Reg_Param #(.DATA_WIDTH(3)) D_E_SIGNEXT(
+	Reg_Neg_Param #(.DATA_WIDTH(3)) D_E_SIGNEXT(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(D_SignExt_H),
 		.Q(E_SignExt)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) D_E_MEMWRITE(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) D_E_MEMWRITE(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(D_MemWrite_H),
 		.Q(E_MemWrite)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) D_E_MEMREAD(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) D_E_MEMREAD(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(D_MemRead_H),
 		.Q(E_MemRead)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) D_E_REGWRITE(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) D_E_REGWRITE(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(D_RegWrite_H),
 		.Q(E_RegWrite)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) D_E_JUMP(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) D_E_JUMP(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(D_Jump_H),
 		.Q(E_Jump)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) D_E_BRANCH(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) D_E_BRANCH(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(D_Branch_H),
 		.Q(E_Branch)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) D_E_XORZERO(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) D_E_XORZERO(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(D_XorZero_H),
 		.Q(E_XorZero)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) D_E_MEMTOREG(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) D_E_MEMTOREG(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(D_MemtoReg_H),
 		.Q(E_MemtoReg)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) D_E_JALRMUX(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) D_E_JALRMUX(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(D_JalrMux_H),
 		.Q(E_JalrMux)
 	);
-	Reg_Param #(.DATA_WIDTH(5)) D_E_ALUCONTROL(
+	Reg_Neg_Param #(.DATA_WIDTH(5)) D_E_ALUCONTROL(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(D_ALUControl_H),
 		.Q(E_ALUControl)
@@ -611,96 +586,96 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	*/
 
 	//PCBra E/M
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) E_M_PCBRA(
+	Reg_Neg_Param #(.DATA_WIDTH(DATA_WIDTH)) E_M_PCBRA(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(E_PCbra),
 		.Q(M_PCbra)
 	);
 
 	//ALUOut E/M
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) E_M_ALUOUT(
+	Reg_Neg_Param #(.DATA_WIDTH(DATA_WIDTH)) E_M_ALUOUT(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(E_ALUOut),
 		.Q(RWAddress)
 	);
 
 	//Zero E/M
-	Reg_Param #(.DATA_WIDTH(1)) E_M_ZERO(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) E_M_ZERO(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(E_Zero),
 		.Q(M_Zero)
 	);
 
 	//RD2 E/M
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) E_M_RD2(
+	Reg_Neg_Param #(.DATA_WIDTH(DATA_WIDTH)) E_M_RD2(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(E_RegB),
 		.Q(WriteData)
 	);
 	
 	//InstrData E/M
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) E_M_INSTRDATA(
+	Reg_Neg_Param #(.DATA_WIDTH(DATA_WIDTH)) E_M_INSTRDATA(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(E_InstrData),
 		.Q(M_InstrData)
 	);
 
 	//Control Unit Signals E/M
-	Reg_Param #(.DATA_WIDTH(1)) E_M_MEMWRITE(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) E_M_MEMWRITE(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(E_MemWrite_H),
 		.Q(MemWrite)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) E_M_MEMREAD(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) E_M_MEMREAD(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(E_MemRead_H),
 		.Q(MemRead)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) E_M_REGWRITE(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) E_M_REGWRITE(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(E_RegWrite_H),
 		.Q(M_RegWrite)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) E_M_JUMP(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) E_M_JUMP(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(E_Jump_H),
 		.Q(M_Jump)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) E_M_BRANCH(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) E_M_BRANCH(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(E_Branch_H),
 		.Q(M_Branch)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) E_M_XORZERO(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) E_M_XORZERO(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(E_XorZero_H),
 		.Q(M_XorZero)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) E_M_MEMTOREG(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) E_M_MEMTOREG(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(E_MemtoReg_H),
 		.Q(M_MemtoReg)
@@ -724,43 +699,43 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	*/
 
 	//MemData M/W
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) M_W_MEMDATA(
+	Reg_Neg_Param #(.DATA_WIDTH(DATA_WIDTH)) M_W_MEMDATA(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(MemData),
 		.Q(W_MemData)
 	);
 
 	//ALUOut M/W
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) M_W_RWADDRESS(
+	Reg_Neg_Param #(.DATA_WIDTH(DATA_WIDTH)) M_W_RWADDRESS(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(RWAddress),
 		.Q(W_ALUOut)
 	);
 
 	//InstrData M/W
-	Reg_Param #(.DATA_WIDTH(DATA_WIDTH)) M_W_INSTRDATA(
+	Reg_Neg_Param #(.DATA_WIDTH(DATA_WIDTH)) M_W_INSTRDATA(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(M_InstrData),
 		.Q(W_InstrData)
 	);
 
 	//Control Unit Signals M/W
-	Reg_Param #(.DATA_WIDTH(1)) M_W_REGWRITE(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) M_W_REGWRITE(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(M_RegWrite),
 		.Q(W_RegWrite)
 	);
-	Reg_Param #(.DATA_WIDTH(1)) M_W_MEMTOREG(
+	Reg_Neg_Param #(.DATA_WIDTH(1)) M_W_MEMTOREG(
 		.rst(rst),
-		.clk(~clk),
+		.clk(clk),
 		.en(1'b1),
 		.D(M_MemtoReg),
 		.Q(W_MemtoReg)
