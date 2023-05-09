@@ -10,23 +10,23 @@ gpio_port_in[4] => gpio_port_in[4].IN1
 gpio_port_in[5] => gpio_port_in[5].IN1
 gpio_port_in[6] => gpio_port_in[6].IN1
 gpio_port_in[7] => gpio_port_in[7].IN1
-tx <= UART_Full_Duplex:UART.tx
-gpio_port_out[0] <= GPIO:IO.GPIO_Out
-gpio_port_out[1] <= GPIO:IO.GPIO_Out
-gpio_port_out[2] <= GPIO:IO.GPIO_Out
-gpio_port_out[3] <= GPIO:IO.GPIO_Out
-gpio_port_out[4] <= GPIO:IO.GPIO_Out
-gpio_port_out[5] <= GPIO:IO.GPIO_Out
-gpio_port_out[6] <= GPIO:IO.GPIO_Out
-gpio_port_out[7] <= GPIO:IO.GPIO_Out
-clk_out <= clk.DB_MAX_OUTPUT_PORT_TYPE
-parity_error <= parity_error.DB_MAX_OUTPUT_PORT_TYPE
-Rx_state_out[0] <= UART_Full_Duplex:UART.Rx_state_out[0]
-Rx_state_out[1] <= UART_Full_Duplex:UART.Rx_state_out[1]
-Rx_state_out[2] <= UART_Full_Duplex:UART.Rx_state_out[2]
-Tx_state_out[0] <= UART_Full_Duplex:UART.Tx_state_out[0]
-Tx_state_out[1] <= UART_Full_Duplex:UART.Tx_state_out[1]
-Tx_state_out[2] <= UART_Full_Duplex:UART.Tx_state_out[2]
+tx << UART_Full_Duplex:UART.tx
+gpio_port_out[0] << GPIO:IO.GPIO_Out
+gpio_port_out[1] << GPIO:IO.GPIO_Out
+gpio_port_out[2] << GPIO:IO.GPIO_Out
+gpio_port_out[3] << GPIO:IO.GPIO_Out
+gpio_port_out[4] << GPIO:IO.GPIO_Out
+gpio_port_out[5] << GPIO:IO.GPIO_Out
+gpio_port_out[6] << GPIO:IO.GPIO_Out
+gpio_port_out[7] << GPIO:IO.GPIO_Out
+clk_out << clk.DB_MAX_OUTPUT_PORT_TYPE
+parity_error << parity_error.DB_MAX_OUTPUT_PORT_TYPE
+Rx_state_out[0] << UART_Full_Duplex:UART.Rx_state_out[0]
+Rx_state_out[1] << UART_Full_Duplex:UART.Rx_state_out[1]
+Rx_state_out[2] << UART_Full_Duplex:UART.Rx_state_out[2]
+Tx_state_out[0] << UART_Full_Duplex:UART.Tx_state_out[0]
+Tx_state_out[1] << UART_Full_Duplex:UART.Tx_state_out[1]
+Tx_state_out[2] << UART_Full_Duplex:UART.Tx_state_out[2]
 
 
 |RISC_V_Pipeline|RISC_V_Core:CORE

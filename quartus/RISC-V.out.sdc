@@ -1,4 +1,4 @@
-## Generated SDC file "RISC-V.sdc"
+## Generated SDC file "RISC-V.out.sdc"
 
 ## Copyright (C) 2022  Intel Corporation. All rights reserved.
 ## Your use of Intel Corporation's design tools, logic functions 
@@ -20,7 +20,7 @@
 ## PROGRAM "Quartus Prime"
 ## VERSION "Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition"
 
-## DATE    "Tue May  9 13:13:05 2023"
+## DATE    "Tue May  9 12:44:47 2023"
 
 ##
 ## DEVICE  "5CSXFC6D6F31C6"
@@ -39,7 +39,7 @@ set_time_format -unit ns -decimal_places 3
 # Create Clock
 #**************************************************************
 
-create_clock -name {clk} -period 14.231 -waveform { 0.000 7.115 } [get_ports {clk}]
+create_clock -name {clk} -period 15.318 -waveform { 0.000 7.659 } [get_ports {clk}]
 
 
 #**************************************************************

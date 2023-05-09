@@ -1,5 +1,5 @@
 EDA Netlist Writer report for RISC-V
-Tue May  2 19:07:31 2023
+Tue May  9 13:16:57 2023
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue May  2 19:07:31 2023 ;
+; EDA Netlist Writer Status ; Successful - Tue May  9 13:16:57 2023 ;
 ; Revision Name             ; RISC-V                                ;
 ; Top-level Entity Name     ; RISC_V_Pipeline                       ;
 ; Family                    ; Cyclone V                             ;
@@ -81,13 +81,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Tue May  2 19:07:26 2023
+    Info: Processing started: Tue May  9 13:16:54 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off RISC-V -c RISC-V
 Info (204019): Generated file RISC-V.svo in folder "D:/Quartus21/projects/RISC-V_Jorge-Padilla/quartus/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4829 megabytes
-    Info: Processing ended: Tue May  2 19:07:31 2023
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4774 megabytes
+    Info: Processing ended: Tue May  9 13:16:57 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
