@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC-V
-Tue May  2 18:20:42 2023
+Tue May  2 18:59:00 2023
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -288,7 +288,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May  2 18:20:42 2023       ;
+; Analysis & Synthesis Status     ; Successful - Tue May  2 18:59:00 2023       ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                   ; RISC-V                                      ;
 ; Top-level Entity Name           ; RISC_V_Pipeline                             ;
@@ -409,11 +409,11 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -518,7 +518,7 @@ https://fpgasoftware.intel.com/eula.
 ; db/ip/sld89fdeded/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File                        ; D:/Quartus21/projects/RISC-V_Jorge-Padilla/quartus/db/ip/sld89fdeded/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
 ; db/ip/sld89fdeded/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File           ; D:/Quartus21/projects/RISC-V_Jorge-Padilla/quartus/db/ip/sld89fdeded/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
 ; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                                ; d:/quartus21/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                         ;             ;
-; ../src/Forwarding_Unit_Decode.sv                                   ; yes             ; User SystemVerilog HDL File                           ; D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Forwarding_Unit_Decode.sv                                              ;             ;
+; ../src/Forwarding_Unit_Decode.sv                                   ; yes             ; User SystemVerilog HDL File                           ; ../src/Forwarding_Unit_Decode.sv                                                                                      ;             ;
 ; db/altsyncram_04p1.tdf                                             ; yes             ; Auto-Generated Megafunction                           ; D:/Quartus21/projects/RISC-V_Jorge-Padilla/quartus/db/altsyncram_04p1.tdf                                             ;             ;
 ; db/RISC-V.ram0_Reg_File_2801358d.hdl.mif                           ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/Quartus21/projects/RISC-V_Jorge-Padilla/quartus/db/RISC-V.ram0_Reg_File_2801358d.hdl.mif                           ;             ;
 +--------------------------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+-------------+
@@ -3738,7 +3738,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:13     ;
+; Top            ; 00:00:15     ;
 +----------------+--------------+
 
 
@@ -4585,7 +4585,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Tue May  2 18:19:57 2023
+    Info: Processing started: Tue May  2 18:58:04 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC-V -c RISC-V
 Info (20032): Parallel compilation is enabled and will use up to 6 processors
 Info (12021): Found 1 design units, including 1 entities, in source file /quartus21/projects/risc-v_jorge-padilla/src/risc_v_pipeline.sv
@@ -4781,7 +4781,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: D:/Quartus21/projects/RISC-V_Jorge-Padilla/quartus/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.05.02.19:20:16 Progress: Loading sld89fdeded/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.05.02.19:58:28 Progress: Loading sld89fdeded/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -4833,10 +4833,10 @@ Info (21057): Implemented 12832 device resources after synthesis - the final res
     Info (21064): Implemented 398 RAM segments
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
-    Info: Peak virtual memory: 5021 megabytes
-    Info: Processing ended: Tue May  2 18:20:43 2023
-    Info: Elapsed time: 00:00:46
-    Info: Total CPU time (on all processors): 00:00:35
+    Info: Peak virtual memory: 5016 megabytes
+    Info: Processing ended: Tue May  2 18:59:00 2023
+    Info: Elapsed time: 00:00:56
+    Info: Total CPU time (on all processors): 00:00:41
 
 
 +------------------------------------------+

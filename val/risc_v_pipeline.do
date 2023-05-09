@@ -7,6 +7,8 @@ add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/gpio_port_in
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/gpio_port_out
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/rx
 add wave -noupdate /RISC_V_Pipeline_UART_tb/DUT/tx
+add wave -noupdate /RISC_V_Pipeline_UART_tb/Rx_state_out
+add wave -noupdate /RISC_V_Pipeline_UART_tb/Tx_state_out
 add wave -noupdate -divider FETCH
 add wave -noupdate -color Cyan -itemcolor Cyan /RISC_V_Pipeline_UART_tb/DUT/CORE/PC
 add wave -noupdate -color Gold -itemcolor Gold /RISC_V_Pipeline_UART_tb/DUT/CORE/InstrData
