@@ -12,59 +12,95 @@
 	result:	.word 0 0 0 0
 
 .text
-# int vector[4] = { 1, 2, 3, 4 };
-auipc	s0, 0xfc10
-addi	s0, s0, 0x40
-# int row[4][4]
-# int row[0][4] = { 1, 2, 3, 4 };
-auipc	s1, 0xfc10
-addi	s1, s1, 0x48
-# int row[1][4] = { 5, 6, 7, 8 };
-auipc	s2, 0xfc10
-addi	s2, s2, 0x50
-# int row[2][4] = { 9, 10, 11, 12 };
-auipc	s3, 0xfc10
-addi	s3, s3, 0x58
-# int row[3][4] = { 13, 14, 15, 16 };
-auipc	s4, 0xfc10
-addi	s4, s4, 0x60
-# int result[4] = { 0, 0, 0, 0 };
-auipc	s5, 0xfc10
-addi	s5, s5, 0x68
-# int rows = 4
-addi	s6, zero, 4
-# int colums = 4
-addi	s7, zero, 4
+auipc	s0, 0xFC10	# Set Memory Map locations for UART
+addi	s1, s0, 0x0024	# 0x10010024 = GPIO_Out
+addi	s2, s0, 0x0028	# 0x10010028 = GPIO_In
+addi	s3, s0, 0x0030	# 0x10010030 = Rx_Data
+addi	s4, s0, 0x0034	# 0x10010034 = Tx_Data
+addi	s5, s0, 0x0038	# 0x10010038 = Rx_Ready
+addi	s6, s0, 0x003C	# 0x1001003C = Tx_Send
 
+# int vector[4] = { 1, 2, 3, 4 };
+addi	s7, s0, 0x40
+# int row[4][4] = {{ 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 }};
+addi	s8, s0, 0x50
+# int result[4] = { 0, 0, 0, 0 };
+addi	s9, s0, 0x90
+# int rows = 4
+addi	s10, zero, 4
+
+__loop:
 jal	ra, __main
-jal	zero, __end
+jal	zero, __loop
 
 # int main(void) {
 __main:
+	# int *mem = &vector;
+	add	t0, s7, zero
+	# for (i = 0; i < 20; i++) {
+	addi	t1, zero, 0
+	__forUART:
+	slti	t2, t1, 20
+	beq	t2, zero, __outUART
+		# while (!UART.Rx_Ready);
+		__whileRx:
+			lw	t3, 0(s5)
+			beq	t3, zero, __whileRx
+		# *mem = UART.Rx;
+		lw	s11, 0(s3)
+		sw	s11, 0(t0)
+		# mem++;
+		addi, t0, t0, 4
+	# }
+	addi	t1, t1, 1
+	jal	zero, __forUART
+	__outUART:
 	# for (i = 0; i < rows; i++) {
-	addi	s8, zero, 0
+	addi	t0, zero, 0
 	__for1:
-	slt	t0, s8, s6
-	beq	t0, zero, __out1
+	slt	t1, t0, s10
+	beq	t1, zero, __out1
 	__loop1:
 		# result[i] = DotProduct(vector, row[i]);
-		slli	t1, s8, 2
-		slli	t2, s8, 4
-		add	s9, t1, s5
-		add	t3, t2, s1
+		slli	t2, t0, 2
+		slli	t3, t0, 4
+		add	s11, t2, s9
+		add	t4, t3, s8
 		addi	sp, sp, -4
 		sw	ra, 0(sp)
-		addi	a2, s0, 0
-		addi	a3, t3, 0
+		addi	a2, s7, 0
+		addi	a3, t4, 0
 		jal	ra, __DotProduct
 		lw	ra, 0(sp)
 		addi	sp, sp, 4
-		sw	a0, 0(s9)
+		sw	a0, 0(s11)
 	# }
-	addi	s8, s8, 1
+	addi	t0, t0, 1
 	jal	zero, __for1
-	# return 0;
 	__out1:
+	# for(int i = 0; i < rows; i--){
+	addi	t0, zero, 0
+	__forSEND:
+	slt	t1, t0, s10
+	beq	t1, zero, __outSEND
+	__loopSEND:
+		# UART.Tx = DotProduct[i];
+		slli	t2, t0, 2
+		add	t3, t2, s9
+		lw	t4, 0(t3)
+		sw	t4, 0(s4)
+		# UART.Tx_Send = 1;
+		addi	t5, zero, 1
+		sw	t5, 0(s6)
+		# while(UART.Tx_Send);
+		__whileTx:
+			lw	t6, 0(s6)
+			bne	t6, zero, __whileTx
+	# }
+	addi	t0, t0, 1
+	jal	zero, __forSEND
+	__outSEND:
+	# return 0;
 	addi	a0, zero, 0
 	jalr	zero, ra, 0
 # }
@@ -72,35 +108,35 @@ __main:
 # int DotProduct(int[] a, int[] b) [
 __DotProduct:
 	# int dot = 0
-	addi	s10, zero, 0
+	addi	t6, zero, 0
 	# for (i = 0; i < colums; i++) {
-	addi	s11, zero, 0
+	addi	t1, zero, 0
 	__for2:
-	slt	t0, s11, s7
-	beq	t0, zero, __out2
+	slt	t2, t1, s10
+	beq	t2, zero, __out2
 	__loop2:
 		# dot = dot + ProductFunction(a[i], b[i]);
-		slli	t1, s11, 2
-		add	t2, t1, a2
-		add	t3, t1, a3
+		slli	t3, t1, 2
+		add	t4, t3, a2
+		add	t5, t3, a3
 		addi	sp, sp, -12
 		sw	ra, 8(sp)
 		sw	a2, 4(sp)
 		sw	a3, 0(sp)
-		lw	a2, 0(t2)
-		lw	a3, 0(t3)
+		lw	a2, 0(t4)
+		lw	a3, 0(t5)
 		jal	ra, __ProductFunction
 		lw	a3, 0(sp)
 		lw	a2, 4(sp)
 		lw	ra, 8(sp)
 		addi	sp, sp, 12
-		add	s10, s10, a0
+		add	t6, t6, a0
 	# }
-	addi	s11, s11, 1
+	addi	t1, t1, 1
 	jal	zero, __for2
 	# return dot;
 	__out2:
-	addi	a0, s10, 0
+	addi	a0, t6, 0
 	jalr	zero, ra, 0
 # }
 
@@ -113,4 +149,8 @@ __ProductFunction:
 
 # nop
 __end:
+addi	zero, zero, 0x0
+addi	zero, zero, 0x0
+addi	zero, zero, 0x0
+addi	zero, zero, 0x0
 addi	zero, zero, 0x0

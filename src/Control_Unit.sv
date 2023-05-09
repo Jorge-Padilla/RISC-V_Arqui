@@ -21,6 +21,7 @@ module Control_Unit(
 	output reg[1:0] ALUSrcB,
 	output reg[1:0] ShiftAmnt,
 	output reg[2:0] SignExt,
+	output reg      PCEn, 
 	output reg      MemWrite, 
 	output reg      MemRead,
 	output reg      RegWrite,
@@ -36,6 +37,7 @@ module Control_Unit(
 	always @(*) begin
 		case(Opcode)
 			`OPCODE_REG: begin
+				PCEn		= 1'b1;	
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b0;		
 				RegWrite	= 1'b1;			//Write to RegFile
@@ -51,6 +53,7 @@ module Control_Unit(
 				ALUControl	= {Funct7[5],Funct7[0],Funct3};	//Functions define ALU Operation
 			end
 			`OPCODE_IMMI: begin
+				PCEn		= 1'b1;	
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b0;		
 				RegWrite	= 1'b1;			//Write to RegFile
@@ -78,6 +81,7 @@ module Control_Unit(
 				endcase
 			end
 			`OPCODE_LOAD: begin
+				PCEn		= 1'b1;	
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b1;			//Read from Memory Map
 				RegWrite	= 1'b1;			//Write to RegFile
@@ -93,6 +97,7 @@ module Control_Unit(
 				ALUControl	= `SEL_ADD;		//Select ADD operation
 			end
 			`OPCODE_STORE: begin
+				PCEn		= 1'b1;	
 				MemWrite	= 1'b1;			//Write to Memory Map
 				MemRead		= 1'b0;
 				RegWrite	= 1'b0;
@@ -108,6 +113,7 @@ module Control_Unit(
 				ALUControl	= `SEL_ADD;		//Select ADD operation
 			end
 			`OPCODE_BRANCH: begin
+				PCEn		= 1'b1;	
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b0;			
 				RegWrite	= 1'b0;			
@@ -151,6 +157,7 @@ module Control_Unit(
 				endcase
 			end
 			`OPCODE_JAL: begin
+				PCEn		= 1'b1;	
 				MemWrite	= 1'b0;			
 				MemRead		= 1'b0;			
 				RegWrite	= 1'b1;			//Write to RegFile
@@ -166,6 +173,7 @@ module Control_Unit(
 				ALUControl	= `SEL_ADD;		//Select ADD operation
 			end
 			`OPCODE_JALR: begin
+				PCEn		= 1'b1;	
 				MemWrite	= 1'b0;			
 				MemRead		= 1'b0;			
 				RegWrite	= 1'b1;			//Write to RegFile
@@ -181,6 +189,7 @@ module Control_Unit(
 				ALUControl	= `SEL_ADD;		//Select ADD operation
 			end
 			`OPCODE_LUI: begin
+				PCEn		= 1'b1;	
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b0;		
 				RegWrite	= 1'b1;			//Write to RegFile
@@ -196,6 +205,7 @@ module Control_Unit(
 				ALUControl	= `SEL_ADD;		//Functions define ALU Operation
 			end
 			`OPCODE_AUIPC: begin
+				PCEn		= 1'b1;	
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b0;		
 				RegWrite	= 1'b1;			//Write to RegFile
@@ -211,6 +221,7 @@ module Control_Unit(
 				ALUControl	= `SEL_ADD;		//Functions define ALU Operation
 			end
 			`OPCODE_STALL: begin
+				PCEn		= 1'b0;			//On reset, PC is not incremented
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b0;		
 				RegWrite	= 1'b0;		
@@ -226,6 +237,7 @@ module Control_Unit(
 				ALUControl	= `SEL_ADD;	
 			end
 			default: begin
+				PCEn		= 1'b0;			//On reset, PC is not incremented
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b0;		
 				RegWrite	= 1'b0;		
