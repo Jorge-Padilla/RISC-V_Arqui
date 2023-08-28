@@ -16,7 +16,8 @@ module ROM_Single_Port #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 10) (
 	
 	//Initial MEM Values
 	initial begin
-		$readmemh("RISC_V_UART.txt", rom);
+		// $readmemh("RISC_V_UART.txt", rom);
+		$readmemh("RISC_V_program_smallest.txt", rom);
 	end
 	
 	//Reading continuously

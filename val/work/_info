@@ -4,84 +4,6 @@ z2
 Z0 !s99 nomlopt
 R0
 R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
 !s11f vlog 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -90,1682 +12,1746 @@ R0
 !i10f 100
 cModel Technology
 Z1 dD:/Quartus21
-T_opt1
-!s110 1678846540
-VoSgFRniTV=dWfISPiNTEU0
-04 14 4 work RISC_V_UART_tb fast 0
-=1-0068eb78737a-64112a4c-34-4ebc
-!s124 OEM10U88 
-Z2 o-quiet -auto_acc_if_foreign -work work +acc
-Z3 tCvgOpt 0
-n@_opt1
-Z4 OL;O;2021.2;73
+T_opt
+!s110 1693257667
+VF8QXh?5SzngL;>VYg8zm=3
+Z2 04 22 4 work RISC_V_Single_Cycle_tb fast 0
+=1-0068eb78737a-64ed0fc3-261-8be0
+Z3 !s124 OEM10U66 
+o-quiet -auto_acc_if_foreign -work work
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2021.2;73
 R1
-T_opt3
-!s110 1680052390
-VXlaM:UTkEaOClMbU98Kiz3
-04 27 4 work RISC_V_Single_Cycle_UART_tb fast 0
-=1-0068eb78737a-642390a5-39b-7a14
-!s124 OEM10U84 
+T_opt1
+!s110 1693258202
+VXbN@`afR2n@[^02mBnbP41
 R2
+=1-0068eb78737a-64ed11d9-2cf-868
 R3
-n@_opt3
+o-quiet -auto_acc_if_foreign -work work +acc
 R4
+n@_opt1
+R5
+R1
 vAdder
-Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z6 !s110 1680052145
+Z6 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z7 !s110 1693258549
 !i10b 1
 !s100 BMgUHg2Dnzd6^LAF46b>K1
-ILbUkMO`f<K[8l>FTI@;<<3
+IKN1no6XYcVZRzJh6[akLd2
 S1
-Z7 dD:/Quartus21/projects/RISC-V_Jorge-Padilla/val
-w1680051822
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Adder.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Adder.sv
-!i122 647
+Z8 dD:/Quartus21/projects/RISC-V_Arqui/val
+Z9 w1693257008
+8D:/Quartus21/projects/RISC-V_Arqui/src/Adder.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/Adder.sv
+!i122 294
 L0 9 12
-Z8 VDg1SIo80bB@j0V0VzS_@n1
-Z9 OL;L;2021.2;73
+Z10 VDg1SIo80bB@j0V0VzS_@n1
+Z11 OL;L;2021.2;73
 r1
 !s85 0
 31
-Z10 !s108 1680052145.000000
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU_sel.sv|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Adder.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Adder.sv|
+Z12 !s108 1693258549.000000
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/ALU_sel.sv|D:/Quartus21/projects/RISC-V_Arqui/src/Adder.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Adder.sv|
 !i113 0
-Z11 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R3
+Z13 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
 n@adder
 vALU
-R5
-Z12 !s110 1678663727
+R6
+R7
 !i10b 1
 !s100 0=zMQK0XYFdgkg`LT<_;I2
-IGJZW>OXl41W>J9Yb@0VDH0
+IK3lkk8PFHZlIz5zSADeb63
 S1
-R7
-w1676995038
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU.sv
-!i122 549
-L0 9 36
 R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/ALU.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/ALU.sv
+!i122 295
+L0 9 36
+R10
+R11
 r1
 !s85 0
 31
-Z13 !s108 1678663727.000000
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU_sel.sv|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU.sv|
+R12
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/ALU_sel.sv|D:/Quartus21/projects/RISC-V_Arqui/src/ALU.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/ALU.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@a@l@u
 vALU_tb
-R5
-R12
+R6
+Z14 !s110 1693258550
 !i10b 1
 !s100 mCZMOlj6dJz]AH?@ZJFgg1
-Id]kaLEZ1jWll?mzN<k?C;1
+IRkNgS7=EnOBjX7?JhTK<z0
 S1
-R7
-w1676995224
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU_tb.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU_tb.sv
-!i122 550
-L0 7 104
 R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/ALU_tb.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/ALU_tb.sv
+!i122 296
+L0 7 104
+R10
+R11
 r1
 !s85 0
 31
-R13
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU_tb.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU_tb.sv|
+Z15 !s108 1693258550.000000
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/ALU_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/ALU_tb.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@a@l@u_tb
 vBit_Rate_Pulse
-R5
-Z14 !s110 1678663730
+R6
+R14
 !i10b 1
 !s100 o12Tn=L1zmo;Vk_Ge;7Pl2
-IP[5>Qe:YjW6fK53f?IVLT3
+I@A8UbdoJjP=f@52b:m0Cj2
 S1
-R7
-w1678663217
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Bit_Rate_Pulse.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Bit_Rate_Pulse.sv
-!i122 571
-L0 8 32
 R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/Bit_Rate_Pulse.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/Bit_Rate_Pulse.sv
+!i122 297
+L0 8 32
+R10
+R11
 r1
 !s85 0
 31
-Z15 !s108 1678663730.000000
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Bit_Rate_Pulse.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Bit_Rate_Pulse.sv|
+R15
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/Bit_Rate_Pulse.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Bit_Rate_Pulse.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@bit_@rate_@pulse
-vControl_Unit
-R5
-Z16 DXx4 work 17 Control_Unit_enum 0 22 ;;OE_PA9<MAVbDPU^BT:>3
-DXx4 work 20 Control_Unit_sv_unit 0 22 i7eR^cDzBjz_[LGAJ1G^e1
-Z17 !s110 1680052103
+vClk_Div
+R6
+Z16 DXx4 work 17 Control_Unit_enum 0 22 iV^M21ER1DSOaQ2h3b]Zg0
+DXx4 work 15 Clk_Div_sv_unit 0 22 aITmD_VA;=G2ESDH]VClA0
+R14
+R10
+r1
+!s85 0
+!i10b 1
+!s100 FO?4D]W2Uek4C8YcSCB001
+IC8Y4J9`Qe40?k__1V`ST20
+!s105 Clk_Div_sv_unit
+S1
 R8
+Z17 w1693257646
+Z18 8D:/Quartus21/projects/RISC-V_Arqui/src/Clk_Div.sv
+Z19 FD:/Quartus21/projects/RISC-V_Arqui/src/Clk_Div.sv
+!i122 298
+L0 9 23
+R11
+31
+R15
+Z20 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/Clk_Div.sv|
+Z21 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Clk_Div.sv|
+!i113 0
+R13
+R4
+n@clk_@div
+XClk_Div_sv_unit
+R6
+R16
+R14
+VaITmD_VA;=G2ESDH]VClA0
+r1
+!s85 0
+!i10b 1
+!s100 OeD[?1f_IXiWEnJ3X5m<R0
+IaITmD_VA;=G2ESDH]VClA0
+!i103 1
+S1
+R8
+R17
+R18
+R19
+!i122 298
+Z22 L0 7 0
+R11
+31
+R15
+R20
+R21
+!i113 0
+R13
+R4
+n@clk_@div_sv_unit
+vControl_Unit
+R6
+R16
+DXx4 work 20 Control_Unit_sv_unit 0 22 <0MW9OCV7Sk>IGBLh8AQ<0
+R14
+R10
 r1
 !s85 0
 !i10b 1
 !s100 kd_`P4Nh1bQ62fd]lI^zR2
-I<IG<M:ScciW;ManOBA=531
+I2z]@K_B6@mkVIlJGRjY<?2
 !s105 Control_Unit_sv_unit
 S1
-R7
-Z18 w1680051987
-Z19 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv
-Z20 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv
-!i122 644
+R8
+Z23 w1693257115
+Z24 8D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit.sv
+Z25 FD:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit.sv
+!i122 299
 L0 12 235
-R9
-31
-Z21 !s108 1680052102.000000
-Z22 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU_sel.sv|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit_defs.sv|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv|
-Z23 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit.sv|
-!i113 0
 R11
-R3
+31
+R15
+Z26 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/ALU_sel.sv|D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_defs.sv|D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit.sv|
+Z27 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit.sv|
+!i113 0
+R13
+R4
 n@control_@unit
 XControl_Unit_enum
-R5
-!s110 1680038836
+R6
+R14
 !i10b 1
 !s100 [S=<gnI6V<>ALJFX_g5m52
-I;;OE_PA9<MAVbDPU^BT:>3
+IiV^M21ER1DSOaQ2h3b]Zg0
 S1
-R7
-Z24 w1680038661
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit_enum.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit_enum.sv
-!i122 640
-Z25 L0 7 0
-V;;OE_PA9<MAVbDPU^BT:>3
+R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_enum.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_enum.sv
+!i122 300
+R22
+ViV^M21ER1DSOaQ2h3b]Zg0
+R11
 r1
 !s85 0
 31
-!s108 1680038836.000000
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit_enum.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit_enum.sv|
+R15
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_enum.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_enum.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@control_@unit_enum
 vControl_Unit_Mul
-R5
-R16
-DXx4 work 24 Control_Unit_Mul_sv_unit 0 22 >zf[l8>RTXV11F7T106SK0
 R6
-R8
+R16
+DXx4 work 24 Control_Unit_Mul_sv_unit 0 22 FfMmO;3EEO8UTXMe@Wo1B0
+R14
+R10
 r1
 !s85 0
 !i10b 1
 !s100 `N>_CaLR1WoEgo=]NCeJ^1
-IS22>6fLjk7d<D88<IfFgR1
+II=nM6lmKYeLYklgDV^[aS2
 !s105 Control_Unit_Mul_sv_unit
 S1
-R7
-w1680046517
-Z26 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit_Mul.sv
-Z27 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit_Mul.sv
-!i122 648
-L0 12 409
+R8
 R9
-31
-R10
-Z28 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU_sel.sv|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit_defs.sv|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit_Mul.sv|
-Z29 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit_Mul.sv|
-!i113 0
+Z28 8D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_Mul.sv
+Z29 FD:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_Mul.sv
+!i122 301
+L0 12 409
 R11
-R3
+31
+R15
+Z30 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/ALU_sel.sv|D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_defs.sv|D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_Mul.sv|
+Z31 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_Mul.sv|
+!i113 0
+R13
+R4
 n@control_@unit_@mul
 XControl_Unit_Mul_sv_unit
-R5
-R16
 R6
-V>zf[l8>RTXV11F7T106SK0
+R16
+R14
+VFfMmO;3EEO8UTXMe@Wo1B0
 r1
 !s85 0
 !i10b 1
 !s100 @kglk0nbQjj>P256_4jG=0
-I>zf[l8>RTXV11F7T106SK0
+IFfMmO;3EEO8UTXMe@Wo1B0
 !i103 1
 S1
-R7
-w1680047859
-R26
-R27
-Z30 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Control_Unit_defs.sv
-Z31 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ALU_sel.sv
-!i122 648
-Z32 L0 10 0
+R8
 R9
-31
-R10
 R28
 R29
-!i113 0
+Z32 FD:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_defs.sv
+Z33 FD:/Quartus21/projects/RISC-V_Arqui/src/ALU_sel.sv
+!i122 301
+Z34 L0 10 0
 R11
-R3
+31
+R15
+R30
+R31
+!i113 0
+R13
+R4
 n@control_@unit_@mul_sv_unit
 XControl_Unit_sv_unit
-R5
+R6
 R16
-R17
-Vi7eR^cDzBjz_[LGAJ1G^e1
+R14
+V<0MW9OCV7Sk>IGBLh8AQ<0
 r1
 !s85 0
 !i10b 1
 !s100 if_61[feSS2ZQe3KmmONf0
-Ii7eR^cDzBjz_[LGAJ1G^e1
+I<0MW9OCV7Sk>IGBLh8AQ<0
 !i103 1
 S1
-R7
-R18
-R19
-R20
-R30
-R31
-!i122 644
-R32
-R9
-31
-R21
-R22
+R8
 R23
-!i113 0
+R24
+R25
+R32
+R33
+!i122 299
+R34
 R11
-R3
+31
+R15
+R26
+R27
+!i113 0
+R13
+R4
 n@control_@unit_sv_unit
 vCounter_Param
-R5
-Z33 !s110 1678663728
+R6
+R14
 !i10b 1
 !s100 eW]No]XKfAgc5clMz^c[J3
-I>9>C<Sl[an@GWa9@iAz721
+I_[Szh3ChTh]3eYeF<=[6:3
 S1
-R7
-w1676680952
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Counter_Param.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Counter_Param.sv
-!i122 553
-Z34 L0 7 24
 R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/Counter_Param.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/Counter_Param.sv
+!i122 302
+Z35 L0 7 24
+R10
+R11
 r1
 !s85 0
 31
-Z35 !s108 1678663728.000000
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Counter_Param.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Counter_Param.sv|
+R15
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/Counter_Param.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Counter_Param.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@counter_@param
 vFSM_UART_Rx
-R5
-Z36 DXx4 work 8 UART_pkg 0 22 FmGW=FPIAQAo_6b3H2KcU0
-DXx4 work 19 FSM_UART_Rx_sv_unit 0 22 zM>OA56^D1^=0@8ZDDzF91
-Z37 !s110 1678664759
-R8
+R6
+Z36 DXx4 work 8 UART_pkg 0 22 HLjc:Ti[SMZAg4<`7WgBc2
+DXx4 work 19 FSM_UART_Rx_sv_unit 0 22 DSC8QKTO^H10RAPBZ[9@E0
+Z37 !s110 1693258551
+R10
 r1
 !s85 0
 !i10b 1
 !s100 mB:M9M86K0XdcljKi>>fa3
-I3Gf;_=B8L;RN@zN1GW56Q1
+IfWmjBK4dcmN2Rbb[gNFSG0
 !s105 FSM_UART_Rx_sv_unit
 S1
-R7
-Z38 w1678664729
-Z39 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/FSM_UART_Rx.sv
-Z40 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/FSM_UART_Rx.sv
-!i122 587
-L0 9 122
+R8
 R9
-31
-Z41 !s108 1678664759.000000
-Z42 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/FSM_UART_Rx.sv|
-Z43 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/FSM_UART_Rx.sv|
-!i113 0
+Z38 8D:/Quartus21/projects/RISC-V_Arqui/src/FSM_UART_Rx.sv
+Z39 FD:/Quartus21/projects/RISC-V_Arqui/src/FSM_UART_Rx.sv
+!i122 303
+L0 9 122
 R11
-R3
+31
+Z40 !s108 1693258551.000000
+Z41 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/FSM_UART_Rx.sv|
+Z42 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/FSM_UART_Rx.sv|
+!i113 0
+R13
+R4
 n@f@s@m_@u@a@r@t_@rx
 XFSM_UART_Rx_sv_unit
-R5
+R6
 R36
 R37
-VzM>OA56^D1^=0@8ZDDzF91
+VDSC8QKTO^H10RAPBZ[9@E0
 r1
 !s85 0
 !i10b 1
 !s100 N12_^d00X<LUNecW7`eJ03
-IzM>OA56^D1^=0@8ZDDzF91
+IDSC8QKTO^H10RAPBZ[9@E0
 !i103 1
 S1
-R7
+R8
+R9
 R38
 R39
-R40
-!i122 587
-R25
-R9
+!i122 303
+R22
+R11
 31
+R40
 R41
 R42
-R43
 !i113 0
-R11
-R3
+R13
+R4
 n@f@s@m_@u@a@r@t_@rx_sv_unit
 vFSM_UART_Tx
-R5
+R6
 R36
-DXx4 work 19 FSM_UART_Tx_sv_unit 0 22 PT0cJFNKBNK9n]JdNnX?01
-Z44 !s110 1678668956
-R8
+DXx4 work 19 FSM_UART_Tx_sv_unit 0 22 @XaDe5ae7iF`LSZ>1AXd<3
+R37
+R10
 r1
 !s85 0
 !i10b 1
 !s100 [0bTQgHJO@ndjVEdKc17j3
-I9oc3f:UQBla?0AHIDSK`E3
+IRklK^FfgOSdD=0XjE>3T03
 !s105 FSM_UART_Tx_sv_unit
 S1
-R7
-Z45 w1678668921
-Z46 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/FSM_UART_Tx.sv
-Z47 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/FSM_UART_Tx.sv
-!i122 604
-L0 9 115
+R8
 R9
-31
-Z48 !s108 1678668956.000000
-Z49 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/FSM_UART_Tx.sv|
-Z50 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/FSM_UART_Tx.sv|
-!i113 0
+Z43 8D:/Quartus21/projects/RISC-V_Arqui/src/FSM_UART_Tx.sv
+Z44 FD:/Quartus21/projects/RISC-V_Arqui/src/FSM_UART_Tx.sv
+!i122 304
+L0 9 115
 R11
-R3
+31
+R40
+Z45 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/FSM_UART_Tx.sv|
+Z46 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/FSM_UART_Tx.sv|
+!i113 0
+R13
+R4
 n@f@s@m_@u@a@r@t_@tx
 XFSM_UART_Tx_sv_unit
-R5
+R6
 R36
-R44
-VPT0cJFNKBNK9n]JdNnX?01
+R37
+V@XaDe5ae7iF`LSZ>1AXd<3
 r1
 !s85 0
 !i10b 1
 !s100 mc]C;Rbn216eS6fd4THaB3
-IPT0cJFNKBNK9n]JdNnX?01
+I@XaDe5ae7iF`LSZ>1AXd<3
 !i103 1
 S1
-R7
+R8
+R9
+R43
+R44
+!i122 304
+R22
+R11
+31
+R40
 R45
 R46
-R47
-!i122 604
-R25
-R9
-31
-R48
-R49
-R50
 !i113 0
-R11
-R3
+R13
+R4
 n@f@s@m_@u@a@r@t_@tx_sv_unit
 vGPIO
-R5
-R14
+R6
+R37
 !i10b 1
 !s100 SeH^lDC_Z70ODdo@UaWM?3
-I?Q1L8<OXQ_;fojO:O5>YK2
+IBY3T;HR8`m3i2PJ@0nJkK1
 S1
-R7
-w1677795679
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/GPIO.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/GPIO.sv
-!i122 570
+R8
+R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/GPIO.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/GPIO.sv
+!i122 305
 L0 9 18
-R8
-R9
+R10
+R11
 r1
 !s85 0
 31
-R15
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Regs.sv|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/GPIO.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/GPIO.sv|
+R40
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/Regs.sv|D:/Quartus21/projects/RISC-V_Arqui/src/GPIO.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/GPIO.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@g@p@i@o
-vMem_Map
-R5
-!s110 1677786170
-!i10b 1
-!s100 imYTYVVmk6gi5?Xaz=JDb2
-I]e`<heO7JokGeim_EX@jZ2
-S1
-R7
-w1677021249
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map.sv
-!i122 359
-L0 9 55
-R8
-R9
-r1
-!s85 0
-31
-!s108 1677786170.000000
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Regs.sv|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map.sv|
-!i113 0
-R11
-R3
-n@mem_@map
 vMem_Map_Controler
-R5
-Z51 DXx4 work 8 UART_pkg 0 22 ZQ`aQ^bWC1PEBLAVDaBz^0
-DXx4 work 25 Mem_Map_Controler_sv_unit 0 22 @JiQn^:GODWD4mVzZ6dNU0
-R17
-R8
+R6
+R36
+DXx4 work 25 Mem_Map_Controler_sv_unit 0 22 n9NIEMBWMIo^GDaiESVbW1
+R37
+R10
 r1
 !s85 0
 !i10b 1
 !s100 ]iW@cWV_z0_1oNWB_iO^H0
-IH?lP7NUO?^J=S@V19g:>L2
+IzT4N04]XWmW5okE8XlVR20
 !s105 Mem_Map_Controler_sv_unit
 S1
-R7
-Z52 w1680051625
-Z53 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map_Controler.sv
-Z54 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map_Controler.sv
-!i122 646
+R8
+R23
+Z47 8D:/Quartus21/projects/RISC-V_Arqui/src/Mem_Map_Controler.sv
+Z48 FD:/Quartus21/projects/RISC-V_Arqui/src/Mem_Map_Controler.sv
+!i122 306
 L0 11 89
-R9
-31
-Z55 !s108 1680052103.000000
-Z56 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Regs.sv|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map_Controler.sv|
-Z57 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map_Controler.sv|
-!i113 0
 R11
-R3
+31
+R40
+Z49 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/Regs.sv|D:/Quartus21/projects/RISC-V_Arqui/src/Mem_Map_Controler.sv|
+Z50 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Mem_Map_Controler.sv|
+!i113 0
+R13
+R4
 n@mem_@map_@controler
 vMem_Map_Controler_Mul
-R5
-R51
-DXx4 work 29 Mem_Map_Controler_Mul_sv_unit 0 22 UBz_`E^ARX1IUlZRl5oI22
 R6
-R8
+R36
+DXx4 work 29 Mem_Map_Controler_Mul_sv_unit 0 22 EVKYaokFhl]Z7JOb[RN=o2
+R37
+R10
 r1
 !s85 0
 !i10b 1
 !s100 aOPO5EUk_JR>0B]8[lDmo2
-I`b<l3b>Cn@NZ@_B7DNCQE0
+Io4OlV^bLW?bIhT??__zSV2
 !s105 Mem_Map_Controler_Mul_sv_unit
 S1
-R7
-Z58 w1680051208
-Z59 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map_Controler_Mul.sv
-Z60 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map_Controler_Mul.sv
-!i122 649
-Z61 L0 11 87
+R8
 R9
-31
-R10
-Z62 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Regs.sv|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map_Controler_Mul.sv|
-Z63 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mem_Map_Controler_Mul.sv|
-!i113 0
+Z51 8D:/Quartus21/projects/RISC-V_Arqui/src/Mem_Map_Controler_Mul.sv
+Z52 FD:/Quartus21/projects/RISC-V_Arqui/src/Mem_Map_Controler_Mul.sv
+!i122 307
+Z53 L0 11 87
 R11
-R3
+31
+R40
+Z54 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/Regs.sv|D:/Quartus21/projects/RISC-V_Arqui/src/Mem_Map_Controler_Mul.sv|
+Z55 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Mem_Map_Controler_Mul.sv|
+!i113 0
+R13
+R4
 n@mem_@map_@controler_@mul
 XMem_Map_Controler_Mul_sv_unit
-R5
-R51
 R6
-VUBz_`E^ARX1IUlZRl5oI22
+R36
+R37
+VEVKYaokFhl]Z7JOb[RN=o2
 r1
 !s85 0
 !i10b 1
 !s100 0I0COaOLMnML>PdF;Sd891
-IUBz_`E^ARX1IUlZRl5oI22
+IEVKYaokFhl]Z7JOb[RN=o2
 !i103 1
 S1
-R7
-R58
-R59
-R60
-Z64 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Regs.sv
-!i122 649
-Z65 L0 9 0
-R9
-31
-R10
-R62
-R63
-!i113 0
+R8
+R23
+R51
+R52
+Z56 FD:/Quartus21/projects/RISC-V_Arqui/src/Regs.sv
+!i122 307
+Z57 L0 9 0
 R11
-R3
+31
+R40
+R54
+R55
+!i113 0
+R13
+R4
 n@mem_@map_@controler_@mul_sv_unit
 XMem_Map_Controler_sv_unit
-R5
-R51
-R17
-V@JiQn^:GODWD4mVzZ6dNU0
+R6
+R36
+R37
+Vn9NIEMBWMIo^GDaiESVbW1
 r1
 !s85 0
 !i10b 1
 !s100 z5WDi?A4_DN=>?d5UG<4n2
-I@JiQn^:GODWD4mVzZ6dNU0
+In9NIEMBWMIo^GDaiESVbW1
 !i103 1
 S1
-R7
-R52
-R53
-R54
-R64
-!i122 646
-R65
-R9
-31
-R55
+R8
+R23
+R47
+R48
 R56
+!i122 306
 R57
-!i113 0
 R11
-R3
+31
+R40
+R49
+R50
+!i113 0
+R13
+R4
 n@mem_@map_@controler_sv_unit
 vMux_2_1
-R5
-R33
+R6
+R37
 !i10b 1
 !s100 b1V7o:_D6;AjP]_TDIEF=0
-I<6C6<o@ED9NJK6MW53dJm3
+IZiX9jI[Bo_c3X78FQmG5:0
 S1
-R7
-w1676671468
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mux_2_1.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mux_2_1.sv
-!i122 554
-L0 7 13
 R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/Mux_2_1.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/Mux_2_1.sv
+!i122 308
+L0 7 13
+R10
+R11
 r1
 !s85 0
 31
-R35
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mux_2_1.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mux_2_1.sv|
+R40
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/Mux_2_1.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Mux_2_1.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@mux_2_1
 vMux_4_1
-R5
-R33
+R6
+R37
 !i10b 1
 !s100 eD@_[1iX>cD:J5UKZJIJC2
-IRKgg0Y2A=me>;[f5aOYai0
+INUgShfe92WoKN9ShJHPDE2
 S1
-R7
-w1676664118
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mux_4_1.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mux_4_1.sv
-!i122 555
-L0 7 37
 R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/Mux_4_1.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/Mux_4_1.sv
+!i122 309
+L0 7 37
+R10
+R11
 r1
 !s85 0
 31
-R35
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mux_4_1.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Mux_4_1.sv|
+R40
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/Mux_4_1.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Mux_4_1.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@mux_4_1
 vPC_Enable
-R5
-R33
+R6
+R37
 !i10b 1
 !s100 :cF^>;lhhkDmNJ6T`>g^g1
-IR?zakzTA351NCoDLQP?Wk0
+I=<:_=RA4U<AcL4i>PXdjH0
 S1
-R7
-w1677010739
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/PC_Enable.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/PC_Enable.sv
-!i122 556
-L0 7 14
 R8
-R9
+R23
+8D:/Quartus21/projects/RISC-V_Arqui/src/PC_Enable.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/PC_Enable.sv
+!i122 310
+L0 7 14
+R10
+R11
 r1
 !s85 0
 31
-R35
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/PC_Enable.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/PC_Enable.sv|
+R40
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/PC_Enable.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/PC_Enable.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@p@c_@enable
 vRAM_Single_Port
-R5
-R33
+R6
+Z58 !s110 1693258552
 !i10b 1
-!s100 H;ID;0Z[aS;R7Q^A84^]Q0
-I=Y=3;Q5Q7bbgQOMZVAkFa1
+!s100 omg>P0WD7hdO3ojB8S?ZE2
+IYFfTMG4MPnO79;1B5K77W3
 S1
-R7
-w1677012655
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RAM_Single_Port.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RAM_Single_Port.sv
-!i122 557
-L0 7 28
 R8
-R9
+w1693258170
+8D:/Quartus21/projects/RISC-V_Arqui/src/RAM_Single_Port.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/RAM_Single_Port.sv
+!i122 311
+L0 7 29
+R10
+R11
 r1
 !s85 0
 31
-R35
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RAM_Single_Port.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RAM_Single_Port.sv|
+R40
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/RAM_Single_Port.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/RAM_Single_Port.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@r@a@m_@single_@port
 vReg_File
-R5
-R33
+R6
+R58
 !i10b 1
 !s100 EPm66C;BkzQ9D61<HP=T`2
-IKm?SG_3KIgSPZh0b<[kLM0
+IlP3>IA_j9e><@_`7jfDV]2
 S1
-R7
-w1677030314
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_File.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_File.sv
-!i122 558
-L0 7 33
 R8
-R9
+R23
+8D:/Quartus21/projects/RISC-V_Arqui/src/Reg_File.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/Reg_File.sv
+!i122 312
+L0 7 33
+R10
+R11
 r1
 !s85 0
 31
-R35
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_File.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_File.sv|
+Z59 !s108 1693258552.000000
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/Reg_File.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Reg_File.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@reg_@file
 vReg_File_tb
-R5
-R33
+R6
+R58
 !i10b 1
 !s100 B]Z9gH^:b:bE0KfOadYW>1
-Izd_MCD9Ma1HPPnb02^HFE3
+IBO4hKN74hi:VLe3@cEOQZ2
 S1
-R7
-w1676670919
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_File_tb.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_File_tb.sv
-!i122 559
-L0 10 60
 R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/Reg_File_tb.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/Reg_File_tb.sv
+!i122 313
+L0 10 60
+R10
+R11
 r1
 !s85 0
 31
-R35
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_File_tb.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_File_tb.sv|
+R59
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/Reg_File_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Reg_File_tb.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@reg_@file_tb
 vReg_Param
-R5
-Z66 !s110 1678663729
+R6
+R58
 !i10b 1
 !s100 DD>gaje`G2MIH[T8ZOW821
-IDE4nfNAQ;;IMSAYO?hz6^3
+Iheb>LI]J8dN]3hV^^3B]H3
 S1
-R7
-w1676672191
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_Param.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_Param.sv
-!i122 560
-Z67 L0 9 14
 R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/Reg_Param.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/Reg_Param.sv
+!i122 314
+Z60 L0 9 14
+R10
+R11
 r1
 !s85 0
 31
-R35
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Regs.sv|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_Param.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_Param.sv|
+R59
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/Regs.sv|D:/Quartus21/projects/RISC-V_Arqui/src/Reg_Param.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Reg_Param.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@reg_@param
 vReg_PC
-R5
-R66
+R6
+R58
 !i10b 1
 !s100 DL16OgU@=AC3`7U8f]aH_0
-IAR7JdOR8O=5lGFLF31ALm3
+I_EC]@GQ8QQgSY6jQCKn=>3
 S1
-R7
-w1677019844
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_PC.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_PC.sv
-!i122 566
-R67
 R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/Reg_PC.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/Reg_PC.sv
+!i122 315
+R60
+R10
+R11
 r1
 !s85 0
 31
-Z68 !s108 1678663729.000000
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Regs.sv|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_PC.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Reg_PC.sv|
+R59
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/Regs.sv|D:/Quartus21/projects/RISC-V_Arqui/src/Reg_PC.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Reg_PC.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@reg_@p@c
-vRISC_V
-R5
-Z69 DXx4 work 17 Control_Unit_enum 0 22 5z:cQ85HcfVjen[dIfXDI3
-DXx4 work 14 RISC_V_sv_unit 0 22 5LKTflzIHo`JnP^a0EMLk0
-Z70 !s110 1677030756
-R8
-r1
-!s85 0
-!i10b 1
-!s100 J@8V;gb8RHnD3IW9N;7011
-I:DiGo5BlF=B:li[BZJA[B0
-!s105 RISC_V_sv_unit
-S1
-R7
-Z71 w1677030740
-Z72 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V.sv
-Z73 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V.sv
-!i122 309
-L0 9 281
-R9
-31
-Z74 !s108 1677030756.000000
-Z75 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V.sv|
-Z76 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V.sv|
-!i113 0
-R11
-R3
-n@r@i@s@c_@v
 vRISC_V_Core
-R5
+R6
 R16
-DXx4 work 19 RISC_V_Core_sv_unit 0 22 AhR61gNhIPH[_Je]oPLL72
-R17
-R8
+DXx4 work 19 RISC_V_Core_sv_unit 0 22 mboG<Ge_09GA?M;V]aJA82
+R58
+R10
 r1
 !s85 0
 !i10b 1
 !s100 zoYZIhF]MCfVcc?c:ZDRo3
-I4lcI3QMbRPO4m>Y3:JzL]2
+IV=:mm@?DPPPNH2[MKTLfD2
 !s105 RISC_V_Core_sv_unit
 S1
-R7
-Z77 w1680051911
-Z78 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv
-Z79 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv
-!i122 645
+R8
+R23
+Z61 8D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Core.sv
+Z62 FD:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Core.sv
+!i122 316
 L0 9 179
-R9
-31
-R55
-Z80 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv|
-Z81 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core.sv|
-!i113 0
 R11
-R3
+31
+R59
+Z63 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Core.sv|
+Z64 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Core.sv|
+!i113 0
+R13
+R4
 n@r@i@s@c_@v_@core
 vRISC_V_Core_Mul
-R5
-R16
-DXx4 work 23 RISC_V_Core_Mul_sv_unit 0 22 8P:G;oIcS?ElER=CoVPOz2
 R6
-R8
+R16
+DXx4 work 23 RISC_V_Core_Mul_sv_unit 0 22 W7HQ2eM<MN?Mgm3Ua@W0@3
+R58
+R10
 r1
 !s85 0
 !i10b 1
 !s100 YoEcom@Le_AMazV1L:RD?2
-IK_LlL=jc9Qm=mh65k0chd0
+IiEk2lAINQ7GDDY^Sj7VDY3
 !s105 RISC_V_Core_Mul_sv_unit
 S1
-R7
-Z82 w1680046528
-Z83 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core_Mul.sv
-Z84 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core_Mul.sv
-!i122 650
-L0 9 240
+R8
 R9
-31
-R10
-Z85 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core_Mul.sv|
-Z86 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Core_Mul.sv|
-!i113 0
+Z65 8D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Core_Mul.sv
+Z66 FD:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Core_Mul.sv
+!i122 317
+L0 9 240
 R11
-R3
+31
+R59
+Z67 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Core_Mul.sv|
+Z68 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Core_Mul.sv|
+!i113 0
+R13
+R4
 n@r@i@s@c_@v_@core_@mul
 XRISC_V_Core_Mul_sv_unit
-R5
-R16
 R6
-V8P:G;oIcS?ElER=CoVPOz2
+R16
+R58
+VW7HQ2eM<MN?Mgm3Ua@W0@3
 r1
 !s85 0
 !i10b 1
 !s100 V?G:BKXUj0[R8X4e`aeTn3
-I8P:G;oIcS?ElER=CoVPOz2
+IW7HQ2eM<MN?Mgm3Ua@W0@3
 !i103 1
 S1
-R7
-R82
-R83
-R84
-!i122 650
-R25
+R8
 R9
-31
-R10
-R85
-R86
-!i113 0
+R65
+R66
+!i122 317
+R22
 R11
-R3
+31
+R59
+R67
+R68
+!i113 0
+R13
+R4
 n@r@i@s@c_@v_@core_@mul_sv_unit
 XRISC_V_Core_sv_unit
-R5
+R6
 R16
-R17
-VAhR61gNhIPH[_Je]oPLL72
+R58
+VmboG<Ge_09GA?M;V]aJA82
 r1
 !s85 0
 !i10b 1
 !s100 mf7M7nX5gahkNUz>l:T1h2
-IAhR61gNhIPH[_Je]oPLL72
+ImboG<Ge_09GA?M;V]aJA82
 !i103 1
 S1
-R7
-R77
-R78
-R79
-!i122 645
-R25
-R9
-31
-R55
-R80
-R81
-!i113 0
+R8
+R23
+R61
+R62
+!i122 316
+R22
 R11
-R3
+31
+R59
+R63
+R64
+!i113 0
+R13
+R4
 n@r@i@s@c_@v_@core_sv_unit
 vRISC_V_Multi_Cycle
-R5
+R6
 R16
-R51
-DXx4 work 26 RISC_V_Multi_Cycle_sv_unit 0 22 EA[^Z2YUMPSKF3^Og7gh02
-Z87 !s110 1680038839
-R8
+R36
+DXx4 work 26 RISC_V_Multi_Cycle_sv_unit 0 22 Q@F8XX9@VJBd<iEI<:iFI3
+R58
+R10
 r1
 !s85 0
 !i10b 1
 !s100 cADKzCiUB9DmA8KJ3<aDX0
-II0eVLg[7?W18iWPEeL;jS3
+I<o52EC>PX6P07PJ6If0HQ0
 !s105 RISC_V_Multi_Cycle_sv_unit
 S1
-R7
-R24
-Z88 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv
-Z89 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv
-!i122 642
-L0 10 130
+R8
 R9
-31
-Z90 !s108 1680038839.000000
-Z91 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv|
-Z92 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Multi_Cycle.sv|
-!i113 0
+Z69 8D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Multi_Cycle.sv
+Z70 FD:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Multi_Cycle.sv
+!i122 318
+L0 10 130
 R11
-R3
+31
+R59
+Z71 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Multi_Cycle.sv|
+Z72 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Multi_Cycle.sv|
+!i113 0
+R13
+R4
 n@r@i@s@c_@v_@multi_@cycle
-XRISC_V_Multi_Cycle_sv_unit
-R5
+vRISC_V_Multi_Cycle_1Hz
+R6
 R16
-R51
-R87
-VEA[^Z2YUMPSKF3^Og7gh02
+DXx4 work 30 RISC_V_Multi_Cycle_1Hz_sv_unit 0 22 Vno2SEQ:Ej6bOj?ZYUM0g3
+Z73 !s110 1693258553
+R10
+r1
+!s85 0
+!i10b 1
+!s100 z4U8WBdocYPBhld1K>UV63
+I^QM8mG]OV@S[J98ZVn1Sk1
+!s105 RISC_V_Multi_Cycle_1Hz_sv_unit
+S1
+R8
+R9
+Z74 8D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Multi_Cycle_1Hz.sv
+Z75 FD:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Multi_Cycle_1Hz.sv
+!i122 319
+L0 9 96
+R11
+31
+Z76 !s108 1693258553.000000
+Z77 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Multi_Cycle_1Hz.sv|
+Z78 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Multi_Cycle_1Hz.sv|
+!i113 0
+R13
+R4
+n@r@i@s@c_@v_@multi_@cycle_1@hz
+XRISC_V_Multi_Cycle_1Hz_sv_unit
+R6
+R16
+R73
+VVno2SEQ:Ej6bOj?ZYUM0g3
+r1
+!s85 0
+!i10b 1
+!s100 8JhZ5mDJS89f:83OQn9oO2
+IVno2SEQ:Ej6bOj?ZYUM0g3
+!i103 1
+S1
+R8
+R9
+R74
+R75
+!i122 319
+R22
+R11
+31
+R76
+R77
+R78
+!i113 0
+R13
+R4
+n@r@i@s@c_@v_@multi_@cycle_1@hz_sv_unit
+XRISC_V_Multi_Cycle_sv_unit
+R6
+R16
+R36
+R58
+VQ@F8XX9@VJBd<iEI<:iFI3
 r1
 !s85 0
 !i10b 1
 !s100 [zKL7;K?g^^W<FbRmd5e33
-IEA[^Z2YUMPSKF3^Og7gh02
+IQ@F8XX9@VJBd<iEI<:iFI3
 !i103 1
 S1
-R7
-R24
-R88
-R89
-!i122 642
-R25
+R8
 R9
-31
-R90
-R91
-R92
-!i113 0
+R69
+R70
+!i122 318
+R22
 R11
-R3
+31
+R59
+R71
+R72
+!i113 0
+R13
+R4
 n@r@i@s@c_@v_@multi_@cycle_sv_unit
 vRISC_V_Single_Cycle
-R5
-R16
-R51
-DXx4 work 27 RISC_V_Single_Cycle_sv_unit 0 22 017PdXol7[ImkX^5;o5H`0
 R6
-R8
+R16
+R36
+DXx4 work 27 RISC_V_Single_Cycle_sv_unit 0 22 V>QMKdikBcZoP?nmQzUa=1
+R73
+R10
 r1
 !s85 0
 !i10b 1
 !s100 60K2Vh^@k8YzB>G4H:fLQ0
-IFi7oT[6=fRVhhgFS3BT@n2
+IY@cOzSf7:[TlXf<><5<WY2
 !s105 RISC_V_Single_Cycle_sv_unit
 S1
-R7
-Z93 w1680042800
-Z94 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Single_Cycle.sv
-Z95 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Single_Cycle.sv
-!i122 651
-L0 10 128
+R8
 R9
-31
-R10
-Z96 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Single_Cycle.sv|
-Z97 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Single_Cycle.sv|
-!i113 0
+Z79 8D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle.sv
+Z80 FD:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle.sv
+!i122 320
+L0 10 128
 R11
-R3
+31
+R76
+Z81 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle.sv|
+Z82 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle.sv|
+!i113 0
+R13
+R4
 n@r@i@s@c_@v_@single_@cycle
 XRISC_V_Single_Cycle_sv_unit
-R5
-R16
-R51
 R6
-V017PdXol7[ImkX^5;o5H`0
+R16
+R36
+R73
+VV>QMKdikBcZoP?nmQzUa=1
 r1
 !s85 0
 !i10b 1
 !s100 M@^KfR=OgXjf:T[J3iDN52
-I017PdXol7[ImkX^5;o5H`0
+IV>QMKdikBcZoP?nmQzUa=1
 !i103 1
 S1
-R7
-R93
-R94
-R95
-!i122 651
-R25
-R9
-31
-R10
-R96
-R97
-!i113 0
-R11
-R3
-n@r@i@s@c_@v_@single_@cycle_sv_unit
-vRISC_V_Single_Cycle_UART_tb
-R5
-R16
-R51
-DXx4 work 35 RISC_V_Single_Cycle_UART_tb_sv_unit 0 22 e5gTFFeKF<jA>4V79;T7M0
-Z98 !s110 1680052349
 R8
+R9
+R79
+R80
+!i122 320
+R22
+R11
+31
+R76
+R81
+R82
+!i113 0
+R13
+R4
+n@r@i@s@c_@v_@single_@cycle_sv_unit
+vRISC_V_Single_Cycle_tb
+R6
+R16
+R36
+DXx4 work 30 RISC_V_Single_Cycle_tb_sv_unit 0 22 UCC^RbJ]KWN4b:iaRL?@[2
+R73
+R10
+r1
+!s85 0
+!i10b 1
+!s100 _e9ndQ^JIdQ@3>8BkPYhb2
+I]K2RQEUWFIEASXdP_:7f33
+!s105 RISC_V_Single_Cycle_tb_sv_unit
+S1
+R8
+Z83 w1693257337
+Z84 8D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle_tb.sv
+Z85 FD:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle_tb.sv
+!i122 321
+L0 12 62
+R11
+31
+R76
+Z86 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle_tb.sv|
+Z87 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle_tb.sv|
+!i113 0
+R13
+R4
+n@r@i@s@c_@v_@single_@cycle_tb
+XRISC_V_Single_Cycle_tb_sv_unit
+R6
+R16
+R36
+R73
+VUCC^RbJ]KWN4b:iaRL?@[2
+r1
+!s85 0
+!i10b 1
+!s100 @T?gTCVJcILDf6SEdWSUc3
+IUCC^RbJ]KWN4b:iaRL?@[2
+!i103 1
+S1
+R8
+R83
+R84
+R85
+!i122 321
+R57
+R11
+31
+R76
+R86
+R87
+!i113 0
+R13
+R4
+n@r@i@s@c_@v_@single_@cycle_tb_sv_unit
+vRISC_V_Single_Cycle_UART_tb
+R6
+R16
+R36
+DXx4 work 35 RISC_V_Single_Cycle_UART_tb_sv_unit 0 22 4@j7BUfUb=YjJHBmjF6273
+R73
+R10
 r1
 !s85 0
 !i10b 1
 !s100 NKmUDSQAoO3>ITBg]<R@10
-IO:mX>7NPjJ5@7dQ75]g^D0
+Ij3GoOBHJ?ngFcDz21?o3O2
 !s105 RISC_V_Single_Cycle_UART_tb_sv_unit
 S1
-R7
-Z99 w1680052289
-Z100 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Single_Cycle_UART_tb.sv
-Z101 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Single_Cycle_UART_tb.sv
-!i122 652
-L0 12 109
+R8
 R9
-31
-Z102 !s108 1680052349.000000
-Z103 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Single_Cycle_UART_tb.sv|
-Z104 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_Single_Cycle_UART_tb.sv|
-!i113 0
+Z88 8D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle_UART_tb.sv
+Z89 FD:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle_UART_tb.sv
+!i122 322
+L0 12 109
 R11
-R3
+31
+R76
+Z90 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle_UART_tb.sv|
+Z91 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle_UART_tb.sv|
+!i113 0
+R13
+R4
 n@r@i@s@c_@v_@single_@cycle_@u@a@r@t_tb
 XRISC_V_Single_Cycle_UART_tb_sv_unit
-R5
+R6
 R16
-R51
-R98
-Ve5gTFFeKF<jA>4V79;T7M0
+R36
+R73
+V4@j7BUfUb=YjJHBmjF6273
 r1
 !s85 0
 !i10b 1
 !s100 9F:315M;fV:ODgbnknQQ83
-Ie5gTFFeKF<jA>4V79;T7M0
+I4@j7BUfUb=YjJHBmjF6273
 !i103 1
 S1
-R7
-R99
-R100
-R101
-!i122 652
-R65
-R9
-31
-R102
-R103
-R104
-!i113 0
-R11
-R3
-n@r@i@s@c_@v_@single_@cycle_@u@a@r@t_tb_sv_unit
-XRISC_V_sv_unit
-R5
-R69
-R70
-V5LKTflzIHo`JnP^a0EMLk0
-r1
-!s85 0
-!i10b 1
-!s100 RC9n2MUP?Cl70A[[cTX]O3
-I5LKTflzIHo`JnP^a0EMLk0
-!i103 1
-S1
-R7
-R71
-R72
-R73
-!i122 309
-R25
-R9
-31
-R74
-R75
-R76
-!i113 0
-R11
-R3
-n@r@i@s@c_@v_sv_unit
-vRISC_V_tb
-R5
-R69
-DXx4 work 17 RISC_V_tb_sv_unit 0 22 C_WPcJlk0k:j0[JUgXYkb0
-R66
 R8
+R9
+R88
+R89
+!i122 322
+R57
+R11
+31
+R76
+R90
+R91
+!i113 0
+R13
+R4
+n@r@i@s@c_@v_@single_@cycle_@u@a@r@t_tb_sv_unit
+vRISC_V_tb
+R6
+R16
+DXx4 work 17 RISC_V_tb_sv_unit 0 22 im5gSZ4>B]2gfOW?I`VbV3
+R73
+R10
 r1
 !s85 0
 !i10b 1
 !s100 KNzT<fhRNVgFN6;gWGX4>0
-Ib9ff^U5KJ^j;9Q16@9]LV2
+I_?CdgkbdI^4=NZQ1B:mcA1
 !s105 RISC_V_tb_sv_unit
 S1
-R7
-Z105 w1677800064
-Z106 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_tb.sv
-Z107 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_tb.sv
-!i122 561
-L0 10 53
+R8
 R9
-31
-R68
-Z108 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_tb.sv|
-Z109 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_tb.sv|
-!i113 0
+Z92 8D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_tb.sv
+Z93 FD:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_tb.sv
+!i122 323
+L0 10 53
 R11
-R3
+31
+R76
+Z94 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_tb.sv|
+Z95 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_tb.sv|
+!i113 0
+R13
+R4
 n@r@i@s@c_@v_tb
 XRISC_V_tb_sv_unit
-R5
-R69
-R66
-VC_WPcJlk0k:j0[JUgXYkb0
+R6
+R16
+R73
+Vim5gSZ4>B]2gfOW?I`VbV3
 r1
 !s85 0
 !i10b 1
 !s100 ckdbS:]6SQKEl=A47VcAc1
-IC_WPcJlk0k:j0[JUgXYkb0
+Iim5gSZ4>B]2gfOW?I`VbV3
 !i103 1
 S1
-R7
-R105
-R106
-R107
-!i122 561
-R65
+R8
 R9
-31
-R68
-R108
-R109
-!i113 0
+R92
+R93
+!i122 323
+R57
 R11
-R3
+31
+R76
+R94
+R95
+!i113 0
+R13
+R4
 n@r@i@s@c_@v_tb_sv_unit
 vRISC_V_UART_tb
-R5
-R69
-R51
-DXx4 work 22 RISC_V_UART_tb_sv_unit 0 22 [aAQem:jhNmX>i=^jh^5Q3
-Z110 !s110 1678839791
-R8
+R6
+R16
+R36
+DXx4 work 22 RISC_V_UART_tb_sv_unit 0 22 1oYgfiLWIFRWnjBnf06]]1
+R73
+R10
 r1
 !s85 0
 !i10b 1
 !s100 3<=IMEY806F:bJdWDQJzO1
-I77@89Y`H6DNA6nUj<WPeG3
+Io<cUn6WfRfRGn[k=DBiLD3
 !s105 RISC_V_UART_tb_sv_unit
 S1
-R7
-Z111 w1678839782
-Z112 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_UART_tb.sv
-Z113 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_UART_tb.sv
-!i122 632
-L0 12 110
+R8
 R9
-31
-Z114 !s108 1678839791.000000
-Z115 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_UART_tb.sv|
-Z116 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/RISC_V_UART_tb.sv|
-!i113 0
+Z96 8D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_UART_tb.sv
+Z97 FD:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_UART_tb.sv
+!i122 324
+L0 12 110
 R11
-R3
+31
+R76
+Z98 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_UART_tb.sv|
+Z99 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_UART_tb.sv|
+!i113 0
+R13
+R4
 n@r@i@s@c_@v_@u@a@r@t_tb
 XRISC_V_UART_tb_sv_unit
-R5
-R69
-R51
-R110
-V[aAQem:jhNmX>i=^jh^5Q3
+R6
+R16
+R36
+R73
+V1oYgfiLWIFRWnjBnf06]]1
 r1
 !s85 0
 !i10b 1
 !s100 VDEY3a9WbLOgk[[_HdlKQ3
-I[aAQem:jhNmX>i=^jh^5Q3
+I1oYgfiLWIFRWnjBnf06]]1
 !i103 1
 S1
-R7
-R111
-R112
-R113
-!i122 632
-R65
+R8
 R9
-31
-R114
-R115
-R116
-!i113 0
+R96
+R97
+!i122 324
+R57
 R11
-R3
+31
+R76
+R98
+R99
+!i113 0
+R13
+R4
 n@r@i@s@c_@v_@u@a@r@t_tb_sv_unit
 vROM_Single_Port
-R5
-!s110 1678837597
+R6
+R73
 !i10b 1
-!s100 eZiaG44;Mhh?L^Po9S@QJ3
-Ia`^3Q0=LF<EY4<ddlBhzd0
+!s100 T]SnMJg[W:WcT?>b8AJz73
+IVDc<Z<zk]DjaJOZMF@Bae0
 S1
-R7
-w1678837566
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv
-!i122 627
-Z117 L0 7 19
 R8
-R9
+w1693258149
+8D:/Quartus21/projects/RISC-V_Arqui/src/ROM_Single_Port.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/ROM_Single_Port.sv
+!i122 325
+L0 7 20
+R10
+R11
 r1
 !s85 0
 31
-Z118 !s108 1678837597.000000
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/ROM_Single_Port.sv|
+R76
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/ROM_Single_Port.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/ROM_Single_Port.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@r@o@m_@single_@port
-vshift_2
-R5
-!s110 1676670522
-!i10b 1
-!s100 d93o4HVSR:W^m9kHQ494^1
-ILCYn9RTU^AV7NI__mMeFR3
-S1
-R7
-w1676670431
-Z119 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Unit.sv
-Z120 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Unit.sv
-!i122 31
-Z121 L0 7 11
-R8
-R9
-r1
-!s85 0
-31
-!s108 1676670522.000000
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Unit.sv|
-Z122 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Unit.sv|
-!i113 0
-R11
-R3
 vShift_Register_PISO_Param
-R5
-R14
+R6
+R73
 !i10b 1
 !s100 RFWY>GGeMU:C3LH>0d^L<0
-IYgiJBAk2Q73OSmgGzh``W1
+IVC8O?E3dMIM58Q>e:ANBN0
 S1
-R7
-w1678659375
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Register_PISO_Param.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Register_PISO_Param.sv
-!i122 574
-R34
 R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/Shift_Register_PISO_Param.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/Shift_Register_PISO_Param.sv
+!i122 326
+R35
+R10
+R11
 r1
 !s85 0
 31
-R15
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Register_PISO_Param.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Register_PISO_Param.sv|
+R76
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/Shift_Register_PISO_Param.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Shift_Register_PISO_Param.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@shift_@register_@p@i@s@o_@param
 vShift_Register_R_Param
-R5
-R14
+R6
+Z100 !s110 1693258554
 !i10b 1
 !s100 UU5NZnz;W51SolP5nQji?3
-I4AVlFfXPBO9QU?6`gIhU90
+I=1>64MH8D8c5ZXaNSYF4Z2
 S1
-R7
-w1678659160
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Register_R_Param.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Register_R_Param.sv
-!i122 575
-R117
 R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/Shift_Register_R_Param.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/Shift_Register_R_Param.sv
+!i122 327
+L0 7 19
+R10
+R11
 r1
 !s85 0
 31
-R15
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Register_R_Param.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Register_R_Param.sv|
+R76
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/Shift_Register_R_Param.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Shift_Register_R_Param.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@shift_@register_@r_@param
 vShift_Unit
-R5
-R66
+R6
+R100
 !i10b 1
 !s100 fkdi=8IS_W14f<=j_4O]j0
-ImJ9=]24SOWXE8R_m4mUc^2
+IP<2X9HgUaA?d8Ao]ND>a>0
 S1
-R7
-w1676672223
-R119
-R120
-!i122 563
-L0 9 30
 R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/Shift_Unit.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/Shift_Unit.sv
+!i122 328
+L0 9 30
+R10
+R11
 r1
 !s85 0
 31
-R68
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shifts.sv|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Shift_Unit.sv|
-R122
+Z101 !s108 1693258554.000000
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/Shifts.sv|D:/Quartus21/projects/RISC-V_Arqui/src/Shift_Unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Shift_Unit.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@shift_@unit
 vSign_Ext
-R5
-R66
+R6
+R100
 !i10b 1
 !s100 ?BS7dbMdAb=e]KSUzjP6E3
-I0nI7hd?k@eX8mPEZ5g7jY3
+IjccHf6_m>YP5EYUR5<JWi1
 S1
-R7
-w1676672520
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Sign_Ext.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Sign_Ext.sv
-!i122 564
-R121
 R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/Sign_Ext.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/Sign_Ext.sv
+!i122 329
+L0 7 11
+R10
+R11
 r1
 !s85 0
 31
-R68
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Sign_Ext.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Sign_Ext.sv|
+R101
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/Sign_Ext.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Sign_Ext.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@sign_@ext
 vSign_Ext_Unit
-R5
-R66
+R6
+R100
 !i10b 1
 !s100 3Ne6e`4nZF7He6lDgYhYY2
-I7X`]Z<olDISk`D]=2LNXd1
+IbXAW:XXBDG9iPPT6iD59=0
 S1
-R7
-w1676864855
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Sign_Ext_Unit.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Sign_Ext_Unit.sv
-!i122 565
-L0 7 56
 R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/Sign_Ext_Unit.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/Sign_Ext_Unit.sv
+!i122 330
+L0 7 56
+R10
+R11
 r1
 !s85 0
 31
-R68
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Sign_Ext_Unit.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/Sign_Ext_Unit.sv|
+R101
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/Sign_Ext_Unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/Sign_Ext_Unit.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@sign_@ext_@unit
 vUART_Full_Duplex
-R5
-R51
-DXx4 work 24 UART_Full_Duplex_sv_unit 0 22 L`OTPKQ;DTM47;`185a?i3
-Z123 !s110 1678835606
-R8
+R6
+R36
+DXx4 work 24 UART_Full_Duplex_sv_unit 0 22 0>7j8ncHN=RhZ?A?gK@UV3
+R100
+R10
 r1
 !s85 0
 !i10b 1
 !s100 T=mNc4YFo38RJN_a;;=>Z1
-InZfI4fjmT?gL0>THZT:0I1
+ImZ1henHJ^F20nT]lRbTN=0
 !s105 UART_Full_Duplex_sv_unit
 S1
-R7
-Z124 w1678835315
-Z125 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex.sv
-Z126 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex.sv
-!i122 624
-Z127 L0 9 86
+R8
 R9
-31
-Z128 !s108 1678835606.000000
-Z129 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex.sv|
-Z130 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex.sv|
-!i113 0
+Z102 8D:/Quartus21/projects/RISC-V_Arqui/src/UART_Full_Duplex.sv
+Z103 FD:/Quartus21/projects/RISC-V_Arqui/src/UART_Full_Duplex.sv
+!i122 331
+Z104 L0 9 86
 R11
-R3
+31
+R101
+Z105 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/UART_Full_Duplex.sv|
+Z106 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/UART_Full_Duplex.sv|
+!i113 0
+R13
+R4
 n@u@a@r@t_@full_@duplex
 XUART_Full_Duplex_sv_unit
-R5
-R51
-R123
-VL`OTPKQ;DTM47;`185a?i3
+R6
+R36
+R100
+V0>7j8ncHN=RhZ?A?gK@UV3
 r1
 !s85 0
 !i10b 1
 !s100 Y6R:ke;z]z7Y:e<61YK0j3
-IL`OTPKQ;DTM47;`185a?i3
+I0>7j8ncHN=RhZ?A?gK@UV3
 !i103 1
 S1
-R7
-R124
-R125
-R126
-!i122 624
-R25
+R8
 R9
-31
-R128
-R129
-R130
-!i113 0
+R102
+R103
+!i122 331
+R22
 R11
-R3
+31
+R101
+R105
+R106
+!i113 0
+R13
+R4
 n@u@a@r@t_@full_@duplex_sv_unit
 vUART_Full_Duplex_tb
-R5
-R51
-DXx4 work 27 UART_Full_Duplex_tb_sv_unit 0 22 cA;TmEXYizC?fP^e1bMzU0
-Z131 !s110 1678837598
-R8
+R6
+R36
+DXx4 work 27 UART_Full_Duplex_tb_sv_unit 0 22 2@AB[[=D9[VAJ6ZcBh3I_2
+R100
+R10
 r1
 !s85 0
 !i10b 1
 !s100 V=D;48mLlKZ7=ZnNObKCB2
-IjgPHgS[Q6nTdX0G<NgoT03
+I?CmUc>e8:e2[;aY5[^d3D0
 !s105 UART_Full_Duplex_tb_sv_unit
 S1
-R7
-Z132 w1678836270
-Z133 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex_tb.sv
-Z134 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex_tb.sv
-!i122 628
-R61
+R8
 R9
-31
-R118
-Z135 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex_tb.sv|
-Z136 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Full_Duplex_tb.sv|
-!i113 0
+Z107 8D:/Quartus21/projects/RISC-V_Arqui/src/UART_Full_Duplex_tb.sv
+Z108 FD:/Quartus21/projects/RISC-V_Arqui/src/UART_Full_Duplex_tb.sv
+!i122 332
+R53
 R11
-R3
+31
+R101
+Z109 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/UART_Full_Duplex_tb.sv|
+Z110 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/UART_Full_Duplex_tb.sv|
+!i113 0
+R13
+R4
 n@u@a@r@t_@full_@duplex_tb
 XUART_Full_Duplex_tb_sv_unit
-R5
-R51
-R131
-VcA;TmEXYizC?fP^e1bMzU0
+R6
+R36
+R100
+V2@AB[[=D9[VAJ6ZcBh3I_2
 r1
 !s85 0
 !i10b 1
 !s100 R=YnVWYlc3WVVgiV><dH_3
-IcA;TmEXYizC?fP^e1bMzU0
+I2@AB[[=D9[VAJ6ZcBh3I_2
 !i103 1
 S1
-R7
-R132
-R133
-R134
-!i122 628
-R65
+R8
 R9
-31
-R118
-R135
-R136
-!i113 0
+R107
+R108
+!i122 332
+R57
 R11
-R3
+31
+R101
+R109
+R110
+!i113 0
+R13
+R4
 n@u@a@r@t_@full_@duplex_tb_sv_unit
 XUART_pkg
-R5
-!s110 1678679811
+R6
+R100
 !i10b 1
 !s100 QS?U29K@9>S7NDMd=;ooQ0
-IZQ`aQ^bWC1PEBLAVDaBz^0
+IHLjc:Ti[SMZAg4<`7WgBc2
 S1
-R7
-w1678679146
-8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_pkg.sv
-FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_pkg.sv
-!i122 608
-R25
-VZQ`aQ^bWC1PEBLAVDaBz^0
+R8
 R9
+8D:/Quartus21/projects/RISC-V_Arqui/src/UART_pkg.sv
+FD:/Quartus21/projects/RISC-V_Arqui/src/UART_pkg.sv
+!i122 333
+R22
+VHLjc:Ti[SMZAg4<`7WgBc2
+R11
 r1
 !s85 0
 31
-!s108 1678679811.000000
-!s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_pkg.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_pkg.sv|
+R101
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/UART_pkg.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/UART_pkg.sv|
 !i113 0
-R11
-R3
+R13
+R4
 n@u@a@r@t_pkg
 vUART_Rx
-R5
+R6
 R36
-DXx4 work 15 UART_Rx_sv_unit 0 22 @XaEiOggjP?d`8UXH^`f_2
-Z137 !s110 1678666285
-R8
+DXx4 work 15 UART_Rx_sv_unit 0 22 [hG`@IgTEMiDjKFbEXF;50
+R100
+R10
 r1
 !s85 0
 !i10b 1
 !s100 V=EmYh_jM8hY4[[69Pz@k0
-II^]F^HL2YlP_4K3R4jQzX1
+I<En9l[oI[Rz;2HWYMK6<X2
 !s105 UART_Rx_sv_unit
 S1
-R7
-Z138 w1678666204
-Z139 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Rx.sv
-Z140 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Rx.sv
-!i122 594
-L0 9 90
+R8
 R9
-31
-Z141 !s108 1678666285.000000
-Z142 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Rx.sv|
-Z143 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Rx.sv|
-!i113 0
+Z111 8D:/Quartus21/projects/RISC-V_Arqui/src/UART_Rx.sv
+Z112 FD:/Quartus21/projects/RISC-V_Arqui/src/UART_Rx.sv
+!i122 334
+L0 9 90
 R11
-R3
+31
+R101
+Z113 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/UART_Rx.sv|
+Z114 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/UART_Rx.sv|
+!i113 0
+R13
+R4
 n@u@a@r@t_@rx
 XUART_Rx_sv_unit
-R5
+R6
 R36
-R137
-V@XaEiOggjP?d`8UXH^`f_2
+R100
+V[hG`@IgTEMiDjKFbEXF;50
 r1
 !s85 0
 !i10b 1
 !s100 HkXa[PdNca9L0V<g1P?K<1
-I@XaEiOggjP?d`8UXH^`f_2
+I[hG`@IgTEMiDjKFbEXF;50
 !i103 1
 S1
-R7
-R138
-R139
-R140
-!i122 594
-R25
+R8
 R9
-31
-R141
-R142
-R143
-!i113 0
+R111
+R112
+!i122 334
+R22
 R11
-R3
+31
+R101
+R113
+R114
+!i113 0
+R13
+R4
 n@u@a@r@t_@rx_sv_unit
 vUART_Tx
-R5
+R6
 R36
-DXx4 work 15 UART_Tx_sv_unit 0 22 N?Y^ZE`M4aRdMd]A5RNAF1
-Z144 !s110 1678668163
-R8
+DXx4 work 15 UART_Tx_sv_unit 0 22 ^A`^6W9G[0]a[Gi3TfQ;01
+Z115 !s110 1693258555
+R10
 r1
 !s85 0
 !i10b 1
 !s100 7;@=m:jfLlo[VTc1OgmOS0
-IWVazc9TE]DBQ_LgICYIOl1
+IBH3e2_k;Wn2XF?5COUnj80
 !s105 UART_Tx_sv_unit
 S1
-R7
-Z145 w1678668161
-Z146 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Tx.sv
-Z147 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Tx.sv
-!i122 597
-L0 9 83
+R8
 R9
-31
-Z148 !s108 1678668163.000000
-Z149 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Tx.sv|
-Z150 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Tx.sv|
-!i113 0
+Z116 8D:/Quartus21/projects/RISC-V_Arqui/src/UART_Tx.sv
+Z117 FD:/Quartus21/projects/RISC-V_Arqui/src/UART_Tx.sv
+!i122 335
+L0 9 83
 R11
-R3
+31
+R101
+Z118 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/UART_Tx.sv|
+Z119 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/UART_Tx.sv|
+!i113 0
+R13
+R4
 n@u@a@r@t_@tx
 XUART_Tx_sv_unit
-R5
+R6
 R36
-R144
-VN?Y^ZE`M4aRdMd]A5RNAF1
+R115
+V^A`^6W9G[0]a[Gi3TfQ;01
 r1
 !s85 0
 !i10b 1
 !s100 fc7amCEO=JAS=g[nPI];P2
-IN?Y^ZE`M4aRdMd]A5RNAF1
+I^A`^6W9G[0]a[Gi3TfQ;01
 !i103 1
 S1
-R7
-R145
-R146
-R147
-!i122 597
-R25
+R8
 R9
-31
-R148
-R149
-R150
-!i113 0
+R116
+R117
+!i122 335
+R22
 R11
-R3
+31
+R101
+R118
+R119
+!i113 0
+R13
+R4
 n@u@a@r@t_@tx_sv_unit
 vUART_Word_FSM
-R5
-R51
-DXx4 work 21 UART_Word_FSM_sv_unit 0 22 B_YB8c65>:f8HaenD?<7z1
-Z151 !s110 1678680204
-R8
+R6
+R36
+DXx4 work 21 UART_Word_FSM_sv_unit 0 22 hNDniCNf7:]DO^FNR>_5H0
+R115
+R10
 r1
 !s85 0
 !i10b 1
 !s100 YI?zL41K1dQ:OMgZfzfIX0
-IL6i6^9MF0N`7S3?R1m^<I0
+I1?]24[gJRBc?977ZnQPCi3
 !s105 UART_Word_FSM_sv_unit
 S1
-R7
-Z152 w1678679260
-Z153 8D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Word_FSM.sv
-Z154 FD:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Word_FSM.sv
-!i122 613
-R127
+R8
 R9
-31
-Z155 !s108 1678680204.000000
-Z156 !s107 D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Word_FSM.sv|
-Z157 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Jorge-Padilla/src/UART_Word_FSM.sv|
-!i113 0
+Z120 8D:/Quartus21/projects/RISC-V_Arqui/src/UART_Word_FSM.sv
+Z121 FD:/Quartus21/projects/RISC-V_Arqui/src/UART_Word_FSM.sv
+!i122 336
+R104
 R11
-R3
+31
+Z122 !s108 1693258555.000000
+!s107 D:/Quartus21/projects/RISC-V_Arqui/src/UART_Word_FSM.sv|
+Z123 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Quartus21/projects/RISC-V_Arqui/src/UART_Word_FSM.sv|
+!i113 0
+R13
+R4
 n@u@a@r@t_@word_@f@s@m
 XUART_Word_FSM_sv_unit
-R5
-R51
-R151
-VB_YB8c65>:f8HaenD?<7z1
+R6
+R36
+R115
+VhNDniCNf7:]DO^FNR>_5H0
 r1
 !s85 0
 !i10b 1
 !s100 SJ`?_8omdS7e62bNF44B70
-IB_YB8c65>:f8HaenD?<7z1
+IhNDniCNf7:]DO^FNR>_5H0
 !i103 1
 S1
-R7
-R152
-R153
-R154
-!i122 613
-R25
+R8
 R9
-31
-R155
-R156
-R157
-!i113 0
+R120
+R121
+!i122 336
+R22
 R11
-R3
+31
+R122
+Z124 !s107 D:/Quartus21/projects/RISC-V_Arqui/src/UART_Word_FSM.sv|
+R123
+!i113 0
+R13
+R4
 n@u@a@r@t_@word_@f@s@m_sv_unit

@@ -1,0 +1,361 @@
+D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_Mul.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_Mul.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package Control_Unit_Mul_sv_unit
+-- Importing package Control_Unit_enum
+-- Compiling module Control_Unit_Mul
+
+Top level modules:
+	Control_Unit_Mul
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Reg_File.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Reg_File.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Reg_File
+
+Top level modules:
+	Reg_File
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle_UART_tb.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle_UART_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package RISC_V_Single_Cycle_UART_tb_sv_unit
+-- Importing package Control_Unit_enum
+-- Importing package UART_pkg
+-- Compiling module RISC_V_Single_Cycle_UART_tb
+
+Top level modules:
+	RISC_V_Single_Cycle_UART_tb
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Multi_Cycle_1Hz.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Multi_Cycle_1Hz.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package RISC_V_Multi_Cycle_1Hz_sv_unit
+-- Importing package Control_Unit_enum
+-- Compiling module RISC_V_Multi_Cycle_1Hz
+
+Top level modules:
+	RISC_V_Multi_Cycle_1Hz
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/FSM_UART_Rx.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/FSM_UART_Rx.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package FSM_UART_Rx_sv_unit
+-- Importing package UART_pkg
+-- Compiling module FSM_UART_Rx
+
+Top level modules:
+	FSM_UART_Rx
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/FSM_UART_Tx.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/FSM_UART_Tx.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package FSM_UART_Tx_sv_unit
+-- Importing package UART_pkg
+-- Compiling module FSM_UART_Tx
+
+Top level modules:
+	FSM_UART_Tx
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/RAM_Single_Port.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/RAM_Single_Port.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module RAM_Single_Port
+
+Top level modules:
+	RAM_Single_Port
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/UART_Rx.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/UART_Rx.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package UART_Rx_sv_unit
+-- Importing package UART_pkg
+-- Compiling module UART_Rx
+
+Top level modules:
+	UART_Rx
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Core.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Core.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package RISC_V_Core_sv_unit
+-- Importing package Control_Unit_enum
+-- Compiling module RISC_V_Core
+
+Top level modules:
+	RISC_V_Core
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/UART_Tx.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/UART_Tx.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package UART_Tx_sv_unit
+-- Importing package UART_pkg
+-- Compiling module UART_Tx
+
+Top level modules:
+	UART_Tx
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Reg_PC.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Reg_PC.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Reg_PC
+
+Top level modules:
+	Reg_PC
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Shifts.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Shifts.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Mux_2_1.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Mux_2_1.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Mux_2_1
+
+Top level modules:
+	Mux_2_1
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/UART_Word_FSM.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/UART_Word_FSM.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package UART_Word_FSM_sv_unit
+-- Importing package UART_pkg
+-- Compiling module UART_Word_FSM
+
+Top level modules:
+	UART_Word_FSM
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Regs.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Regs.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Sign_Ext.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Sign_Ext.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Sign_Ext
+
+Top level modules:
+	Sign_Ext
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/ROM_Single_Port.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/ROM_Single_Port.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ROM_Single_Port
+
+Top level modules:
+	ROM_Single_Port
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Mem_Map_Controler.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Mem_Map_Controler.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package Mem_Map_Controler_sv_unit
+-- Importing package UART_pkg
+-- Compiling module Mem_Map_Controler
+
+Top level modules:
+	Mem_Map_Controler
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_tb.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package RISC_V_tb_sv_unit
+-- Importing package Control_Unit_enum
+-- Compiling module RISC_V_tb
+
+Top level modules:
+	RISC_V_tb
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package Control_Unit_sv_unit
+-- Importing package Control_Unit_enum
+-- Compiling module Control_Unit
+
+Top level modules:
+	Control_Unit
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Mem_Map_Controler_Mul.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Mem_Map_Controler_Mul.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package Mem_Map_Controler_Mul_sv_unit
+-- Importing package UART_pkg
+-- Compiling module Mem_Map_Controler_Mul
+
+Top level modules:
+	Mem_Map_Controler_Mul
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/PC_Enable.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/PC_Enable.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module PC_Enable
+
+Top level modules:
+	PC_Enable
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Bit_Rate_Pulse.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Bit_Rate_Pulse.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Bit_Rate_Pulse
+
+Top level modules:
+	Bit_Rate_Pulse
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/UART_Full_Duplex_tb.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/UART_Full_Duplex_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package UART_Full_Duplex_tb_sv_unit
+-- Importing package UART_pkg
+-- Compiling module UART_Full_Duplex_tb
+
+Top level modules:
+	UART_Full_Duplex_tb
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/ALU_sel.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/ALU_sel.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Mux_4_1.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Mux_4_1.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Mux_4_1
+
+Top level modules:
+	Mux_4_1
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/UART_pkg.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/UART_pkg.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package UART_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package RISC_V_Single_Cycle_sv_unit
+-- Importing package Control_Unit_enum
+-- Importing package UART_pkg
+-- Compiling module RISC_V_Single_Cycle
+
+Top level modules:
+	RISC_V_Single_Cycle
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/ALU_tb.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/ALU_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ALU_tb
+
+Top level modules:
+	ALU_tb
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Sign_Ext_Unit.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Sign_Ext_Unit.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Sign_Ext_Unit
+
+Top level modules:
+	Sign_Ext_Unit
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Shift_Register_PISO_Param.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Shift_Register_PISO_Param.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Shift_Register_PISO_Param
+
+Top level modules:
+	Shift_Register_PISO_Param
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_UART_tb.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_UART_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package RISC_V_UART_tb_sv_unit
+-- Importing package Control_Unit_enum
+-- Importing package UART_pkg
+-- Compiling module RISC_V_UART_tb
+
+Top level modules:
+	RISC_V_UART_tb
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Multi_Cycle.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Multi_Cycle.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package RISC_V_Multi_Cycle_sv_unit
+-- Importing package Control_Unit_enum
+-- Importing package UART_pkg
+-- Compiling module RISC_V_Multi_Cycle
+
+Top level modules:
+	RISC_V_Multi_Cycle
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Core_Mul.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Core_Mul.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package RISC_V_Core_Mul_sv_unit
+-- Importing package Control_Unit_enum
+-- Compiling module RISC_V_Core_Mul
+
+Top level modules:
+	RISC_V_Core_Mul
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle_tb.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/RISC_V_Single_Cycle_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package RISC_V_Single_Cycle_tb_sv_unit
+-- Importing package Control_Unit_enum
+-- Importing package UART_pkg
+-- Compiling module RISC_V_Single_Cycle_tb
+
+Top level modules:
+	RISC_V_Single_Cycle_tb
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_enum.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_enum.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package Control_Unit_enum
+
+Top level modules:
+	--none--
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Clk_Div.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Clk_Div.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package Clk_Div_sv_unit
+-- Importing package Control_Unit_enum
+-- Compiling module Clk_Div
+
+Top level modules:
+	Clk_Div
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Reg_Param.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Reg_Param.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Reg_Param
+
+Top level modules:
+	Reg_Param
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_defs.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Control_Unit_defs.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/ALU.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/ALU.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Reg_File_tb.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Reg_File_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Reg_File_tb
+
+Top level modules:
+	Reg_File_tb
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Shift_Register_R_Param.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Shift_Register_R_Param.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Shift_Register_R_Param
+
+Top level modules:
+	Shift_Register_R_Param
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Shift_Unit.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Shift_Unit.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Shift_Unit
+
+Top level modules:
+	Shift_Unit
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/GPIO.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/GPIO.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module GPIO
+
+Top level modules:
+	GPIO
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/UART_Full_Duplex.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/UART_Full_Duplex.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package UART_Full_Duplex_sv_unit
+-- Importing package UART_pkg
+-- Compiling module UART_Full_Duplex
+
+Top level modules:
+	UART_Full_Duplex
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Counter_Param.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Counter_Param.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Counter_Param
+
+Top level modules:
+	Counter_Param
+
+} {} {}} D:/Quartus21/projects/RISC-V_Arqui/src/Adder.sv {1 {vlog -work work -vopt -sv -stats=none D:/Quartus21/projects/RISC-V_Arqui/src/Adder.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Adder
+
+Top level modules:
+	Adder
+
+} {} {}}
