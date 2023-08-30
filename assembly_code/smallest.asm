@@ -9,7 +9,7 @@
 
 .text
 auipc	s0, 0xFC10	# Set Memory Map Pointer
-addi	s1, s0, 0x0044	# Set Last Value Pointer
+addi	s1, s0, 0x0040	# Set Last Value Pointer
 addi	s2, s0, 0x0064	# Set Last Value Pointer
 
 lw	s3, 0(s1)	# Store first value as smalest
