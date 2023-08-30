@@ -19,6 +19,19 @@ proj_questasim/vsim.wlf
 *.qip
 *.qdb
 *.jar
+quartus/db
+quartus/incremental_db
+quartus/output_files
+quartus/simulation
+val/work
+*.bak
+*model_dump.txt
+questa_project/work
+*.mti
+questa_project/transcript
+*.rpt
+*.wlf
+wlf*
 
 transcript
 !*.sof
