@@ -97,6 +97,16 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	wire [DATA_WIDTH-1:0]   E_SrcA;
 	wire [DATA_WIDTH-1:0]   E_SrcB;
 	wire [DATA_WIDTH-1:0]   E_ALUOut;
+	//Product
+	wire [4:0]				P1_Rs1;
+	wire [4:0]				P1_Rs2;
+	wire [4:0]				P1_Rd;
+	wire [4:0]				P2_Rs1;
+	wire [4:0]				P2_Rs2;
+	wire [4:0]				P2_Rd;
+	wire [4:0]				P3_Rs1;
+	wire [4:0]				P3_Rs2;
+	wire [4:0]				P3_Rd;
 	//Memory
 	wire					M_RegWrite;
 	wire                    M_Jump;
@@ -109,9 +119,14 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	wire [DATA_WIDTH-1:0]   M_PCbra;
 	//Writeback
 	wire					W_RegWrite;
+	wire					W_RegMul;
 	wire                    W_MemtoReg;
+	wire [4:0]				W_Rs1;
+	wire [4:0]				W_Rs2;
+	wire [4:0]				W_Rd;
 	wire [DATA_WIDTH-1:0]	W_MemData;
 	wire [DATA_WIDTH-1:0]   W_ALUOut;
+	wire [DATA_WIDTH-1:0]   W_MULOut;
 	wire [DATA_WIDTH-1:0]   W_InstrData;
 	wire [DATA_WIDTH-1:0]   W_WD3;
 
@@ -206,7 +221,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	Reg_File #(.ADDRESS_WIDTH(5), .DATA_WIDTH(DATA_WIDTH)) REGFILE (
 		.clk(clk),
 		.rst(rst),
-		.we3(W_RegWrite),
+		.we3(W_RegWrite | W_RegMul),
 		.a1(D_InstrData[19:15]),
 		.a2(D_InstrData[24:20]),
 		.a3(W_InstrData[11:7]),
@@ -537,6 +552,32 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.z(E_Zero)
 	);
 
+	//MUL for RV32I
+	ALU_Mul MULRISCV(
+		.a(E_SrcA),
+		.b(E_SrcB),
+		.sel(E_ALUControl),
+		.clk(clk),
+		.rst(rst),
+		.Rs1(E_InstrData[19:15]),
+		.Rs2(E_InstrData[24:20]),
+		.Rd(E_InstrData[11:7]),
+		.f(W_MULOut),
+		.Rs1_1(P1_Rs1),
+		.Rs2_1(P1_Rs2),
+		.Rd_1(P1_Rd),
+		.Rs1_2(P2_Rs1),
+		.Rs2_2(P2_Rs2),
+		.Rd_2(P2_Rd),
+		.Rs1_3(P3_Rs1),
+		.Rs2_3(P3_Rs2),
+		.Rd_3(P3_Rd),
+		.Rs1_Out(W_Rs1),
+		.Rs2_Out(W_Rs2),
+		.Rd_Out(W_Rd),
+		.regmul_Out(W_RegMul)
+	);
+
 	//Muxes for Nop
 	Mux_2_1 #(.DATA_WIDTH(1)) NOP_MEMWRITE (
 		.A(E_MemWrite),
@@ -746,10 +787,12 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	*/
 	
     //Mux for WD3
-	Mux_2_1 #(.DATA_WIDTH(32)) WD3MUX (
+	Mux_4_1 #(.DATA_WIDTH(32)) WD3MUX (
 		.A(W_ALUOut),
 		.B(W_MemData),
-		.sel(W_MemtoReg),
+		.C(W_MULOut),
+		.D({DATA_WIDTH{1'b0}}),
+		.sel({W_RegMul,W_MemtoReg}),
 		.Q(W_WD3)
 	);
 	

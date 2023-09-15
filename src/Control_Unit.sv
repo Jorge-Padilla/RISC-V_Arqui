@@ -25,6 +25,7 @@ module Control_Unit(
 	output reg      MemWrite, 
 	output reg      MemRead,
 	output reg      RegWrite,
+	output reg      RegMul,
 	output reg      Jump,
 	output reg      Branch,
 	output reg      XorZero,
@@ -40,7 +41,8 @@ module Control_Unit(
 				PCEn		= 1'b1;	
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b0;		
-				RegWrite	= 1'b1;			//Write to RegFile
+				RegWrite	= ~Funct7[0];	//Write to RegFile, If MUL will be written by RegMul
+				RegMul		= Funct7[0];	//Multiplication defined by 1st bit of Funct7
 				Jump		= 1'b0;		
 				Branch		= 1'b0;		
 				XorZero		= 1'b0;		
@@ -57,6 +59,7 @@ module Control_Unit(
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b0;		
 				RegWrite	= 1'b1;			//Write to RegFile
+				RegMul		= 1'b0;
 				Jump		= 1'b0;		
 				Branch		= 1'b0;		
 				XorZero		= 1'b0;		
@@ -85,6 +88,7 @@ module Control_Unit(
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b1;			//Read from Memory Map
 				RegWrite	= 1'b1;			//Write to RegFile
+				RegMul		= 1'b0;
 				Jump		= 1'b0;		
 				Branch		= 1'b0;		
 				XorZero		= 1'b0;		
@@ -101,6 +105,7 @@ module Control_Unit(
 				MemWrite	= 1'b1;			//Write to Memory Map
 				MemRead		= 1'b0;
 				RegWrite	= 1'b0;
+				RegMul		= 1'b0;
 				Jump		= 1'b0;		
 				Branch		= 1'b0;		
 				XorZero		= 1'b0;		
@@ -116,7 +121,8 @@ module Control_Unit(
 				PCEn		= 1'b1;	
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b0;			
-				RegWrite	= 1'b0;			
+				RegWrite	= 1'b0;		
+				RegMul		= 1'b0;	
 				Jump		= 1'b0;		
 				Branch		= 1'b1;			//Branch enable for possible change on PC
 				SignExt		= `EXT_BRA;		//Extend from 12 bits B-type
@@ -161,6 +167,7 @@ module Control_Unit(
 				MemWrite	= 1'b0;			
 				MemRead		= 1'b0;			
 				RegWrite	= 1'b1;			//Write to RegFile
+				RegMul		= 1'b0;
 				Jump		= 1'b1;			//Jump enable for change on PC
 				Branch		= 1'b0;			
 				XorZero		= 1'b0;		
@@ -177,6 +184,7 @@ module Control_Unit(
 				MemWrite	= 1'b0;			
 				MemRead		= 1'b0;			
 				RegWrite	= 1'b1;			//Write to RegFile
+				RegMul		= 1'b0;
 				Jump		= 1'b1;			//Jump enable for change on PC
 				Branch		= 1'b0;			
 				XorZero		= 1'b0;		
@@ -193,6 +201,7 @@ module Control_Unit(
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b0;		
 				RegWrite	= 1'b1;			//Write to RegFile
+				RegMul		= 1'b0;
 				Jump		= 1'b0;		
 				Branch		= 1'b0;		
 				XorZero		= 1'b0;		
@@ -209,6 +218,7 @@ module Control_Unit(
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b0;		
 				RegWrite	= 1'b1;			//Write to RegFile
+				RegMul		= 1'b0;
 				Jump		= 1'b0;		
 				Branch		= 1'b0;		
 				XorZero		= 1'b0;		
@@ -224,7 +234,8 @@ module Control_Unit(
 				PCEn		= 1'b0;			//On reset, PC is not incremented
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b0;		
-				RegWrite	= 1'b0;		
+				RegWrite	= 1'b0;	
+				RegMul		= 1'b0;	
 				Jump		= 1'b0;		
 				Branch		= 1'b0;		
 				XorZero		= 1'b0;		
@@ -240,7 +251,8 @@ module Control_Unit(
 				PCEn		= 1'b0;			//On reset, PC is not incremented
 				MemWrite	= 1'b0;		
 				MemRead		= 1'b0;		
-				RegWrite	= 1'b0;		
+				RegWrite	= 1'b0;	
+				RegMul		= 1'b0;	
 				Jump		= 1'b0;		
 				Branch		= 1'b0;		
 				XorZero		= 1'b0;		

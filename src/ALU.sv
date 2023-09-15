@@ -31,7 +31,7 @@ module ALU(
 			`SEL_SRA	: f = signed'(a) >>> b;									//sra
 			`SEL_SLT	: f = (signed'(a) < signed'(b)) ? 32'h1 : 32'h0;		//slt
 			`SEL_SLTU	: f = (unsigned'(a) < unsigned'(b)) ? 32'h1 : 32'h0;	//sltu
-			`SEL_MUL	: f = a * b;											//mul
+			//`SEL_MUL	: f = a * b;											//mul
 			default		: f = 32'h0;
 		endcase
 		//Zero flag
