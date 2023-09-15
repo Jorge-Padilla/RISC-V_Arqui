@@ -1,7 +1,7 @@
 ###################################################
 ##        Jorge Alberto Padilla Gutierrez        ##
 ##        Carlos Rodrigo Fernandez Garcia        ##
-##                   test1.asm                   ##
+##                  testmul.asm                  ##
 ###################################################
 .data
 	null:	.word 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -13,21 +13,28 @@ addi	s1, s0, 0x0040	# Set Last Value Pointer
 addi	s2, s0, 0x0064	# Set Last Value Pointer
 
 __main:
-	lw	zero, 0(s1)		
-	lw	sp, 8(s1)		
-	lw	tp, 12(s1)		
-	add	sp, sp, tp		
-	and	gp, sp, zero
-	lw	t0, 10(s1)
-	or	t2, t0, zero
-	lw	t1, 4(s1)
-	or	t2, t2, t1
-	slt	a0, zero, t2
-	slt	a1, t2, zero
-	addi	t6, zero, -1
-	beq	t2, zero, __main
-	jal	zero, __label1
-__label2:
-	beq	zero, zero, __label2
-__label1:
-	jal	a4, __label2
+	lw	s3, 0(s1)
+	lw	s4, 4(s1)
+	lw	s5, 8(s1)
+	lw	s6, 12(s1)
+	lw	s7, 16(s1)
+	lw	s8, 20(s1)
+	lw	s9, 24(s1)
+	lw	s10, 28(s1)
+__muls:
+	mul	t0, s3, s4
+	mul	t1, s4, s5
+	mul	t2, s5, s6
+	mul	t3, s6, s7
+	mul	t4, s7, s8
+	add	t5, t4, t3
+	add	t6, t5, t4
+	mul	t0, s8, s9
+	add	t1, t2, t3
+	add 	t2, t3, t4
+	mul	t3, t0, t0
+	add	t3, t0, t0
+	add	t4, t0, t0
+	add	t5, t0, t0
+	add	t6, t3, t3
+	

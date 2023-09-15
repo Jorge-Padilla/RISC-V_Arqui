@@ -19,7 +19,8 @@ module RAM_Single_Port #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 10) (
 	
 	//Initial MEM Values
 	initial begin
-		$readmemh("RISC_V_mem.txt", ram);
+		//$readmemh("RISC_V_mem.txt", ram);
+		$readmemh("RISC_V_data_arqui_testmul.txt", ram);
 	end
 
 	always @ (posedge clk) begin

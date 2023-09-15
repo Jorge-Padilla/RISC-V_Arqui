@@ -11,7 +11,7 @@ module Clk_Div #( parameter MAX_COUNT = 25000000, parameter NUMBER_OF_BITS = $cl
 	input wire  clk,
 	input wire  rst,
 	//Outputs
-    output      out_clk
+    output reg  out_clk
 );
 
     //Counter

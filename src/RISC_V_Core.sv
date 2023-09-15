@@ -36,6 +36,8 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	wire					D_MemRead_H;
 	wire                    D_RegWrite;
 	wire                    D_RegWrite_H;
+	wire                    D_RegMul;
+	wire                    D_RegMul_H;
 	wire                    D_Jump;
 	wire                    D_Jump_H;
 	wire                    D_Branch;
@@ -60,6 +62,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	wire [DATA_WIDTH-1:0]   D_InstrData;
 	wire [DATA_WIDTH-1:0]   D_RD1;
 	wire [DATA_WIDTH-1:0]   D_RD2;
+	wire [DATA_WIDTH-1:0]	D_WD;
 	//Execute
 	wire					E_MemWrite;
 	wire					E_MemWrite_H;
@@ -67,6 +70,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	wire					E_MemRead_H;
 	wire					E_RegWrite;
 	wire					E_RegWrite_H;
+	wire					E_RegMul;
 	wire                    E_Jump;
 	wire                    E_Jump_H;
 	wire                    E_Branch;
@@ -101,12 +105,15 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	wire [4:0]				P1_Rs1;
 	wire [4:0]				P1_Rs2;
 	wire [4:0]				P1_Rd;
+	wire					P1_RegMul;
 	wire [4:0]				P2_Rs1;
 	wire [4:0]				P2_Rs2;
 	wire [4:0]				P2_Rd;
+	wire					P2_RegMul;
 	wire [4:0]				P3_Rs1;
 	wire [4:0]				P3_Rs2;
 	wire [4:0]				P3_Rd;
+	wire					P3_RegMul;
 	//Memory
 	wire					M_RegWrite;
 	wire                    M_Jump;
@@ -209,6 +216,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
         .MemWrite(D_MemWrite), 
         .MemRead(D_MemRead),
         .RegWrite(D_RegWrite),
+        .RegMul(D_RegMul),
         .Jump(D_Jump),
         .Branch(D_Branch),
         .XorZero(D_XorZero),
@@ -217,6 +225,14 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
         .ALUControl(D_ALUControl)
     );
 	
+	//Mux for Multiplier Address
+	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) MUXMUL (
+		.A(W_InstrData[11:7]),
+		.B(W_Rd),
+		.sel(W_RegMul),
+		.Q(D_WD)
+	);
+
     //Register File
 	Reg_File #(.ADDRESS_WIDTH(5), .DATA_WIDTH(DATA_WIDTH)) REGFILE (
 		.clk(clk),
@@ -224,7 +240,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.we3(W_RegWrite | W_RegMul),
 		.a1(D_InstrData[19:15]),
 		.a2(D_InstrData[24:20]),
-		.a3(W_InstrData[11:7]),
+		.a3(D_WD),
 		.wd3(W_WD3),
 		.rd1(D_RD1),
 		.rd2(D_RD2)
@@ -234,8 +250,15 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	Hazard_Detection_Unit #(.DATA_WIDTH(5)) HDU (
 		.Rs1(D_InstrData[19:15]),
 		.Rs2(D_InstrData[24:20]),
+		.Rd(D_InstrData[11:7]),
 		.E_Rd(E_InstrData[11:7]),
+		.P1_Rd(P1_Rd),
+		.P2_Rd(P2_Rd),
+		.RegWrite(D_RegWrite),
 		.E_MemRead(E_MemRead),
+		.P0_RegMul(E_RegMul),
+		.P1_RegMul(P1_RegMul),
+		.P2_RegMul(P2_RegMul),
 		.PCWrite(D_PCWrite),
 		.IDWrite(D_RegEn),
 		.Stall(D_Stall)
@@ -283,6 +306,12 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.B(1'b0),
 		.sel(D_Stall | M_PCSrc),
 		.Q(D_RegWrite_H)
+	);
+	Mux_2_1 #(.DATA_WIDTH(1)) STALL_REGMUL (
+		.A(D_RegMul),
+		.B(1'b0),
+		.sel(D_Stall | M_PCSrc),
+		.Q(D_RegMul_H)
 	);
 	Mux_2_1 #(.DATA_WIDTH(1)) STALL_JUMP (
 		.A(D_Jump),
@@ -411,6 +440,13 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.D(D_RegWrite_H),
 		.Q(E_RegWrite)
 	);
+	Reg_Neg_Param #(.DATA_WIDTH(1)) D_E_REGMUL(
+		.rst(rst),
+		.clk(clk),
+		.en(1'b1),
+		.D(D_RegMul_H),
+		.Q(E_RegMul)
+	);
 	Reg_Neg_Param #(.DATA_WIDTH(1)) D_E_JUMP(
 		.rst(rst),
 		.clk(clk),
@@ -482,8 +518,10 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.Rs2(E_InstrData[24:20]),
 		.M_Rd(M_InstrData[11:7]),
 		.W_Rd(W_InstrData[11:7]),
+		.W_Rd_Mul(W_Rd),
 		.M_RegWrite(M_RegWrite),
 		.W_RegWrite(W_RegWrite),
+		.W_RegMul(W_RegMul),
 		.AForward(E_AForward),
 		.BForward(E_BForward)
 	);
@@ -566,12 +604,15 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.Rs1_1(P1_Rs1),
 		.Rs2_1(P1_Rs2),
 		.Rd_1(P1_Rd),
+		.regmul_1(P1_RegMul),
 		.Rs1_2(P2_Rs1),
 		.Rs2_2(P2_Rs2),
 		.Rd_2(P2_Rd),
+		.regmul_2(P2_RegMul),
 		.Rs1_3(P3_Rs1),
 		.Rs2_3(P3_Rs2),
 		.Rd_3(P3_Rd),
+		.regmul_3(P3_RegMul),
 		.Rs1_Out(W_Rs1),
 		.Rs2_Out(W_Rs2),
 		.Rd_Out(W_Rd),
