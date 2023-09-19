@@ -66,11 +66,11 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     
     /// FIXME Branch wires
     wire                    D_B_SignExt;
-    wire [11:0]             D_B_Data;
     wire [DATA_WIDTH-1:0]   D_B_Data_SE;
     wire [DATA_WIDTH-1:0]   D_B_ShiftImm;
     wire [DATA_WIDTH-1:0]   D_B_PCj;
     wire [DATA_WIDTH-1:0]   D_B_PCbra;
+    wire                    D_B_PCSrc;
 
 
 	//Execute
@@ -158,7 +158,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	Reg_PC #(.DATA_WIDTH(DATA_WIDTH)) PCREG (
 		.rst(rst),
 		.clk(clk),
-		.en(F_PCEn | M_PCSrc),
+		.en(F_PCEn | D_B_PCSrc), // .en(F_PCEn | M_PCSrc)
 		.D(F_PCp),
 		.Q(PC)
 	);
@@ -180,8 +180,8 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     //Mux for next PC
 	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) PCOUTMUX (
 		.A(F_PCp4),
-		.B(M_PCbra), // FIXME new wire for Branch in decode: D_B_PCbra
-		.sel(M_PCSrc),
+		.B(D_B_PCbra), // .B(M_PCbra),
+		.sel(D_B_PCSrc),  // sel(M_PCSrc),
 		.Q(F_PCp)
 	);
 
@@ -284,32 +284,48 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     );
 
     // Moving PC + Offset adder and AND gate
-    //Sign Extender + mux, give it B instruction encoding
-    // Mux makes it easier to debug but it can be removed, uses CMP_D as selector
-    Mux_2_1 #(.DATA_WIDTH(12)) MUX_B_D (
-        .A({12{1'b0}}),
-        .B({E_InstrData[31],E_InstrData[7],E_InstrData[30:25],E_InstrData[11:8]}),
-        .sel(D_B_SignExt),
-        .Q(D_B_Data)
+	// Sign Extender Unit, used for B and J type instructions
+    Sign_Ext_Unit #(.IN_WIDTH_1(12), .IN_WIDTH_2(20), .OUT_WIDTH(DATA_WIDTH)) SEU_D (
+        .In_12_I(12'h0),
+        .In_12_S(12'h0),
+        .In_12_B({D_InstrData[31],D_InstrData[7],D_InstrData[30:25],D_InstrData[11:8]}),
+        .In_20_U(20'h0),
+        .In_20_J({D_InstrData[31],D_InstrData[19:12],D_InstrData[20],D_InstrData[30:21]}),
+        .sel(D_SignExt),
+        .Out(D_B_Data_SE)
     );
-    Sign_Ext #(.IN_WIDTH(12), .OUT_WIDTH(DATA_WIDTH)) SE_D (
-		.In(D_B_Data),
-		.Out(D_B_Data_SE)
-	);
     
-    //Shift Unit
-    // selector for B instructions has shift amt of 1
+    // Shift Unit
     Shift_Unit #(.DATA_WIDTH(DATA_WIDTH)) SU_D (
         .In(D_B_Data_SE),
-        .sel(D_ShiftAmnt), // FIXME ???
+        .sel(D_ShiftAmnt),
         .Out(D_B_ShiftImm)
     );
 
+
+   //Mux for jal and jalr source
+	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) JALRMUX_D (
+		.A(D_PC),
+		.B(D_RD1),
+		.sel(D_JalrMux),
+		.Q(D_B_PCj)
+	);
+
     //PC + Offset adder for B instructions
     Adder #(.DATA_WIDTH(DATA_WIDTH)) PCBJ_D (
-		.a(D_PC),
+		.a(D_B_PCj),
 		.b(D_B_ShiftImm),
 		.f(D_B_PCbra) // This is the new wire for PC mux
+	);
+    
+    // Update PCSrc for Jumps and Branch
+    // PCWrite will always override.. using it for now to have Branch and cmp
+	PC_Src PCSRC_D (
+		.PCWrite(D_Jump | (D_Branch & D_B_SignExt)),
+		.Branch(1'b0),
+		.Zero(1'b0),
+		.XorZero(1'b0),
+		.PCSrc(D_B_PCSrc)
 	);
     // FIXME END
 
