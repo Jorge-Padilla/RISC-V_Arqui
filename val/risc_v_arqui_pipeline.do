@@ -103,19 +103,19 @@ add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/E_SrcA
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/E_SrcB
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/E_ALUOut
 add wave -noupdate -divider PRODUCT
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P1_Rs1;
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P1_Rs2;
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P1_Rd;
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P1_RegMul;
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P2_Rs1;
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P2_Rs2;
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P2_Rd;
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P2_RegMul;
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P3_Rs1;
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P3_Rs2;
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P3_Rd;
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P3_RegMul;
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/W_MULOut;
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P1_Rs1
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P1_Rs2
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P1_Rd
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P1_RegMul
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P2_Rs1
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P2_Rs2
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P2_Rd
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P2_RegMul
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P3_Rs1
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P3_Rs2
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P3_Rd
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/P3_RegMul
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/W_MULOut
 add wave -noupdate -divider MEMORY
 add wave -noupdate -color Gold -itemcolor Gold /RISC_V_Pipeline_rst_tb/DUT/CORE/M_InstrData
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/M_RegWrite
@@ -202,8 +202,26 @@ add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/MM/tx_data_en
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/MM/tx_send
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/MM/rx_ready
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/MM/tx_send_read
+add wave -noupdate -divider HDU
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/PCWrite
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/IDWrite
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/Stall
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/load_stall
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/mult_stall
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/muwb_stall
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/mooo_stall
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/mult_stall_0
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/mult_stall_1
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/mult_stall_2
+add wave -noupdate -divider FU
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/FU/AForward
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/FU/BForward
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/FU/mem_forward
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/FU/wb_forward
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/FU/wb_forward_alu
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/FU/wb_forward_mul
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {5993 ps} 0}
+WaveRestoreCursors {{Cursor 1} {210317 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -219,4 +237,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {18430 ps}
+WaveRestoreZoom {194562 ps} {223438 ps}

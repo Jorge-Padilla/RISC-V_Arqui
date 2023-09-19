@@ -48,7 +48,7 @@ __loop:
 	addi	t0, t0, 1
 	mul	t2, t0, t1
 	beq	t2, t3, __end
-	beq	t2, t2, __loop
+	jal	zero, __loop
 __end:
 	mul	t0, t2, t4
 	sw	t0, 4(s2)
