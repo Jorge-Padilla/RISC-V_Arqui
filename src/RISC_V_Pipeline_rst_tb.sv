@@ -108,7 +108,7 @@ module RISC_V_Pipeline_rst_tb;
         #2 rst = 1'b0;
         #2 rst = 1'b1;
 
-        #200
+        #300
 
 		$finish();
 	end

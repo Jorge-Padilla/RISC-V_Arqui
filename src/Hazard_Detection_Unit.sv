@@ -12,11 +12,14 @@ module Hazard_Detection_Unit #(parameter DATA_WIDTH=5)(
 	input [DATA_WIDTH-1:0]	E_Rd,
 	input [DATA_WIDTH-1:0]	P1_Rd,
 	input [DATA_WIDTH-1:0]	P2_Rd,
+	input [DATA_WIDTH-1:0]	P3_Rd,
+    input                   Branch,
     input                   RegWrite,
 	input                   E_MemRead,
 	input                   P0_RegMul,
 	input                   P1_RegMul,
 	input                   P2_RegMul,
+	input                   P3_RegMul,
 	//Output
     output reg              PCWrite,
     output reg              IDWrite,
@@ -28,6 +31,7 @@ module Hazard_Detection_Unit #(parameter DATA_WIDTH=5)(
     reg mult_stall;
     reg muwb_stall;
     reg mooo_stall;
+    reg mubr_stall;
     reg mult_stall_0;
     reg mult_stall_1;
     reg mult_stall_2;
@@ -39,11 +43,12 @@ module Hazard_Detection_Unit #(parameter DATA_WIDTH=5)(
     assign mult_stall = mult_stall_0 | mult_stall_1 | mult_stall_2;
     assign muwb_stall = RegWrite & P1_RegMul;
     assign mooo_stall = RegWrite && Rd != {DATA_WIDTH{1'b0}} && ((Rd == E_Rd && P0_RegMul) || (Rd == P1_Rd && P1_RegMul));
+    assign mubr_stall = P3_RegMul && P3_Rd != {DATA_WIDTH{1'b0}} && (P3_Rd == Rs1 || P3_Rd == Rs2) && Branch;
 
 	//Combinational always block
 	always @(*) begin
         //We detect a hazard on a lw instruction
-        if (load_stall | mult_stall | muwb_stall | mooo_stall) begin
+        if (load_stall | mult_stall | muwb_stall | mooo_stall | mubr_stall) begin
             PCWrite = 1'b0;
             IDWrite = 1'b0;
             Stall   = 1'b1;

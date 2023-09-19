@@ -62,6 +62,10 @@ add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/D_B_ShiftImm
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/D_B_PCj
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/D_B_PCbra
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/D_B_PCSrc
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/D_B_AForward;
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/D_B_BForward;
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/D_B_RD1;
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/D_B_RD2;
 add wave -noupdate -divider EXECUTE
 add wave -noupdate -color Cyan -itemcolor Cyan /RISC_V_Pipeline_rst_tb/DUT/CORE/E_PC
 add wave -noupdate -color Gold -itemcolor Gold /RISC_V_Pipeline_rst_tb/DUT/CORE/E_InstrData
@@ -210,6 +214,7 @@ add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/load_stall
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/mult_stall
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/muwb_stall
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/mooo_stall
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/mubr_stall
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/mult_stall_0
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/mult_stall_1
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/HDU/mult_stall_2
@@ -220,6 +225,10 @@ add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/FU/mem_forward
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/FU/wb_forward
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/FU/wb_forward_alu
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/FU/wb_forward_mul
+add wave -noupdate -divider FBU
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/FBU/B_AForward
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/FBU/B_BForward
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/FBU/bw_forward
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {210317 ps} 0}
 quietly wave cursor active 1
