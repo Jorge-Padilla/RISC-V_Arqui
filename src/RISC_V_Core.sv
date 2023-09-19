@@ -58,11 +58,11 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 	wire [2:0]              D_SignExt_H;
 	wire [4:0]              D_ALUControl;
 	wire [4:0]              D_ALUControl_H;
+	wire [4:0]				D_WD;
 	wire [DATA_WIDTH-1:0]   D_PC;
 	wire [DATA_WIDTH-1:0]   D_InstrData;
 	wire [DATA_WIDTH-1:0]   D_RD1;
 	wire [DATA_WIDTH-1:0]   D_RD2;
-	wire [DATA_WIDTH-1:0]	D_WD;
     
     /// FIXME Branch wires
     wire                    D_B_SignExt;
@@ -236,7 +236,7 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     );
 	
 	//Mux for Multiplier Address
-	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) MUXMUL (
+	Mux_2_1 #(.DATA_WIDTH(5)) MUXMUL (
 		.A(W_InstrData[11:7]),
 		.B(W_Rd),
 		.sel(W_RegMul),
