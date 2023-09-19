@@ -204,18 +204,23 @@ add wave -noupdate -color Magenta /RISC_V_Pipeline_rst_tb/DUT/CORE/D_Branch
 add wave -noupdate -color Magenta /RISC_V_Pipeline_rst_tb/DUT/CORE/D_Branch_H
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/D_RD1
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/D_RD2
-add wave -noupdate -divider CMP
+add wave -noupdate -divider CMP_D
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/CMP_D/a
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/CMP_D/b
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/CMP_D/f
-add wave -noupdate -divider {Mux + SE}
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/MUX_B_D/A
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/MUX_B_D/B
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/MUX_B_D/sel
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/MUX_B_D/Q
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SE_D/In
-add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SE_D/Out
-add wave -noupdate -divider SU
+add wave -noupdate -divider SE_D
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SEU_D/In_12_I
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SEU_D/In_12_S
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SEU_D/In_12_B
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SEU_D/In_20_U
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SEU_D/In_20_J
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SEU_D/sel
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SEU_D/Out
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SEU_D/In_12
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SEU_D/In_20
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SEU_D/In_0
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SEU_D/In_1
+add wave -noupdate -divider SU_D
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SU_D/In
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SU_D/sel
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SU_D/Out
@@ -223,13 +228,30 @@ add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SU_D/In_0
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SU_D/In_1
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SU_D/In_2
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/SU_D/In_C
-add wave -noupdate -divider PCB
+add wave -noupdate -divider JALRMUX
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/JALRMUX_D/A
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/JALRMUX_D/B
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/JALRMUX_D/sel
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/JALRMUX_D/Q
+add wave -noupdate -divider PC_B_D
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/PCBJ_D/a
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/PCBJ_D/b
 add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/PCBJ_D/f
+add wave -noupdate -divider PCSRC
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/PCSRC_D/PCWrite
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/PCSRC_D/Branch
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/PCSRC_D/Zero
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/PCSRC_D/XorZero
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/PCSRC_D/PCSrc
+add wave -noupdate -divider PCREG
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/PCREG/rst
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/PCREG/clk
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/PCREG/en
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/PCREG/D
+add wave -noupdate /RISC_V_Pipeline_rst_tb/DUT/CORE/PCREG/Q
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {34996 ps} 0} {{Cursor 2} {35994 ps} 0}
-quietly wave cursor active 2
+WaveRestoreCursors {{Cursor 1} {34000 ps} 0} {{Cursor 2} {48000 ps} 0}
+quietly wave cursor active 1
 configure wave -namecolwidth 490
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -244,4 +266,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {30050 ps} {51050 ps}
+WaveRestoreZoom {25063 ps} {51313 ps}

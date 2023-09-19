@@ -37,4 +37,19 @@ __muls:
 	add	t4, t0, t0
 	add	t5, t0, t0
 	add	t6, t3, t3
-	
+	lw	t0, 0(s1)
+	mul	t1, t0, t6
+	beq	t1, zero, __main
+	add	t0, zero, zero
+	addi	t1, zero 2
+	addi	t3, zero, 0x10
+	addi	t4, zero, 1
+__loop:
+	addi	t0, t0, 1
+	mul	t2, t0, t1
+	beq	t2, t3, __end
+	beq	t2, t2, __loop
+__end:
+	mul	t0, t2, t4
+	sw	t0, 4(s2)
+	addi	zero, zero, 0
