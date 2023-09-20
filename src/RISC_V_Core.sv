@@ -71,10 +71,12 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     wire [DATA_WIDTH-1:0]   D_B_PCj;
     wire [DATA_WIDTH-1:0]   D_B_PCbra;
     wire                    D_B_PCSrc;
-	wire					D_B_AForward;
-	wire					D_B_BForward;
+	wire [1:0]				D_B_AForward;
+	wire [1:0]				D_B_BForward;
 	wire [DATA_WIDTH-1:0]   D_B_RD1;
 	wire [DATA_WIDTH-1:0]   D_B_RD2;
+	wire [DATA_WIDTH-1:0]   D_E_RegA;
+	wire [DATA_WIDTH-1:0]   D_E_RegB;
 
 	//Execute
 	wire					E_MemWrite;
@@ -283,17 +285,21 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
     // FIXME BEGIN
     // B INSTR IN DECODE
 	//Mux for Forwarded A value
-	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) A_FW_BRANCH (
+	Mux_4_1 #(.DATA_WIDTH(DATA_WIDTH)) A_FW_BRANCH (
 		.A(D_RD1),
-		.B(W_MULOut),
+        .B(RWAddress),
+		.C(W_MULOut),
+		.D(32'h0),
 		.sel(D_B_AForward),
 		.Q(D_B_RD1)
 	);
 
 	//Mux for Forwarded B value
-	Mux_2_1 #(.DATA_WIDTH(DATA_WIDTH)) B_FW_BRANCH (
+	Mux_4_1 #(.DATA_WIDTH(DATA_WIDTH)) B_FW_BRANCH (
 		.A(D_RD2),
-		.B(W_MULOut),
+        .B(RWAddress),
+		.C(W_MULOut),
+		.D(32'h0),
 		.sel(D_B_BForward),
 		.Q(D_B_RD2)
 	);
@@ -357,9 +363,35 @@ module RISC_V_Core #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32) (
 		.W_Rd_Mul(W_Rd),
 		.Branch(D_Branch),
 		.W_RegMul(W_RegMul),
+		.M_Rd(E_InstrData[11:7]),
+		.W_Rd(M_InstrData[11:7]),
+		.M_RegWrite(E_RegWrite),
+		.W_RegWrite(M_RegWrite),
 		.B_AForward(D_B_AForward),
 		.B_BForward(D_B_BForward)
 	);
+
+
+   	//Mux for B_Forwarding B input
+	Mux_4_1 #(.DATA_WIDTH(DATA_WIDTH)) D_AFBU (
+		.A(E_RD1),
+		.B(RWAddress),
+		.C(E_WD3),
+		.D(32'h0),
+		.sel(D_B_AForward),
+		.Q(D_E_RegA)
+	);
+
+	//Mux for Forwarding B input
+	Mux_4_1 #(.DATA_WIDTH(DATA_WIDTH)) D_BFBU (
+		.A(E_RD2),
+		.B(RWAddress),
+		.C(E_WD3),
+		.D(32'h0),
+		.sel(D_B_BForward),
+		.Q(D_E_RegB)
+	);
+
     // FIXME END
 
 	//Muxes for Stall
